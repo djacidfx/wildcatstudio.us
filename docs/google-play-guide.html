@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Play Publishing Guide - WebToApp Studio Pro</title>
+    <link rel="stylesheet" href="css/docs.css">
+    <style>
+        .step-badge {
+            display: inline-block;
+            background: #10b981;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .code-box {
+            background: #0b1120;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-family: Consolas, monospace;
+            font-size: 12px;
+            color: #38bdf8;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <main class="docs-content" style="max-width: 900px; margin: 40px auto; padding: 0 24px;">
+        <span class="hero-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Google Play Publishing Guide</span>
+        <h1>Publishing Your Android App to Google Play</h1>
+        <p class="lead">Complete step-by-step walkthrough for opening the WebToApp Studio Pro generated Android project, building your release Android App Bundle (<code>.aab</code>), and publishing to the Google Play Store Console.</p>
+
+        <div class="card-box" style="margin-bottom: 24px;">
+            <h3>? What WebToApp Studio Pro Generated For You</h3>
+            <ul>
+                <li><strong>Turnkey Android 14 (API 34) Project:</strong> Configured with modern Gradle Kotlin DSL scripts (<code>build.gradle.kts</code>).</li>
+                <li><strong>WebViewAssetLoader:</strong> High-performance internal HTTPS virtual host (<code>https://appassets.androidplatform.net/</code>) for zero-CORS local assets.</li>
+                <li><strong>Native Pull-to-Refresh:</strong> Smooth <code>SwipeRefreshLayout</code> integration.</li>
+                <li><strong>Complete Mipmap Icon Set:</strong> <code>mdpi</code> (48px), <code>hdpi</code> (72px), <code>xhdpi</code> (96px), <code>xxhdpi</code> (144px), <code>xxxhdpi</code> (192px).</li>
+                <li><strong>Pre-Configured AndroidManifest.xml:</strong> Screen orientation, hardware acceleration, and requested permissions.</li>
+            </ul>
+        </div>
+
+        <section>
+            <h2>Step 1: Open in Android Studio</h2>
+            <span class="step-badge">Phase 1: Project Setup</span>
+            <p>1. Extract the generated <code>[YourAppName]_Android_Studio_Project.zip</code> to a folder on your computer.</p>
+            <p>2. Download and launch <a href="https://developer.android.com/studio" target="_blank" style="color: #60a5fa;">Android Studio Hedgehog / Iguana / Jellyfish (or later)</a>.</p>
+            <p>3. On the welcome screen, click <strong>Open</strong> and select the extracted folder.</p>
+            <p>4. Allow Android Studio a moment to automatically synchronize dependencies and run Gradle Sync.</p>
+        </section>
+
+        <section style="margin-top: 24px;">
+            <h2>Step 2: Generate Signed App Bundle (.AAB)</h2>
+            <span class="step-badge">Phase 2: Production Build</span>
+            <p>Google Play requires applications to be submitted in the <strong>Android App Bundle (.aab)</strong> format rather than a standard APK.</p>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+                <li>In Android Studio's top menu bar, click <strong>Build &rarr; Generate Signed Bundle / APK...</strong></li>
+                <li>Choose <strong>Android App Bundle</strong> and click <strong>Next</strong>.</li>
+                <li>Under <strong>Key store path</strong>:
+                    <ul>
+                        <li>Click <strong>Create new...</strong> if you don't already have a publisher keystore.</li>
+                        <li>Choose a secure location (e.g. <code>my-release-key.jks</code>) and password. Remember this password!</li>
+                    </ul>
+                </li>
+                <li>Select <strong>release</strong> build variant and click <strong>Create</strong>.</li>
+                <li>Android Studio will compile your bundle to: <br><code class="code-box" style="display:inline-block;">app/release/app-release.aab</code></li>
+            </ol>
+        </section>
+
+        <section style="margin-top: 24px;">
+            <h2>Step 3: Upload to Google Play Console</h2>
+            <span class="step-badge">Phase 3: Store Submission</span>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+                <li>Log in to your <a href="https://play.google.com/console" target="_blank" style="color: #60a5fa;">Google Play Console</a> account.</li>
+                <li>Click <strong>Create App</strong> and enter your App Name, Default Language, and Free/Paid status.</li>
+                <li>In the left sidebar, navigate to <strong>Production &rarr; Create new release</strong>.</li>
+                <li>Drag and drop your <code>app-release.aab</code> file into the upload zone.</li>
+                <li>Add release notes (e.g. <em>"Initial release v1.0.0"</em>) and click <strong>Next</strong>.</li>
+                <li>Complete your Store Listing (short description, full description, screenshots, and 512x512 icon).</li>
+                <li>Submit your app for review! Google typically approves initial releases within 24 to 72 hours.</li>
+            </ol>
+        </section>
+
+        <section style="margin-top: 30px;">
+            <div class="card-box" style="border-left: 4px solid #FFDD00; background: rgba(255, 221, 0, 0.03);">
+                <h3>?? Support & Questions</h3>
+                <p>Need assistance or feature customization? WebToApp Studio Pro is built and maintained by <strong>Wildcat Studio</strong>. If you love this utility, support our work:</p>
+                <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
+                    <a href="https://buymeacoffee.com/wildcatstudio" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #FFDD00; color: #000000; font-weight: 700; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 12px;">
+                        <span>? Buy Me a Coffee</span>
+                    </a>
+                    <a href="https://www.patreon.com/c/wildcatstudio" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #FF424D; color: #ffffff; font-weight: 700; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 12px;">
+                        <span>?? Join on Patreon</span>
+                    </a>
+                    <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #ffffff; font-weight: 600; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 12px;">
+                        <span>&larr; Back to Full Documentation</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - WebToApp Studio Pro</title>
+    <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="docs-sidebar">
+        <a href="../index.html" style="text-decoration:none;color:inherit;">
+            <div class="docs-brand">
+                <div class="docs-brand-logo">
+                    <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h2>WebToApp Studio Pro</h2>
+            </div>
+        </a>
+        <div style="margin: 0 0 14px; font-size: 0.82rem;"><a href="../index.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">&larr; Return to wildcatstudio.us</a></div>
+        <input type="text" id="docsSearch" class="docs-search" placeholder="Search documentation...">
+
+        <div class="nav-section-title">Getting Started</div>
+        <nav class="docs-nav">
+            <a href="#overview" class="active">1. Overview & Architecture</a>
+            <a href="#requirements">2. System Requirements</a>
+            <a href="#quickstart">3. Quick Start (30 Seconds)</a>
+        </nav>
+
+        <div class="nav-section-title">Guides & Workflows</div>
+        <nav class="docs-nav">
+            <a href="#url-mode">4. Converting a Live Website</a>
+            <a href="#local-mode">5. Converting Static HTML5</a>
+            <a href="#html5-games">6. HTML5 Games & Audio</a>
+            <a href="#icons-branding">7. Custom Icons & Branding</a>
+            <a href="#splash-offline">8. Splash & Offline Screens</a>
+        </nav>
+
+        <div class="nav-section-title">Security & Production</div>
+        <nav class="docs-nav">
+            <a href="#security">9. DevTools & Code Protection</a>
+            <a href="#tray-window">10. System Tray & Kiosk Mode</a>
+            <a href="#updater">11. 1-Click Auto-Updater</a>
+            <a href="#google-play">12. Dual Export & Google Play</a>
+            <a href="#ubuntu-linux">13. Ubuntu Linux & Debian (.deb)</a>
+            <a href="#multi-platform">14. Multi-Build (All Platforms)</a>
+            <a href="#faq">15. Frequently Asked Questions</a>
+            <a href="#troubleshooting">16. Troubleshooting & Support</a>
+        </nav>
+    </aside>
+
+    <!-- Content -->
+    <main class="docs-content">
+        <span class="hero-badge">Envato Market / CodeCanyon Edition</span>
+        <h1>WebToApp Studio Pro Documentation</h1>
+        <p class="lead">The complete user and developer guide for converting any live website URL or local static HTML5 project into high-performance standalone Windows desktop executables.</p>
+
+        <!-- 1. OVERVIEW -->
+        <section id="overview">
+            <h2>1. Overview & Architecture</h2>
+            <p><strong>WebToApp Studio Pro</strong> is a commercial developer utility software created for entrepreneurs, web agencies, game creators, and indie developers who want to distribute their web applications as native Windows desktop software without recurring fees or complex build tooling.</p>
+
+            <div class="card-box">
+                <h3>Why WebToApp Studio Pro outperforms traditional solutions:</h3>
+                <ul>
+                    <li><strong>No Electron Bloat:</strong> Electron apps weigh 150MB+ and consume 400MB+ of RAM. WebToApp Studio Pro apps use Microsoft Edge WebView2, producing lean 14MB executables that load in milliseconds.</li>
+                    <li><strong>Zero SDK Required for Buyers:</strong> Unlike command-line CLI builders, WebToApp Studio Pro features an Instant Template Engine. Buyers click "Build" and get an executable in seconds without installing C++ compilers or Node.js.</li>
+                    <li><strong>HTTPS Virtual Host (`https://app.local/`):</strong> Eliminates `file://` protocol CORS bugs. WebGL, Web Audio, LocalStorage, IndexedDB, and ES6 modules work seamlessly.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. REQUIREMENTS -->
+        <section id="requirements">
+            <h2>2. System Requirements</h2>
+            <p><strong>For the WebToApp Studio Builder:</strong></p>
+            <ul>
+                <li>Operating System: Windows 10 (1809+) or Windows 11 (64-bit).</li>
+                <li>Runtime: .NET 8.0 Desktop Runtime (pre-installed or auto-installed).</li>
+                <li>Display: 1280 × 720 minimum screen resolution.</li>
+            </ul>
+
+            <p><strong>For Generated Executables:</strong></p>
+            <ul>
+                <li>Windows 10 / 11 (64-bit).</li>
+                <li>Microsoft Edge WebView2 Runtime (standard on all modern Windows installations).</li>
+            </ul>
+        </section>
+
+        <!-- 3. QUICK START -->
+        <section id="quickstart">
+            <h2>3. Quick Start (Build in 30 Seconds)</h2>
+            <ol>
+                <li>Launch <code>WebToApp-Studio.exe</code>.</li>
+                <li>Under <strong>1. Source</strong>, choose <em>Website URL</em> (enter your website) or <em>Local HTML5 Folder</em> (pick your folder containing <code>index.html</code>).</li>
+                <li>Under <strong>2. Branding</strong>, enter your Application Name (e.g. <code>My Awesome App</code>) and select an icon.</li>
+                <li>Under <strong>3. Window</strong>, choose a preset (e.g. <code>1280 × 800</code>).</li>
+                <li>Click the primary button: <strong>BUILD EXECUTABLE</strong>.</li>
+                <li>Once the progress bar hits 100%, click <strong>Test Run App</strong> to verify your newly generated desktop application!</li>
+            </ol>
+        </section>
+
+        <!-- 4. LIVE WEBSITE MODE -->
+        <section id="url-mode">
+            <h2>4. Converting a Live Website (URL Mode)</h2>
+            <p>URL Mode transforms any online SaaS platform, e-commerce store, or web portal into a focused desktop app.</p>
+            <div class="tip-box">
+                <h4>Network Auto-Reconnect</h4>
+                <p>When URL mode is selected with "Offline Connection Error Page" enabled, if the user loses Wi-Fi, the app automatically transitions to a stylish dark reconnect view and resumes when network connectivity is restored.</p>
+            </div>
+            <p><strong>External Link Routing:</strong> When "Open External Links in Default Browser" is enabled, any links directing to other domains or opened with <code>target="_blank"</code> will launch in the user's default browser (e.g. Google Chrome), keeping your application window dedicated to your main site.</p>
+        </section>
+
+        <!-- 5. STATIC HTML5 MODE -->
+        <section id="local-mode">
+            <h2>5. Converting Static HTML/CSS/JS (Offline Mode)</h2>
+            <p>Offline Mode embeds your static website folder directly inside the desktop application package.</p>
+            <ul>
+                <li>Ensure an entrypoint file exists in your folder (typically <code>index.html</code>).</li>
+                <li>Assets are served via the internal secure origin <code>https://app.local/</code>.</li>
+                <li>All relative paths (e.g. <code>&lt;script src="js/app.js"&gt;</code>, <code>&lt;img src="img/logo.png"&gt;</code>) work out of the box.</li>
+                <li>Local storage and IndexedDB remain persistent between app restarts.</li>
+            </ul>
+        </section>
+
+        <!-- 6. HTML5 GAMES -->
+        <section id="html5-games">
+            <h2>6. Packaging HTML5 Games & Web Audio</h2>
+            <p>WebToApp Studio Pro is optimized for HTML5 game engines:</p>
+            <ul>
+                <li><strong>Construct 3 & Phaser:</strong> Export as "HTML5 Website / Web", choose the export folder in WebToApp Studio Pro, and compile.</li>
+                <li><strong>WebGL & Canvas:</strong> Full GPU hardware acceleration is enabled by default.</li>
+                <li><strong>Web Audio API:</strong> Low-latency spatial audio and background music run without browser autoplay restrictions.</li>
+            </ul>
+        </section>
+
+        <!-- 7. ICONS & BRANDING -->
+        <section id="icons-branding">
+            <h2>7. Custom Icons & Executable Branding</h2>
+            <p>You can upload either a <code>.ico</code> file or a standard <code>.png</code> image. WebToApp Studio Pro's built-in image processor will automatically generate multi-resolution icon layers (16x16, 32x32, 48x48, 64x64, 128x128, and 256x256) to ensure your app icon is razor sharp on both the Windows taskbar and desktop shortcuts.</p>
+        </section>
+
+        <!-- 8. SPLASH & OFFLINE -->
+        <section id="splash-offline">
+            <h2>8. Splash Screens & Offline Fallbacks</h2>
+            <p><strong>Custom Splash Screen:</strong> When enabled, a borderless window displays your logo immediately upon launch. As soon as the underlying web engine finishes rendering the DOM, the splash screen performs a smooth alpha fade-out transition.</p>
+        </section>
+
+        <!-- 9. SECURITY -->
+        <section id="security">
+            <h2>9. DevTools & Code Protection</h2>
+            <p>For commercial releases, you generally do not want end-users viewing your proprietary JavaScript code or modifying DOM variables:</p>
+            <ul>
+                <li><strong>Disable Developer Tools (F12):</strong> Suppresses F12, Ctrl+Shift+I, and inspect tools.</li>
+                <li><strong>Disable Right-Click Context Menu:</strong> Removes the default browser context menu.</li>
+                <li><strong>Disable Text Selection:</strong> Gives the application a genuine native software appearance.</li>
+                <li><strong>Single Instance Mutex:</strong> Prevents opening multiple copies, avoiding state collisions and excessive memory consumption.</li>
+            </ul>
+        </section>
+
+        <!-- 10. SYSTEM TRAY -->
+        <section id="tray-window">
+            <h2>10. System Tray & Kiosk Mode</h2>
+            <p><strong>System Tray Integration:</strong> Displays a tray icon with "Open [AppName]" and "Exit". If "Minimize to Tray on Close" is activated, closing the window will silently dock the application to the tray.</p>
+            <p><strong>Kiosk / Fullscreen Mode:</strong> Ideal for interactive museum exhibits, digital signage, or point-of-sale displays. The window opens borderless across the entire display.</p>
+        </section>
+
+        <!-- 11. AUTO-UPDATER -->
+        <section id="updater">
+            <h2>11. 1-Click In-App Auto-Updater</h2>
+            <p>WebToApp Studio Pro features a built-in automated software update engine that allows buyers to upgrade to new releases without manual downloads or re-extracting zip files.</p>
+            
+            <div class="card-box">
+                <h3>How It Works for Buyers:</h3>
+                <ol>
+                    <li>On startup (or by clicking <strong>Check Updates</strong> in the header), the Studio checks the remote manifest.</li>
+                    <li>If a newer version exists, a glowing green notification appears: <code>Update vX.X Available!</code>.</li>
+                    <li>Clicking the notification opens the <strong>Release Notes Modal</strong> detailing the changelog.</li>
+                    <li>Clicking <strong>1-Click Update & Restart</strong> downloads the release package, automatically extracts the new binaries over the existing folder, and restarts the application in ~2 seconds.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 12. DUAL EXPORT & GOOGLE PLAY STORE PUBLISHING -->
+        <section id="google-play">
+            <h2>12. Dual Export & Google Play Store Publishing</h2>
+            <p><strong>WebToApp Studio Pro</strong> includes a built-in cross-platform compilation engine that outputs both standalone Windows Desktop executables and production-ready Android Studio projects / Google Play App Bundles (<code>.aab</code>).</p>
+
+            <div class="card-box">
+                <h3>🚀 The Turnkey Zero-SDK Workflow</h3>
+                <ol>
+                    <li>In the top bar of WebToApp Studio, select your target export platform:
+                        <ul>
+                            <li><strong>Windows (.exe):</strong> Builds standalone Windows 10/11 desktop executable.</li>
+                            <li><strong>Android App:</strong> Generates Android 14 (API 34) Gradle project, launcher mipmaps, and APK/AAB bundle.</li>
+                            <li><strong>⚡ Dual Build (Both):</strong> Compiles both Windows and Android packages in a single click!</li>
+                        </ul>
+                    </li>
+                    <li>Open <strong>Tab 6: Android & Play Store</strong> to customize:
+                        <ul>
+                            <li><strong>Package Name:</strong> Reverse-domain identifier (e.g., <code>com.mycompany.myapp</code>). Use the "Auto-generate" button for instant formatting.</li>
+                            <li><strong>Version Code:</strong> Google Play incrementing build number (e.g. <code>1</code>, <code>2</code>, <code>3</code>).</li>
+                            <li><strong>Orientation:</strong> Choose Portrait, Landscape, or Sensor auto-rotation.</li>
+                            <li><strong>WebViewAssetLoader:</strong> Automatically serves local static files over <code>https://appassets.androidplatform.net/</code>, ensuring modern Web Audio, Canvas, and localStorage work flawlessly without CORS blocks.</li>
+                            <li><strong>Pull to Refresh:</strong> Native Android <code>SwipeRefreshLayout</code> gesture.</li>
+                        </ul>
+                    </li>
+                    <li>Click <strong>BUILD EXECUTABLE / DUAL BUILD</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="card-box" style="margin-top: 18px;">
+                <h3>📦 Opening & Publishing Your Android App</h3>
+                <p>WebToApp Studio Pro produces a turnkey project ZIP: <code>[AppName]_Android_Studio_Project.zip</code> containing:</p>
+                <ul>
+                    <li>Complete Gradle build scripts (<code>build.gradle.kts</code>, <code>settings.gradle.kts</code>) configured for Android 14 (API 34).</li>
+                    <li>Optimized launcher icons across all 5 mipmap densities (<code>mdpi</code>, <code>hdpi</code>, <code>xhdpi</code>, <code>xxhdpi</code>, <code>xxxhdpi</code>).</li>
+                    <li><code>GOOGLE_PLAY_PUBLISH_GUIDE.txt</code> with step-by-step instructions for uploading to the Google Play Console.</li>
+                    <li>If Java JDK / Android SDK is installed on your computer, WebToApp Studio Pro compiles the <code>.aab</code> and <code>.apk</code> binaries automatically!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 13. UBUNTU LINUX & DEBIAN PACKAGING -->
+        <section id="ubuntu-linux">
+            <h2>13. Ubuntu Linux & Debian Packaging (.deb)</h2>
+            <p>WebToApp Studio Pro features a native pure C# Debian packaging engine that compiles genuine binary <code>.deb</code> packages directly on Windows with <strong>zero external toolchains, WSL, or Docker required</strong>.</p>
+
+            <div class="card-box">
+                <h3>🐧 How to Export for Ubuntu & Debian:</h3>
+                <ol>
+                    <li>In the top target selector bar, click <strong>Ubuntu Linux (.deb)</strong> or switch to tab <strong>7. Linux & Ubuntu</strong>.</li>
+                    <li>Configure your Debian package properties:
+                        <ul>
+                            <li><strong>Debian Package Name:</strong> Lowercase package identifier (e.g. <code>com.wildcatstudio.myapp</code> or <code>myapp</code>).</li>
+                            <li><strong>Target Architecture:</strong> Choose <code>all</code> (universal compatibility across x86_64, arm64, and Raspberry Pi) or specific target architectures (<code>amd64</code>, <code>arm64</code>).</li>
+                            <li><strong>Debian Section & Categories:</strong> Choose standard Debian sections (<code>utils</code>, <code>web</code>, <code>games</code>, <code>graphics</code>, <code>net</code>) and desktop categories for GNOME / Ubuntu Dash.</li>
+                            <li><strong>Dependencies:</strong> Pre-configured with automatic fallbacks: <code>python3, python3-gi, gir1.2-webkit2-4.1 | gir1.2-webkit2-4.0 | chromium-browser | google-chrome-stable</code>.</li>
+                        </ul>
+                    </li>
+                    <li>Click <strong>BUILD UBUNTU APP (.DEB)</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="card-box" style="margin-top: 18px;">
+                <h3>📦 Output Deliverables</h3>
+                <p>WebToApp Studio Pro generates two complete distribution packages inside your output folder:</p>
+                <ul>
+                    <li><strong><code>[app]_[version]_[arch].deb</code>:</strong> Standard binary Debian package. Users double-click to install via Ubuntu Software Center, or run:
+                        <pre><code>sudo dpkg -i myapp_1.0.0_all.deb
+sudo apt-get install -f   # Resolves any missing runtime dependencies</code></pre>
+                    </li>
+                    <li><strong><code>[app]_[version]_linux_portable.tar.gz</code>:</strong> Standalone portable AppDir. Does not require root/sudo access:
+                        <pre><code>tar -xzf myapp_1.0.0_linux_portable.tar.gz
+cd myapp/
+./run.sh</code></pre>
+                    </li>
+                    <li><strong>Embedded Localhost Web Server:</strong> Local HTML5 games and web apps are automatically served via an embedded background Python 3 HTTP server on <code>localhost</code> with an ephemeral random port, guaranteeing 100% CORS-free execution, WebGL support, and IndexedDB/localStorage storage.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 14. MULTI-BUILD -->
+        <section id="multi-platform">
+            <h2>14. Multi-Build (All Platforms in 1-Click)</h2>
+            <p>Ship everywhere simultaneously with the <strong>Multi-Build</strong> target.</p>
+            <div class="card-box">
+                <p>Selecting <strong>Multi-Build</strong> allows you to click one button and generate:</p>
+                <ul>
+                    <li><strong>Windows (.exe):</strong> Standalone lightweight WebView2 desktop application.</li>
+                    <li><strong>Android (.zip):</strong> 100% turnkey Android Studio project + Google Play publishing assets (or compiled APK/AAB).</li>
+                    <li><strong>Ubuntu Linux (.deb):</strong> Debian installer package and portable Linux AppDir tarball.</li>
+                </ul>
+                <p>Perfect for indie developers, game studios, and SaaS founders who want cross-platform distribution without maintaining three different build pipelines.</p>
+            </div>
+        </section>
+
+        <!-- 15. FAQ -->
+        <section id="faq">
+            <h2>15. Frequently Asked Questions (FAQ)</h2>
+            <div class="card-box">
+                <h4>Q: Do my buyers need to install Python or Node.js to use the generated app?</h4>
+                <p>No! The Windows output executable is completely standalone and runs directly on Windows 10 and Windows 11. The Ubuntu Linux package includes standard system dependencies installed automatically via <code>apt</code>.</p>
+
+                <h4>Q: Can I compile Ubuntu .deb packages directly on a Windows PC?</h4>
+                <p>Yes! WebToApp Studio Pro contains a custom pure C# Unix <code>ar</code> archive writer and gzip tarball generator built on .NET 8 BCL. It generates 100% compliant Debian binary packages directly on Windows without WSL or Docker.</p>
+
+                <h4>Q: Can I sell the applications I build with WebToApp Studio Pro?</h4>
+                <p>Yes! Any applications you compile are 100% yours to sell, distribute, or license to clients royalty-free.</p>
+
+                <h4>Q: Does WebToApp Studio Pro support cookies and local storage?</h4>
+                <p>Yes. User sessions, local storage, cookies, and cache are preserved across restarts in an isolated sandboxed profile.</p>
+            </div>
+        </section>
+
+        <!-- 16. TROUBLESHOOTING & SUPPORT -->
+        <section id="troubleshooting">
+            <h2>16. Troubleshooting & Support</h2>
+            <div class="card-box">
+                <h4>Problem: "Missing WebView2 Runtime" alert on an older PC</h4>
+                <p>Solution: Microsoft Edge WebView2 is built into Windows 11 and recent Windows 10 updates. If testing on an older Windows 10 build, download the free evergreen runtime installer from Microsoft's official site: <code>https://developer.microsoft.com/microsoft-edge/webview2/</code>.</p>
+            </div>
+
+            <div class="card-box" style="margin-top: 20px; border-left: 4px solid #FFDD00; background: rgba(255, 221, 0, 0.03);">
+                <h3>❤️ Support the Developer (Wildcat Studio)</h3>
+                <p>WebToApp Studio Pro is actively maintained by <strong>Wildcat Studio</strong>. If this utility saves you time and accelerates your releases, consider buying me a coffee or joining our Patreon community!</p>
+                <div style="display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap;">
+                    <a href="https://buymeacoffee.com/wildcatstudio" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #FFDD00; color: #000000; font-weight: 700; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-size: 13px;">
+                        <span>☕ Buy Me a Coffee</span>
+                    </a>
+                    <a href="https://www.patreon.com/c/wildcatstudio" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #FF424D; color: #ffffff; font-weight: 700; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-size: 13px;">
+                        <span>❤️ Join on Patreon</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simple search filter for documentation links
+        document.getElementById('docsSearch').addEventListener('input', e => {
+            const val = e.target.value.toLowerCase();
+            document.querySelectorAll('.docs-nav a').forEach(link => {
+                const text = link.textContent.toLowerCase();
+                link.style.display = text.includes(val) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>WebToApp Studio Pro | Native Desktop & Mobile Packaging by WildCat Studio</title>
+  <meta name="title" content="WebToApp Studio Pro | Native Desktop & Mobile Packaging by WildCat Studio">
+  <meta name="description" content="Turn any website, WebGL game, or HTML5 app into ultra-fast native Windows .exe, Ubuntu .deb, and Android Studio projects. Zero Electron bloat, AES-256 asset encryption, and built-in Icon Studio.">
+  <meta name="theme-color" content="#1d68bd">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wildcatstudio.us/">
+  <meta property="og:title" content="WebToApp Studio Pro | Ultra-Fast Native Desktop & Mobile Packaging">
+  <meta property="og:description" content="No Electron bloat. 14MB executables, AES-256 encrypted assets, integrated Icon Studio, and 1-click updates.">
+  <meta property="og:image" content="https://wildcatstudio.us/preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://wildcatstudio.us/">
+  <meta property="twitter:title" content="WebToApp Studio Pro | Ultra-Fast Native Desktop & Mobile Packaging">
+  <meta property="twitter:description" content="No Electron bloat. 14MB executables, AES-256 encrypted assets, integrated Icon Studio, and 1-click updates.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231d68bd'><path d='M13 10V3L4 14h7v7l9-11h-7z'/></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="bg-glow-blue"></div>
+  <div class="bg-glow-red"></div>
+
+  <!-- ========================================================================
+       Header & Navigation
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-link">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">WebToApp Studio Pro</span>
+          <span class="brand-subtitle">by WildCat Studio</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#icon-studio" class="nav-link">Icon Studio</a></li>
+        <li><a href="#comparison" class="nav-link">Comparison</a></li>
+        <li><a href="#downloads" class="nav-link">Downloads</a></li>
+        <li><a href="#support" class="nav-link">Support & Fund</a></li>
+        <li><a href="docs/index.html" class="nav-link">Docs</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#downloads" class="btn btn-secondary btn-sm">Download Free</a>
+        <a href="https://buymeacoffee.com/wildcatstudio" target="_blank" rel="noopener" class="btn btn-support-red btn-sm">
+          <span>☕</span> Support Us
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section & Interactive App Simulation
+       ======================================================================== -->
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="badge-pill">
+          <span class="pill-dot"></span>
+          <span>v1.2.2 Released • Standalone Zero-Install Edition Now Live</span>
+        </div>
+
+        <h1 class="hero-title">
+          Transform Any Web App Into <span class="gradient-text-blue">Ultra-Fast Native Desktop</span> & <span class="gradient-text-red">Mobile Software</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Say goodbye to 150MB+ Electron memory bloat. Package web apps, WebGL games, and HTML5 suites into lean 14MB Windows <code>.exe</code>, Ubuntu <code>.deb</code>, and Google Play-ready Android Studio projects in seconds.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#downloads" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Download v1.2.2 Free
+          </a>
+          <a href="https://buymeacoffee.com/wildcatstudio" target="_blank" rel="noopener" class="btn btn-bmac btn-lg">
+            <span>☕</span> Buy Me a Coffee
+          </a>
+          <a href="https://www.patreon.com/wildcatstudio" target="_blank" rel="noopener" class="btn btn-patreon btn-lg">
+            <span>🎗️</span> Patreon
+          </a>
+        </div>
+
+        <!-- Simulated App Window Mockup -->
+        <div class="mockup-wrapper">
+          <div class="mockup-window">
+            <div class="mockup-titlebar">
+              <div class="window-dots">
+                <div class="window-dot dot-close"></div>
+                <div class="window-dot dot-min"></div>
+                <div class="window-dot dot-max"></div>
+              </div>
+              <div class="mockup-addressbar">
+                <span class="address-lock">🔒</span>
+                <span id="mockupUrl">https://app.local/space-arcade/</span>
+              </div>
+              <div class="window-controls-meta">
+                <span class="status-badge">● WebView2 Native</span>
+                <span>RAM: 32MB</span>
+              </div>
+            </div>
+
+            <!-- Viewport Preset Toggles -->
+            <div class="mockup-presets">
+              <button class="preset-btn active" data-preset="game">🕹️ Space Arcade (WebGL)</button>
+              <button class="preset-btn" data-preset="saas">📊 SaaS Analytics Pro</button>
+              <button class="preset-btn" data-preset="media">🎵 Synthwave Lossless Player</button>
+            </div>
+
+            <!-- Live Viewport Container -->
+            <div class="mockup-viewport" id="mockupViewport">
+              <div class="view-game">
+                <div class="game-canvas-preview">
+                  <div class="game-starfield"></div>
+                  <div class="game-hud">
+                    <span>SCORE: 18,450</span>
+                    <span>LIVES: 3</span>
+                    <span>ENGINE: WebGL 60FPS</span>
+                  </div>
+                  <div class="game-ship">
+                    <svg viewBox="0 0 24 24" fill="#60a5fa"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Metrics & Trust Bar
+         ======================================================================== -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon-box blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+            </div>
+            <div>
+              <div class="metric-val">14 MB</div>
+              <div class="metric-label">Lightweight Runtime Size</div>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box red">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            </div>
+            <div>
+              <div class="metric-val">AES-256</div>
+              <div class="metric-label">Streaming Memory Encryption</div>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.04-4.09l-2.61-1.53C16.14 17.74 14.21 19 12 19z"/></svg>
+            </div>
+            <div>
+              <div class="metric-val">0 Compilers</div>
+              <div class="metric-label">Instant 1-Click Template Engine</div>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box red">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div>
+              <div class="metric-val">70+ Clean</div>
+              <div class="metric-label">VirusTotal Verified Integrity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Features Grid Section
+         ======================================================================== -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ENGINEERING EXCELLENCE</span>
+          <h2 class="section-title">Packed with Pro-Grade Developer Capabilities</h2>
+          <p class="section-desc">Everything you need to turn responsive web applications into enterprise desktop and mobile software.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1: Multi-Platform -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v10H4zM2 18h20v2H2z"/></svg>
+            </div>
+            <h3 class="feature-title">Multi-Platform Output Engine</h3>
+            <p class="feature-body">Compile across formats from a single interface: native Windows 64-bit <code>.exe</code>, Ubuntu/Debian <code>.deb</code> packages, Linux Portable <code>.tar.gz</code>, Android Studio packages with ProGuard/R8 obfuscation, and Microsoft Store MSIX bundles.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">Windows x64</span>
+              <span class="feature-tag-chip">Ubuntu .deb</span>
+              <span class="feature-tag-chip">Android Studio</span>
+              <span class="feature-tag-chip">MSIX Store</span>
+            </div>
+          </div>
+
+          <!-- Feature 2: Standalone Zero-Install -->
+          <div class="feature-card spotlight-red">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="feature-title">Zero-Dependency Standalone Edition</h3>
+            <p class="feature-body">Embeds the .NET Core runtime and host components directly into the application directory. End users can double-click and run immediately with zero prompts, prerequisites, or framework installations.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">Zero Prerequisites</span>
+              <span class="feature-tag-chip">Embedded .NET</span>
+              <span class="feature-tag-chip">Instant Launch</span>
+            </div>
+          </div>
+
+          <!-- Feature 3: AES-256 Virtual Store -->
+          <div class="feature-card spotlight-red">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            </div>
+            <h3 class="feature-title">AES-256 Virtual Streaming Store</h3>
+            <p class="feature-body">Protect your intellectual property. Local HTML5, JS, and CSS code is encrypted with military-grade AES-256. Files stream directly into WebView2 memory without ever touching disk as plaintext.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">Anti-Decompilation</span>
+              <span class="feature-tag-chip">DevTools Lock</span>
+              <span class="feature-tag-chip">In-Memory Stream</span>
+            </div>
+          </div>
+
+          <!-- Feature 4: HTTPS Local Host -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <h3 class="feature-title">Virtual Host (https://app.local/)</h3>
+            <p class="feature-body">Permanently eliminate <code>file://</code> CORS limitations. Run WebGL, Web Workers, Web Audio, LocalStorage, IndexedDB, and ES6 dynamic imports flawlessly without hosting a Node server.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">Zero CORS Bugs</span>
+              <span class="feature-tag-chip">ES6 Modules</span>
+              <span class="feature-tag-chip">WebGL Audio</span>
+            </div>
+          </div>
+
+          <!-- Feature 5: 1-Click Auto-Updater -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+            </div>
+            <h3 class="feature-title">1-Click Auto-Updater</h3>
+            <p class="feature-body">Seamless background update checks against GitHub releases with SHA-256 cryptographic checksum verification, tamper rejection, and automatic silent installation.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">SHA-256 Checksum</span>
+              <span class="feature-tag-chip">Tamper Detection</span>
+              <span class="feature-tag-chip">Background Sync</span>
+            </div>
+          </div>
+
+          <!-- Feature 6: Kiosk & Acrylic -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4V4zm2 4v10h12V8H6z"/></svg>
+            </div>
+            <h3 class="feature-title">Kiosk Mode & Acrylic Styling</h3>
+            <p class="feature-body">Lock down POS and digital signage kiosks with Alt+F4 traps and taskbar hiding. Style windows with modern Windows 11 Mica and Acrylic transparency effects.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">Digital Signage</span>
+              <span class="feature-tag-chip">System Tray</span>
+              <span class="feature-tag-chip">Mica Transparency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Integrated Icon Studio Section & Live Playground
+         ======================================================================== -->
+    <section id="icon-studio" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag blue">INTEGRATED ICON STUDIO</span>
+          <h2 class="section-title">One Graphic In. 38 Formats Out.</h2>
+          <p class="section-desc">Design custom typography monogram badges or drop in a single PNG/SVG to produce complete multi-platform icon trees automatically.</p>
+        </div>
+
+        <div class="studio-interactive-box">
+          <!-- Studio Left: Controls -->
+          <div class="studio-controls">
+            <div>
+              <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:8px;">Live Monogram Playground</h3>
+              <p style="font-size:0.9rem;color:#94a3b8;">Try the in-app typography badge generator right now:</p>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="studioInitials">App Initials (1-4 Chars)</label>
+              <input type="text" id="studioInitials" class="studio-input" value="WCS" maxlength="4">
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Geometry Shape</label>
+              <div class="shape-buttons">
+                <button class="shape-btn active" data-shape="squircle">Squircle</button>
+                <button class="shape-btn" data-shape="circle">Circle</button>
+                <button class="shape-btn" data-shape="rounded">Rounded</button>
+                <button class="shape-btn" data-shape="square">Square</button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Gradient Palette</label>
+              <div class="color-swatches">
+                <div class="color-swatch swatch-duo active" title="Duo Brand"></div>
+                <div class="color-swatch swatch-blue" title="Medium Blue"></div>
+                <div class="color-swatch swatch-red" title="Crimson Red"></div>
+                <div class="color-swatch swatch-purple" title="Cyber Purple"></div>
+                <div class="color-swatch swatch-emerald" title="Emerald Mint"></div>
+              </div>
+            </div>
+
+            <div style="font-size:0.82rem;color:#94a3b8;line-height:1.5;">
+              ✨ Generates Windows 7-res <code>.ico</code>, Android mipmap densities, Microsoft Store tiles, and Linux hicolor trees with 1 click.
+            </div>
+          </div>
+
+          <!-- Studio Right: Mockup Displays -->
+          <div class="studio-displays">
+            <div style="font-size:0.85rem;font-weight:700;color:#cbd5e1;margin-bottom:16px;text-align:center;">
+              Live Cross-Platform Operating System Mockups
+            </div>
+
+            <div class="studio-mockup-grid">
+              <!-- Windows Desktop -->
+              <div class="mockup-item">
+                <span class="mockup-platform-tag">Windows Desktop</span>
+                <div class="icon-render-target" id="targetWin">WCS</div>
+                <span style="font-size:0.75rem;color:#94a3b8;">MyApp.exe (7-Res .ico)</span>
+              </div>
+
+              <!-- Android Google Play -->
+              <div class="mockup-item">
+                <span class="mockup-platform-tag">Android Launcher</span>
+                <div class="icon-render-target" id="targetAndroid">WCS</div>
+                <span style="font-size:0.75rem;color:#94a3b8;">mipmap-xxxhdpi</span>
+              </div>
+
+              <!-- Microsoft Store Tile -->
+              <div class="mockup-item">
+                <span class="mockup-platform-tag">Microsoft Store</span>
+                <div class="icon-render-target" id="targetStore">WCS</div>
+                <span style="font-size:0.75rem;color:#94a3b8;">Square150x150Logo</span>
+              </div>
+
+              <!-- Ubuntu Linux Dock -->
+              <div class="mockup-item">
+                <span class="mockup-platform-tag">Ubuntu Linux Dock</span>
+                <div class="icon-render-target" id="targetLinux">WCS</div>
+                <span style="font-size:0.75rem;color:#94a3b8;">hicolor/256x256</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Comparison Table Section
+         ======================================================================== -->
+    <section id="comparison" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">BENCHMARKS & ARCHITECTURE</span>
+          <h2 class="section-title">Why WebToApp Studio Pro Outperforms The Rest</h2>
+          <p class="section-desc">See how our WebView2 Instant Engine compares directly against traditional application wrappers.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature / Metric</th>
+                <th class="col-highlight">WebToApp Studio Pro</th>
+                <th>Electron</th>
+                <th>Tauri</th>
+                <th>Browser Shortcut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Application Binary Size</strong></td>
+                <td class="col-highlight"><strong>~14 MB</strong> (Ultra-Light)</td>
+                <td>150 MB - 250 MB</td>
+                <td>~10 MB - 15 MB</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td><strong>Idle Memory Footprint (RAM)</strong></td>
+                <td class="col-highlight"><strong>30 MB - 50 MB</strong></td>
+                <td>350 MB - 600 MB</td>
+                <td>40 MB - 60 MB</td>
+                <td>250 MB+</td>
+              </tr>
+              <tr>
+                <td><strong>Compiler / SDK Prerequisites</strong></td>
+                <td class="col-highlight"><strong>Zero Setup</strong> (1-Click)</td>
+                <td>Node.js, npm, Python, C++</td>
+                <td>Rust, Cargo, C++ Tools</td>
+                <td>Browser Only</td>
+              </tr>
+              <tr>
+                <td><strong>Source Code Security</strong></td>
+                <td class="col-highlight"><strong>AES-256 In-Memory Stream</strong></td>
+                <td>Asar (Plaintext Extractable)</td>
+                <td>Native Compiled</td>
+                <td>Plaintext Exposed</td>
+              </tr>
+              <tr>
+                <td><strong>Multi-Platform Builds</strong></td>
+                <td class="col-highlight"><strong>Windows + Linux + Android + Store</strong></td>
+                <td>Desktop Only</td>
+                <td>Desktop & Mobile</td>
+                <td>Desktop Only</td>
+              </tr>
+              <tr>
+                <td><strong>Integrated Icon Studio</strong></td>
+                <td class="col-highlight"><strong>Built-in (38 Icons + Badges)</strong></td>
+                <td>External Scripts Required</td>
+                <td>External Scripts</td>
+                <td>Manual .ico creation</td>
+              </tr>
+              <tr>
+                <td><strong>Built-in Auto-Updater</strong></td>
+                <td class="col-highlight"><strong>1-Click SHA-256 Verified</strong></td>
+                <td>Complex Server Setup</td>
+                <td>Complex Signing Setup</td>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Creator Support & Monetization Hub
+         ======================================================================== -->
+    <section id="support" class="section">
+      <div class="container">
+        <div class="support-hub-card">
+          <div class="support-hub-inner">
+            <div class="support-copy">
+              <span class="section-tag">SUPPORT INDIE CREATOR DEVELOPMENT</span>
+              <h3>Help Fund WildCat Studio & WebToApp Studio Pro</h3>
+              <p>
+                WebToApp Studio Pro is developed by <strong>WildCat Studio</strong> with love for indie developers, web agencies, and game makers. If this software saves you hours of packaging friction, consider supporting our ongoing development to help us maintain open releases, add new platform targets (macOS & iOS next!), and keep updates free for everyone!
+              </p>
+              <div class="support-quote-box">
+                "Empowering indie creators with enterprise-grade desktop packaging tools without subscription fees."
+              </div>
+            </div>
+
+            <div class="support-channels-grid">
+              <!-- Buy Me a Coffee Card -->
+              <a href="https://buymeacoffee.com/wildcatstudio" target="_blank" rel="noopener" class="channel-card bmac">
+                <div class="channel-info">
+                  <div class="channel-icon bmac">☕</div>
+                  <div>
+                    <div class="channel-title">Buy Me a Coffee</div>
+                    <div class="channel-desc">One-time tips & instant coffee fuel</div>
+                  </div>
+                </div>
+                <span class="btn btn-bmac btn-sm">Support Now &rarr;</span>
+              </a>
+
+              <!-- Patreon Card -->
+              <a href="https://www.patreon.com/wildcatstudio" target="_blank" rel="noopener" class="channel-card patreon">
+                <div class="channel-info">
+                  <div class="channel-icon patreon">🎗️</div>
+                  <div>
+                    <div class="channel-title">Join our Patreon</div>
+                    <div class="channel-desc">Devlogs, early beta builds & feature voting</div>
+                  </div>
+                </div>
+                <span class="btn btn-patreon btn-sm">Join Tiers &rarr;</span>
+              </a>
+
+              <!-- GitHub Community Star -->
+              <a href="https://github.com/djacidfx/webtoapp-studio-pro" target="_blank" rel="noopener" class="channel-card">
+                <div class="channel-info">
+                  <div class="channel-icon" style="background:rgba(255,255,255,0.1);color:#fff;">⭐</div>
+                  <div>
+                    <div class="channel-title">Star on GitHub</div>
+                    <div class="channel-desc">Spread the word to fellow developers</div>
+                  </div>
+                </div>
+                <span class="btn btn-secondary btn-sm">Star Repo &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Download Center & Release Integrity
+         ======================================================================== -->
+    <section id="downloads" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag blue">OFFICIAL DISTRIBUTION HUB</span>
+          <h2 class="section-title">Download WebToApp Studio Pro v1.2.2</h2>
+          <p class="section-desc">Choose between zero-install standalone bundles or ultra-compact runtime editions.</p>
+        </div>
+
+        <div class="downloads-grid">
+          <!-- Standalone Windows (Recommended) -->
+          <div class="download-pkg-card recommended">
+            <span class="pkg-badge">Recommended</span>
+            <span class="pkg-platform">Windows 10 / 11 (64-Bit)</span>
+            <h3 class="pkg-title">Standalone Edition</h3>
+            <p class="pkg-meta">Includes embedded .NET runtime. Double-click and launch immediately with zero prompts or installation steps.</p>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#38bdf8;">Size: 68.03 MB • Self-Contained</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.2.2/WebToApp-Studio-v1.2.2.zip" class="btn btn-primary" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download Standalone .zip
+            </a>
+          </div>
+
+          <!-- Lightweight Windows -->
+          <div class="download-pkg-card">
+            <span class="pkg-platform">Windows 10 / 11 (64-Bit)</span>
+            <h3 class="pkg-title">Lightweight Edition</h3>
+            <p class="pkg-meta">Ultra-compact archive. Requires the free Microsoft .NET 8.0 Desktop Runtime pre-installed on the host machine.</p>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 1.78 MB • Fast Download</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.2.2/WebToApp-Studio-v1.2.2-Lightweight.zip" class="btn btn-secondary" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download Lightweight .zip
+            </a>
+          </div>
+
+          <!-- Ubuntu / Debian -->
+          <div class="download-pkg-card">
+            <span class="pkg-platform">Ubuntu / Debian / Mint</span>
+            <h3 class="pkg-title">Debian Package</h3>
+            <p class="pkg-meta">Native Linux .deb installer with desktop launcher, icon registration, and standard system integration.</p>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 1.36 MB • .deb Package</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.2.2/WebToApp-Studio-Pro_1.2.2_amd64.deb" class="btn btn-secondary" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download Ubuntu .deb
+            </a>
+          </div>
+
+          <!-- Linux Portable -->
+          <div class="download-pkg-card">
+            <span class="pkg-platform">Linux x64 Portable</span>
+            <h3 class="pkg-title">Portable AppDir</h3>
+            <p class="pkg-meta">Universal portable Linux archive. Extract and run on any modern Linux distribution without root installation.</p>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 1.36 MB • .tar.gz Archive</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.2.2/WebToApp-Studio-Pro-Linux-x64-v1.2.2-Portable.tar.gz" class="btn btn-secondary" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download Portable .tar.gz
+            </a>
+          </div>
+        </div>
+
+        <!-- Cryptographic Checksums & VirusTotal Table -->
+        <div class="integrity-box">
+          <div class="integrity-title">
+            <span>🛡️</span> Cryptographic SHA-256 Checksums & Anti-Malware Verification
+          </div>
+
+          <div class="hash-row">
+            <div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-v1.2.2.zip</div>
+              <div class="hash-code">f9e445c7a54f69dccee8c68b5e1a9a818f42fbdcede0ecdad9a21bc22eceeaec</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <a href="https://www.virustotal.com/gui/file/f9e445c7a54f69dccee8c68b5e1a9a818f42fbdcede0ecdad9a21bc22eceeaec" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="f9e445c7a54f69dccee8c68b5e1a9a818f42fbdcede0ecdad9a21bc22eceeaec">Copy Hash</button>
+            </div>
+          </div>
+
+          <div class="hash-row">
+            <div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-v1.2.2-Lightweight.zip</div>
+              <div class="hash-code">d4c9cf16c34cb550282cad58532355d832cbeadbdc753ed9ccdc94100d21e538</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <a href="https://www.virustotal.com/gui/file/d4c9cf16c34cb550282cad58532355d832cbeadbdc753ed9ccdc94100d21e538" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="d4c9cf16c34cb550282cad58532355d832cbeadbdc753ed9ccdc94100d21e538">Copy Hash</button>
+            </div>
+          </div>
+
+          <div class="hash-row">
+            <div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-Pro_1.2.2_amd64.deb</div>
+              <div class="hash-code">3cbc32624f0a51ebc7d20b152b77a5384a75bf0d84b24845b9e1c95a3c0e297e</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <a href="https://www.virustotal.com/gui/file/3cbc32624f0a51ebc7d20b152b77a5384a75bf0d84b24845b9e1c95a3c0e297e" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="3cbc32624f0a51ebc7d20b152b77a5384a75bf0d84b24845b9e1c95a3c0e297e">Copy Hash</button>
+            </div>
+          </div>
+
+          <div class="hash-row">
+            <div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-Pro-Linux-x64-v1.2.2-Portable.tar.gz</div>
+              <div class="hash-code">3c83ace7850b20784183b300d0790aee9ce3c744a1b76a10bb74aa7bc7be4339</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <a href="https://www.virustotal.com/gui/file/3c83ace7850b20784183b300d0790aee9ce3c744a1b76a10bb74aa7bc7be4339" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="3c83ace7850b20784183b300d0790aee9ce3c744a1b76a10bb74aa7bc7be4339">Copy Hash</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FAQ Section
+         ======================================================================== -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ANSWERS TO COMMON QUESTIONS</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is the difference between Standalone and Lightweight editions?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The <strong>Standalone Edition</strong> embeds the required .NET Core runtime directly within the application package so it runs on any modern Windows 10/11 64-bit machine with zero prerequisites or missing runtime warnings. The <strong>Lightweight Edition</strong> is an ultra-small 1.78 MB package intended for developers who already have Microsoft .NET 8.0 Desktop Runtime installed.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do my generated applications require end users to install Node.js?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>No!</strong> Generated applications use Microsoft Edge WebView2, which is pre-installed natively on Windows 10 and Windows 11. End users simply double-click your executable to launch immediately without installing Node.js, Python, or external frameworks.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does AES-256 asset encryption protect my source code?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Unlike standard Electron <code>.asar</code> archives (which can be unbundled in seconds with free tools), WebToApp Studio Pro encrypts your HTML, JS, CSS, and media files into an AES-256 binary vault. The custom host intercepts WebView2 network requests and streams decrypted data in-memory directly to the browser view without writing decrypted files to temporary folders on disk.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I publish to the Microsoft Store or Google Play?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>For Google Play, select the <strong>Android App</strong> target to produce an Android Studio project with pre-configured Gradle scripts and ProGuard/R8 obfuscation. For the Microsoft Store, select <strong>Microsoft Store (MSIX)</strong> to generate signed packages with custom certificates ready for developer center submission.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-link" style="margin-bottom:8px;">
+            <div class="brand-icon" style="width:30px;height:30px;">
+              <svg viewBox="0 0 24 24" style="width:18px;height:18px;"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="brand-title" style="font-size:1rem;">WebToApp Studio Pro</span>
+          </div>
+          <p>
+            A high-performance packaging suite crafted by <strong>WildCat Studio</strong> to empower developers, studios, and creators worldwide.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#features" class="footer-link">Core Features</a></li>
+            <li><a href="#icon-studio" class="footer-link">Icon Studio</a></li>
+            <li><a href="#comparison" class="footer-link">Architecture Comparison</a></li>
+            <li><a href="#downloads" class="footer-link">Download v1.2.2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support the Creator</h4>
+          <ul class="footer-links">
+            <li><a href="https://buymeacoffee.com/wildcatstudio" target="_blank" rel="noopener" class="footer-link">☕ Buy Me a Coffee</a></li>
+            <li><a href="https://www.patreon.com/wildcatstudio" target="_blank" rel="noopener" class="footer-link">🎗️ Patreon Memberships</a></li>
+            <li><a href="https://github.com/djacidfx/webtoapp-studio-pro" target="_blank" rel="noopener" class="footer-link">⭐ Star on GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="docs/index.html" class="footer-link">Documentation Manual</a></li>
+            <li><a href="https://github.com/djacidfx/webtoapp-releases" target="_blank" rel="noopener" class="footer-link">Public Release Hub</a></li>
+            <li><a href="https://wildcatstudio.us/" class="footer-link">WildCat Studio Home</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>WildCat Studio</strong>. Hosted with GitHub Pages on <a href="https://wildcatstudio.us/" style="color:#60a5fa;text-decoration:none;">wildcatstudio.us</a>.
+        </div>
+        <div>
+          Built with precision • No telemetry • 100% VirusTotal Clean
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
