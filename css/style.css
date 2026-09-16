@@ -270,19 +270,6 @@ body {
   box-shadow: 0 6px 20px rgba(255, 221, 0, 0.5);
 }
 
-.btn-patreon {
-  background: #FF424D;
-  color: #fff;
-  font-weight: 700;
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 14px rgba(255, 66, 77, 0.35);
-}
-
-.btn-patreon:hover {
-  background: #ff5e68;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 66, 77, 0.5);
-}
 
 .btn-sm {
   padding: 6px 14px;
@@ -1104,10 +1091,6 @@ body {
   box-shadow: 0 8px 30px rgba(255, 221, 0, 0.3);
 }
 
-.channel-card.patreon:hover {
-  border-color: #FF424D;
-  box-shadow: 0 8px 30px rgba(255, 66, 77, 0.3);
-}
 
 .channel-info {
   display: flex;
@@ -1132,11 +1115,6 @@ body {
   border: 1px solid rgba(255, 221, 0, 0.4);
 }
 
-.channel-icon.patreon {
-  background: rgba(255, 66, 77, 0.15);
-  color: #FF424D;
-  border: 1px solid rgba(255, 66, 77, 0.4);
-}
 
 .channel-title {
   font-size: 1.1rem;
