@@ -1417,6 +1417,12 @@ body {
   box-shadow: 0 10px 30px var(--blue-glow);
 }
 
+.roadmap-card.shipped {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, rgba(14, 22, 38, 0.85) 100%);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+}
+
 .roadmap-status-badge {
   display: inline-flex;
   align-items: center;
@@ -1429,6 +1435,12 @@ body {
   border-radius: var(--radius-full);
   margin-bottom: 16px;
   width: fit-content;
+}
+
+.badge-shipped {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 .badge-in-progress {
