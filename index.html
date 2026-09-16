@@ -295,6 +295,21 @@
               <span class="feature-tag-chip">Mica Transparency</span>
             </div>
           </div>
+
+          <!-- Feature 7: Native SQLite Database Bridge -->
+          <div class="feature-card spotlight-blue">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zm6 5.25c-.87.48-2.26.75-3.8.75-2.07 0-3.92-.48-4.95-1.21-.5-.36-.92-.76-1.25-1.19V12c0 .5 2.13 2 6 2s6-1.5 6-2v-1.75zM12 19c-3.87 0-6-1.5-6-2v-2.1c1.03.73 2.88 1.1 4.95 1.1 1.54 0 2.93-.27 3.8-.75V17c0 .5-2.13 2-6 2z"/></svg>
+            </div>
+            <h3 class="feature-title">Native SQLite Database Bridge</h3>
+            <p class="feature-body">Zero-driver relational database for persistent offline storage, user state, and caching. Seamless promise-based JavaScript API (<code>window.desktopApp.db</code>) with atomic transactions, WAL concurrency, and origin isolation.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">Embedded SQLite 3</span>
+              <span class="feature-tag-chip">Atomic Transactions</span>
+              <span class="feature-tag-chip">WAL Concurrency</span>
+              <span class="feature-tag-chip">Origin Security</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -508,14 +523,25 @@
             </div>
           </div>
 
-          <!-- Milestone 3: SQLite Bridge -->
-          <div class="roadmap-card">
-            <span class="roadmap-status-badge badge-community">💡 Community Request • v1.5.0</span>
+          <!-- Milestone 3: SQLite Bridge (Shipped) -->
+          <div class="roadmap-card active-dev" style="border-color: rgba(16, 185, 129, 0.4);">
+            <span class="roadmap-status-badge badge-shipped" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);">⚡ Shipped & Ready • v1.3.0</span>
             <h3 class="roadmap-title">Built-in SQLite & Local Database Bridge</h3>
-            <p class="roadmap-desc">High-speed native SQLite engine exposed via a lightweight frontend JavaScript API (<code>window.desktopApp.db</code>) for robust local relational database storage.</p>
+            <p class="roadmap-desc">High-speed embedded SQLite 3 engine exposed via promise-based JavaScript API (<code>window.desktopApp.db</code>) with atomic transactions, WAL concurrency, origin isolation, and zero native drivers.</p>
             <div class="roadmap-meta">
-              <span>Target: All Platforms</span>
-              <span style="color:#fb7185;">Under Research</span>
+              <span>Target: Windows (Live in Studio)</span>
+              <span style="color:#34d399; font-weight:600;">Available Now</span>
+            </div>
+          </div>
+
+          <!-- Milestone 4: Native Notifications & Tray Alerts -->
+          <div class="roadmap-card">
+            <span class="roadmap-status-badge badge-community">💡 Community Request • v1.4.0</span>
+            <h3 class="roadmap-title">Native OS Notifications & Audio Alerts</h3>
+            <p class="roadmap-desc">Rich desktop notification dispatch with actionable buttons, sound effects, and tray badge counters triggered directly from frontend JavaScript.</p>
+            <div class="roadmap-meta">
+              <span>Target: Windows & Linux</span>
+              <span style="color:#fb7185;">Under Discussion</span>
             </div>
           </div>
         </div>
