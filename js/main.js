@@ -40,7 +40,7 @@ function initAppSimulator() {
         </div>`
     },
     saas: {
-      url: 'https://app.local/analytics-pro/',
+      url: 'https://app.local/saas-dashboard-client/',
       render: () => `
         <div class="view-saas">
           <div class="saas-sidebar">
@@ -50,6 +50,10 @@ function initAppSimulator() {
             <div class="saas-nav-item"></div>
           </div>
           <div class="saas-main">
+            <div style="background:rgba(29,104,189,0.18);border:1px solid rgba(29,104,189,0.4);border-radius:6px;padding:6px 12px;font-size:0.75rem;color:#bfdbfe;display:flex;align-items:center;gap:6px;">
+              <span>💡</span>
+              <span><strong>Packaging Use Case:</strong> Turn your company's React/Vue cloud dashboard or SaaS URL into a fast 32MB native desktop app.</span>
+            </div>
             <div class="saas-cards-row">
               <div class="saas-card"><div style="font-size:0.75rem;color:#94a3b8;">Active Users</div><div style="font-size:1.2rem;font-weight:700;">12,842</div></div>
               <div class="saas-card"><div style="font-size:0.75rem;color:#94a3b8;">Conversions</div><div style="font-size:1.2rem;font-weight:700;color:#38bdf8;">+28.4%</div></div>
