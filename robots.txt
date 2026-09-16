@@ -1,0 +1,8 @@
+# Robots.txt for WildCat Studio (https://wildcatstudio.us/)
+# Allow all search engine crawlers and bots full indexing access
+
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://wildcatstudio.us/sitemap.xml

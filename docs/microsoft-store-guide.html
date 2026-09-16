@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Microsoft Store (MSIX) Submission Guide - WebToApp Studio Pro</title>
+    <meta name="title" content="Microsoft Store (MSIX) Submission Guide - WebToApp Studio Pro">
+    <meta name="description" content="Step-by-step guide to publishing WebToApp Studio Pro applications to the Microsoft Store as MSIX packages. Learn about $0 free code signing, Partner Center setup, and automatic updates.">
+    <meta name="theme-color" content="#1d68bd">
+    <link rel="canonical" href="https://wildcatstudio.us/docs/microsoft-store-guide.html">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wildcatstudio.us/docs/microsoft-store-guide.html">
+    <meta property="og:title" content="Microsoft Store (MSIX) Submission Guide - WebToApp Studio Pro">
+    <meta property="og:description" content="Publish your web apps to the Microsoft Store with free automated code signing, zero SmartScreen warnings, and automatic background updates.">
+    <meta property="og:image" content="https://wildcatstudio.us/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wildcatstudio.us/docs/microsoft-store-guide.html">
+    <meta property="twitter:title" content="Microsoft Store (MSIX) Submission Guide - WebToApp Studio Pro">
+    <meta property="twitter:description" content="Publish your web apps to the Microsoft Store with free automated code signing and zero SmartScreen warnings.">
+    <meta property="twitter:image" content="https://wildcatstudio.us/preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="css/docs.css">
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wildcatstudio.us/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Documentation",
+          "item": "https://wildcatstudio.us/docs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Microsoft Store Guide",
+          "item": "https://wildcatstudio.us/docs/microsoft-store-guide.html"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .step-badge {
+            display: inline-block;
+            background: #0ea5e9;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .code-box {
+            background: #0b1120;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            padding: 14px 18px;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+            color: #38bdf8;
+            margin: 12px 0;
+            overflow-x: auto;
+            line-height: 1.5;
+        }
+        .highlight-advantage {
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .highlight-advantage h3 {
+            color: #38bdf8;
+            margin-top: 0;
+            font-size: 1.15rem;
+        }
+        .breadcrumb-nav {
+            margin-bottom: 16px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        .breadcrumb-nav a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main class="docs-content" style="max-width: 920px; margin: 40px auto; padding: 0 24px;">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="../index.html">&larr; wildcatstudio.us</a> &nbsp;/&nbsp; 
+            <a href="index.html">Documentation</a> &nbsp;/&nbsp; 
+            <span>Microsoft Store Guide</span>
+        </nav>
+
+        <span class="hero-badge" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8; border-color: rgba(14, 165, 233, 0.4);">Windows 10 & 11 Desktop Publishing</span>
+        <h1>Microsoft Store (MSIX) Submission & Publishing Guide</h1>
+        <p class="lead">Complete step-by-step walkthrough for packaging WebToApp Studio Pro applications as modern Windows <code>.msix</code> packages and publishing directly to the Microsoft Store.</p>
+
+        <div class="highlight-advantage">
+            <h3>🌟 The $0 Code Signing Advantage of Microsoft Store</h3>
+            <p style="margin-bottom: 8px; color: #e2e8f0;">Normally, distributing standalone Windows software requires purchasing an expensive <strong>Commercial Code Signing Certificate</strong> ($300 to $500+ every year) to prevent Windows SmartScreen from showing <em>"Windows protected your PC"</em> warnings.</p>
+            <ul style="color: #cbd5e1; margin-bottom: 0;">
+                <li><strong>$0 Digital Signing</strong>: Microsoft automatically signs your MSIX package with Microsoft's globally trusted root certificate for free during ingestion.</li>
+                <li><strong>Zero SmartScreen Warnings</strong>: Users downloading from the Microsoft Store will never see untrusted warnings.</li>
+                <li><strong>Automatic Background Updates</strong>: Windows Update handles silent delta updates for all users when you release new versions.</li>
+                <li><strong>One-Time Account Fee</strong>: Microsoft Partner Center costs just a <strong>one-time $19 USD fee</strong> for individual developers (or $99 corporate) with zero recurring subscriptions.</li>
+            </ul>
+        </div>
+
+        <!-- Sideload Testing -->
+        <section id="sideload">
+            <h2>Part 1: Immediate Local Sideload Testing</h2>
+            <span class="step-badge">Phase 1: Local Verification</span>
+            <p>Before submitting to Partner Center, you can test-install your <code>.msix</code> package locally on your own Windows 10 or 11 workstation:</p>
+            
+            <ol style="color: #cbd5e1; line-height: 1.7;">
+                <li>Generate your MSIX package using WebToApp Studio Pro's <strong>Microsoft Store (MSIX)</strong> target tab.</li>
+                <li>Open PowerShell as <strong>Administrator</strong> in your generated MSIX folder.</li>
+                <li>Run the automated certificate installer:
+                    <div class="code-box">.\Install-TestCertificate.ps1</div>
+                    <em>(This safely installs your development signing certificate to <code>Cert:\LocalMachine\TrustedPeople</code> for local testing).</em>
+                </li>
+                <li>Double-click your <code>.msix</code> file. The native <strong>Windows App Installer</strong> will open with your app's icon, name, and capabilities.</li>
+                <li>Click <strong>Install</strong> to test launch your app directly from the Windows Start Menu.</li>
+            </ol>
+        </section>
+
+        <!-- Partner Center -->
+        <section id="partner-center" style="margin-top: 36px;">
+            <h2>Part 2: Microsoft Partner Center Submission</h2>
+            <span class="step-badge">Phase 2: Store Ingestion</span>
+            <p>Once you are satisfied with local testing, submit your package to the worldwide Microsoft Store:</p>
+
+            <h3>Step 1: Sign in to Partner Center</h3>
+            <p>Log in to <a href="https://partner.microsoft.com/dashboard/apps-and-games/overview" target="_blank" rel="noopener" style="color: #38bdf8;">Microsoft Partner Center</a>. If you do not have an account, register as an individual developer ($19 one-time).</p>
+
+            <h3>Step 2: Reserve Your App Name</h3>
+            <p>Click <strong>Create a new product</strong> &rarr; <strong>MSIX or PWA app</strong>, enter your application name, and click <strong>Reserve product name</strong>.</p>
+
+            <h3>Step 3: Retrieve Your Product Identity</h3>
+            <p>In your app menu on the left, navigate to <strong>Product management &rarr; Product Identity</strong>. Copy the three values:</p>
+            <ul>
+                <li><strong>Package/Identity Name</strong> (e.g. <code>12345WildcatStudio.MyAwesomeApp</code>)</li>
+                <li><strong>Publisher ID</strong> (e.g. <code>CN=938E4211-1234-ABCD-5678-0123456789AB</code>)</li>
+                <li><strong>Publisher Display Name</strong> (e.g. <code>WildCat Studio</code>)</li>
+            </ul>
+
+            <h3>Step 4: Package with Your Exact Identity</h3>
+            <p>Build your final store package with your Partner Center parameters:</p>
+            <div class="code-box">.\package_store_studio.ps1 `<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-PackageName "Your_Partner_Center_Package_Name" `<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-PublisherId "CN=Your_Partner_Center_Publisher_ID" `<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-PublisherDisplayName "Your_Partner_Center_Publisher_Display_Name"</div>
+
+            <h3>Step 5: Complete Submission Details</h3>
+            <p>Click <strong>Start your submission</strong> and complete the standard sections:</p>
+            <ul>
+                <li><strong>Pricing and Availability</strong>: Choose Free or set your commercial price. Select all global markets.</li>
+                <li><strong>Properties</strong>: Category (Developer Tools or Utilities), Privacy Policy URL.</li>
+                <li><strong>Age Ratings</strong>: Complete the IARC questionnaire (typically rated for all ages).</li>
+                <li><strong>Packages</strong>: Drag and drop your final <code>.msix</code> file. Partner Center will validate package schemas in real time.</li>
+                <li><strong>Store Listings</strong>: Add your app title, marketing description, screenshots, and keywords.</li>
+            </ul>
+
+            <h3>Step 6: Submit for Certification</h3>
+            <p>Click <strong>Submit to the Store</strong>. Microsoft's automated security certification typically approves and publishes the app within 24 to 72 hours.</p>
+        </section>
+
+        <div style="margin-top: 50px; padding-top: 24px; border-top: 1px solid #1e293b; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <a href="index.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">&larr; Back to Documentation Hub</a>
+            <a href="google-play-guide.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Google Play Publishing Guide &rarr;</a>
+        </div>
+    </main>
+</body>
+</html>

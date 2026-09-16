@@ -3,8 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>Google Play Publishing Guide - WebToApp Studio Pro</title>
+    <meta name="title" content="Google Play Publishing Guide - WebToApp Studio Pro">
+    <meta name="description" content="Step-by-step tutorial for publishing your WebToApp Studio Pro generated Android app to the Google Play Store Console. Learn how to build signed Android App Bundles (.aab).">
+    <meta name="theme-color" content="#10b981">
+    <link rel="canonical" href="https://wildcatstudio.us/docs/google-play-guide.html">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wildcatstudio.us/docs/google-play-guide.html">
+    <meta property="og:title" content="Google Play Publishing Guide - WebToApp Studio Pro">
+    <meta property="og:description" content="Step-by-step tutorial for publishing WebToApp Studio Pro Android apps to Google Play as signed .aab bundles.">
+    <meta property="og:image" content="https://wildcatstudio.us/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wildcatstudio.us/docs/google-play-guide.html">
+    <meta property="twitter:title" content="Google Play Publishing Guide - WebToApp Studio Pro">
+    <meta property="twitter:description" content="Step-by-step tutorial for publishing WebToApp Studio Pro Android apps to Google Play as signed .aab bundles.">
+    <meta property="twitter:image" content="https://wildcatstudio.us/preview.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <link rel="stylesheet" href="css/docs.css">
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wildcatstudio.us/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Documentation",
+          "item": "https://wildcatstudio.us/docs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Play Guide",
+          "item": "https://wildcatstudio.us/docs/google-play-guide.html"
+        }
+      ]
+    }
+    </script>
     <style>
         .step-badge {
             display: inline-block;
@@ -28,16 +83,33 @@
             margin: 10px 0;
             overflow-x: auto;
         }
+        .breadcrumb-nav {
+            margin-bottom: 16px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        .breadcrumb-nav a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <main class="docs-content" style="max-width: 900px; margin: 40px auto; padding: 0 24px;">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="../index.html">&larr; wildcatstudio.us</a> &nbsp;/&nbsp; 
+            <a href="index.html">Documentation</a> &nbsp;/&nbsp; 
+            <span>Google Play Guide</span>
+        </nav>
         <span class="hero-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Google Play Publishing Guide</span>
         <h1>Publishing Your Android App to Google Play</h1>
         <p class="lead">Complete step-by-step walkthrough for opening the WebToApp Studio Pro generated Android project, building your release Android App Bundle (<code>.aab</code>), and publishing to the Google Play Store Console.</p>
 
         <div class="card-box" style="margin-bottom: 24px;">
-            <h3>? What WebToApp Studio Pro Generated For You</h3>
+            <h3>🚀 What WebToApp Studio Pro Generated For You</h3>
             <ul>
                 <li><strong>Turnkey Android 14 (API 34) Project:</strong> Configured with modern Gradle Kotlin DSL scripts (<code>build.gradle.kts</code>).</li>
                 <li><strong>WebViewAssetLoader:</strong> High-performance internal HTTPS virtual host (<code>https://appassets.androidplatform.net/</code>) for zero-CORS local assets.</li>
@@ -98,6 +170,9 @@
                     </a>
                     <a href="https://github.com/djacidfx/webtoapp-releases/issues" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); color: #ffffff; font-weight: 600; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 12px; border: 1px solid rgba(255, 255, 255, 0.2);">
                         <span>💬 Feature Requests & Issues</span>
+                    </a>
+                    <a href="microsoft-store-guide.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0ea5e9; color: #ffffff; font-weight: 600; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 12px;">
+                        <span>🏬 Microsoft Store (MSIX) Guide &rarr;</span>
                     </a>
                     <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #ffffff; font-weight: 600; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 12px;">
                         <span>&larr; Back to Full Documentation</span>
