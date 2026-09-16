@@ -54,6 +54,7 @@
         <li><a href="#features" class="nav-link">Features</a></li>
         <li><a href="#icon-studio" class="nav-link">Icon Studio</a></li>
         <li><a href="#comparison" class="nav-link">Comparison</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
         <li><a href="#downloads" class="nav-link">Downloads</a></li>
         <li><a href="#support" class="nav-link">Support & Fund</a></li>
         <li><a href="docs/index.html" class="nav-link">Docs</a></li>
@@ -466,6 +467,116 @@
           </table>
         </div>
       </div>
+    <!-- ========================================================================
+         Roadmap & Community Feature Requests
+         ======================================================================== -->
+    <section id="roadmap" class="section" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag blue">DEVELOPMENT ROADMAP</span>
+          <h2 class="section-title">What's Coming Next to WebToApp Studio Pro</h2>
+          <p class="section-desc">We build transparently alongside our indie community. Explore upcoming milestones, vote on priorities, and submit your own feature requests!</p>
+        </div>
+
+        <!-- Roadmap Cards Grid -->
+        <div class="roadmap-grid">
+          <!-- Milestone 1: Windows Setup Installer -->
+          <div class="roadmap-card active-dev">
+            <span class="roadmap-status-badge badge-in-progress">⚡ In Development • v1.3.0</span>
+            <h3 class="roadmap-title">1-Click Windows Setup Installer (.exe)</h3>
+            <p class="roadmap-desc">Integrated Inno Setup compiler producing full Windows installation wizards with Desktop shortcuts, Start Menu entries, and clean uninstallers alongside portable zips.</p>
+            <div class="roadmap-meta">
+              <span>Target: Windows 10 / 11</span>
+              <span style="color:#60a5fa;">Estimated: Q4 2026</span>
+            </div>
+          </div>
+
+          <!-- Milestone 2: macOS Target -->
+          <div class="roadmap-card">
+            <span class="roadmap-status-badge badge-planned">🍏 Planned • v1.4.0</span>
+            <h3 class="roadmap-title">macOS Universal Target (.dmg / .app)</h3>
+            <p class="roadmap-desc">Native WebKit-powered macOS packaging supporting both Apple Silicon (M1/M2/M3/M4) and Intel architectures with drag-to-Applications .dmg disk image export.</p>
+            <div class="roadmap-meta">
+              <span>Target: macOS 12+ (Universal)</span>
+              <span style="color:#c084fc;">Patreon Voted</span>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Deep Linking -->
+          <div class="roadmap-card">
+            <span class="roadmap-status-badge badge-planned">🔗 Planned • v1.5.0</span>
+            <h3 class="roadmap-title">Custom Deep-Linking (myapp://)</h3>
+            <p class="roadmap-desc">Register custom URI protocol schemes so external web browsers, emails, or Discord links can launch your desktop application directly into specific views or states.</p>
+            <div class="roadmap-meta">
+              <span>Target: Win / Linux / Mac</span>
+              <span style="color:#c084fc;">Planned</span>
+            </div>
+          </div>
+
+          <!-- Milestone 4: SQLite Bridge -->
+          <div class="roadmap-card">
+            <span class="roadmap-status-badge badge-community">💡 Community Request • v1.6.0</span>
+            <h3 class="roadmap-title">Built-in SQLite & Local Database Bridge</h3>
+            <p class="roadmap-desc">High-speed native SQLite engine exposed via a lightweight frontend JavaScript API (<code>window.desktopApp.db</code>) for robust local relational database storage.</p>
+            <div class="roadmap-meta">
+              <span>Target: All Platforms</span>
+              <span style="color:#fb7185;">Under Research</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Request Guide & Callout Card -->
+        <div class="feature-request-card">
+          <div class="request-guide-header">
+            <span class="section-tag" style="color:var(--blue-light);">COMMUNITY-DRIVEN DEVELOPMENT</span>
+            <h3>Have an Idea or Need a Specific Feature?</h3>
+            <p>
+              We want to hear from you! Feature requests are reviewed, discussed, and prioritized directly on GitHub. Here is how you can submit yours in 3 quick steps:
+            </p>
+          </div>
+
+          <!-- 3-Step Guide Grid -->
+          <div class="request-steps-grid">
+            <div class="request-step-item">
+              <div class="step-num-badge">1</div>
+              <h4 class="step-title">Visit GitHub Issues</h4>
+              <p class="step-desc">
+                Head over to our public repository's issue tracker at <a href="https://github.com/djacidfx/webtoapp-releases/issues" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none;font-weight:600;">webtoapp-releases/issues</a> and click the green <strong>"New Issue"</strong> button.
+              </p>
+            </div>
+
+            <div class="request-step-item">
+              <div class="step-num-badge">2</div>
+              <h4 class="step-title">Describe Your Use Case</h4>
+              <p class="step-desc">
+                Give your request a clear title (e.g. <em>"Add system notification sound trigger"</em>), describe what you are building, your target platform, and how this feature would help your workflow.
+              </p>
+            </div>
+
+            <div class="request-step-item">
+              <div class="step-num-badge">3</div>
+              <h4 class="step-title">Vote & Track Progress</h4>
+              <p class="step-desc">
+                Add a 👍 thumbs-up reaction to existing feature requests you'd like to see implemented. High-vote community requests and Patreon suggestions move straight to the top of our development sprint!
+              </p>
+            </div>
+          </div>
+
+          <!-- Action Buttons Bar -->
+          <div class="request-actions-bar">
+            <a href="https://github.com/djacidfx/webtoapp-releases/issues/new?title=%5BFeature+Request%5D+&body=%23%23+Feature+Description%0A%0A%23%23+Target+Platform%0A%5B+%5D+Windows%0A%5B+%5D+Linux%0A%5B+%5D+Android%0A%5B+%5D+macOS%0A%0A%23%23+Why+is+this+feature+needed%3F%0A" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              <span>💡</span> Open Feature Request on GitHub
+            </a>
+            <a href="https://github.com/djacidfx/webtoapp-releases/issues" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
+              <span>🔍</span> Browse Existing Requests
+            </a>
+            <a href="https://www.patreon.com/wildcatstudio" target="_blank" rel="noopener" class="btn btn-patreon btn-lg">
+              <span>🎗️</span> Vote with Patreon Members
+            </a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ========================================================================
@@ -723,6 +834,7 @@
             <li><a href="#features" class="footer-link">Core Features</a></li>
             <li><a href="#icon-studio" class="footer-link">Icon Studio</a></li>
             <li><a href="#comparison" class="footer-link">Architecture Comparison</a></li>
+            <li><a href="#roadmap" class="footer-link">Development Roadmap</a></li>
             <li><a href="#downloads" class="footer-link">Download v1.2.2</a></li>
           </ul>
         </div>
@@ -741,6 +853,7 @@
           <ul class="footer-links">
             <li><a href="docs/index.html" class="footer-link">Documentation Manual</a></li>
             <li><a href="https://github.com/djacidfx/webtoapp-releases" target="_blank" rel="noopener" class="footer-link">Public Release Hub</a></li>
+            <li><a href="https://github.com/djacidfx/webtoapp-releases/issues" target="_blank" rel="noopener" class="footer-link">Feature Requests & Ideas</a></li>
             <li><a href="https://wildcatstudio.us/" class="footer-link">WildCat Studio Home</a></li>
           </ul>
         </div>
