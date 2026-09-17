@@ -1,0 +1,42 @@
+================================================================================
+WebToApp Studio Pro - Lightweight Edition Host Machine Requirements
+================================================================================
+
+You are using the ultra-compact Lightweight Edition of WebToApp Studio Pro.
+Because this edition does not bundle the ~50 MB .NET runtime inside itself,
+it utilizes the shared Microsoft .NET Desktop Runtime installed on your PC.
+
+HOST PREREQUISITES (WINDOWS):
+--------------------------------------------------------------------------------
+1. Operating System:
+   Windows 10 (version 1809 or higher) or Windows 11 (64-bit).
+
+2. Microsoft .NET 8.0 Desktop Runtime (x64) [REQUIRED]:
+   WebToApp Studio Pro is built with .NET 8 and native Windows Forms controls.
+   It specifically requires the DESKTOP Runtime (not just the base console or
+   ASP.NET Core runtime).
+
+   * Direct Official Microsoft Installer Download Link:
+     https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe
+
+   * Microsoft .NET 8 Download Portal:
+     https://dotnet.microsoft.com/download/dotnet/8.0/runtime
+
+3. Microsoft Edge WebView2 Evergreen Runtime:
+   Pre-installed on Windows 11 and all updated Windows 10 installations.
+   If missing on a stripped/LTSC Windows install:
+   https://go.microsoft.com/fwlink/p/?LinkId=2124703
+
+--------------------------------------------------------------------------------
+PREFER ZERO INSTALLATIONS? USE STANDALONE EDITION:
+--------------------------------------------------------------------------------
+If you prefer not to install the .NET Desktop Runtime on your host machine,
+download the completely self-contained STANDALONE EDITION:
+-> WebToApp-Studio-v1.5.3.zip
+
+The Standalone Edition includes the embedded .NET runtime and launches immediately
+out of the box with zero prompts, zero installations, and zero prerequisites!
+
+Official Website & Portal: https://wildcatstudio.us#downloads
+GitHub Releases: https://github.com/djacidfx/webtoapp-releases/releases/latest
+================================================================================

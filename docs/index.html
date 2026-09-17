@@ -129,18 +129,40 @@
 
         <!-- 2. REQUIREMENTS -->
         <section id="requirements">
-            <h2>2. System Requirements</h2>
-            <p><strong>For the WebToApp Studio Builder:</strong></p>
-            <ul>
-                <li>Operating System: Windows 10 (1809+) or Windows 11 (64-bit).</li>
-                <li>Runtime: .NET 8.0 Desktop Runtime (pre-installed or auto-installed).</li>
-                <li>Display: 1280 × 720 minimum screen resolution.</li>
-            </ul>
+            <h2>2. System Requirements & Host Prerequisites</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 18px 0;">
+                <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 18px;">
+                    <h3 style="color: #38bdf8; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                        <span>⚡</span> Standalone Edition (Zero-Config)
+                    </h3>
+                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 12px;">Completely self-contained. <strong>Zero runtime dependencies or installation steps required.</strong></p>
+                    <ul style="font-size: 0.88rem; color: #94a3b8; padding-left: 20px; line-height: 1.6;">
+                        <li><strong>Operating System:</strong> Windows 10 (1809+) or Windows 11 (64-bit).</li>
+                        <li><strong>Runtime:</strong> Embedded .NET runtime included inside the executable.</li>
+                        <li><strong>Web Engine:</strong> Microsoft Edge WebView2 (standard on modern Windows).</li>
+                        <li>Just extract <code>WebToApp-Studio-v1.5.3.zip</code> and run <code>WebToExe.Studio.exe</code> immediately.</li>
+                    </ul>
+                </div>
+                <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 18px;">
+                    <h3 style="color: #cbd5e1; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                        <span>🪶</span> Lightweight Edition (Fast Download)
+                    </h3>
+                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 12px;">Ultra-compact download (~28 MB). Relies on the host's installed .NET runtime.</p>
+                    <ul style="font-size: 0.88rem; color: #94a3b8; padding-left: 20px; line-height: 1.6;">
+                        <li><strong>Operating System:</strong> Windows 10 (1809+) or Windows 11 (64-bit).</li>
+                        <li><strong>Host Requirement:</strong> <a href="https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 700; text-decoration: underline;">Microsoft .NET 8.0 Desktop Runtime (x64)</a>.
+                            <br><span style="font-size: 0.8rem; color: #64748b;"><em>Must be the Desktop Runtime (not base console or ASP.NET).</em></span>
+                        </li>
+                        <li><strong>Web Engine:</strong> Microsoft Edge WebView2.</li>
+                    </ul>
+                </div>
+            </div>
 
-            <p><strong>For Generated Executables:</strong></p>
+            <p><strong>For Generated Application Outputs (Your Packaged Apps):</strong></p>
             <ul>
-                <li>Windows 10 / 11 (64-bit).</li>
-                <li>Microsoft Edge WebView2 Runtime (standard on all modern Windows installations).</li>
+                <li><strong>Windows Executables (.exe):</strong> Runs on Windows 10 and 11 (64-bit) with Microsoft Edge WebView2 Evergreen Runtime (pre-installed on 99%+ of Windows machines).</li>
+                <li><strong>Android Applications (.apk / .aab):</strong> Android 7.0 (API 24) through Android 14+ (API 34+).</li>
+                <li><strong>Ubuntu / Debian Packages (.deb):</strong> Ubuntu 20.04+, Debian 11+, Linux Mint 20+, or compatible distributions with WebKit2GTK.</li>
             </ul>
         </section>
 

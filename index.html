@@ -978,11 +978,17 @@
             <span class="pkg-platform">Windows 10 / 11 (64-Bit)</span>
             <h3 class="pkg-title">Standalone Edition</h3>
             <p class="pkg-meta">Includes embedded .NET runtime. Double-click and launch immediately with zero prompts or installation steps.</p>
-            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#38bdf8;">Size: 80.20 MB • Self-Contained</div>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:12px;color:#38bdf8;">Size: 80.20 MB • Self-Contained</div>
             <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.3/WebToApp-Studio-v1.5.3.zip" class="btn btn-primary" download>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Download Standalone .zip
             </a>
+            <div style="margin-top:14px;padding:10px 12px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.22);border-radius:6px;font-size:0.78rem;text-align:left;color:#94a3b8;line-height:1.45;">
+              <div style="font-weight:700;color:#22c55e;margin-bottom:3px;display:flex;align-items:center;gap:5px;">
+                <span>⚡</span> Zero Prerequisites
+              </div>
+              Includes embedded runtime. Runs immediately out of the box with zero setup.
+            </div>
           </div>
 
           <!-- Lightweight Windows -->
@@ -990,11 +996,20 @@
             <span class="pkg-platform">Windows 10 / 11 (64-Bit)</span>
             <h3 class="pkg-title">Lightweight Edition</h3>
             <p class="pkg-meta">Ultra-compact archive. Requires the free Microsoft .NET 8.0 Desktop Runtime pre-installed on the host machine.</p>
-            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 28.75 MB • Fast Download</div>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:12px;color:#cbd5e1;">Size: 28.75 MB • Fast Download</div>
             <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.3/WebToApp-Studio-v1.5.3-Lightweight.zip" class="btn btn-secondary" download>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Download Lightweight .zip
             </a>
+            <div style="margin-top:14px;padding:10px 12px;background:rgba(56,189,248,0.06);border:1px solid rgba(56,189,248,0.25);border-radius:6px;font-size:0.78rem;text-align:left;color:#94a3b8;line-height:1.45;">
+              <div style="font-weight:700;color:#38bdf8;margin-bottom:3px;display:flex;align-items:center;gap:5px;">
+                <span>ℹ️</span> Host Requirement:
+              </div>
+              Requires <strong>.NET 8.0 Desktop Runtime (x64)</strong>.<br>
+              <a href="https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:4px;">
+                Download Microsoft .NET 8.0 &rarr;
+              </a>
+            </div>
           </div>
 
           <!-- Ubuntu / Debian -->
@@ -1091,6 +1106,21 @@
         </div>
 
         <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What needs to be installed on my machine to run the Lightweight Edition vs Standalone Edition?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Depending on which Windows package you choose:</p>
+              <ul style="margin: 8px 0 12px 20px; line-height: 1.6; color: #cbd5e1;">
+                <li><strong>Standalone Edition (Recommended • 80.20 MB):</strong> <strong>Zero prerequisites required.</strong> The required .NET runtime components are fully embedded. Simply extract the ZIP and double-click <code>WebToExe.Studio.exe</code> to run immediately on any Windows 10/11 64-bit PC with zero installation steps.</li>
+                <li><strong>Lightweight Edition (Fast Download • 28.75 MB):</strong> Requires the free <strong><a href="https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe" target="_blank" rel="noopener" style="color:var(--blue-light);text-decoration:underline;">Microsoft .NET 8.0 Desktop Runtime (x64)</a></strong> installed on the host machine. <em>(Note: You specifically need the <strong>Desktop Runtime</strong> to support native Windows controls, rather than the base console runtime or ASP.NET Core runtime).</em></li>
+              </ul>
+              <p>Both editions run on <strong>Windows 10 (Build 1809+) or Windows 11 (64-bit)</strong> and utilize Microsoft Edge WebView2, which is pre-installed on all modern Windows machines. If you run the Lightweight edition on a machine without .NET 8 Desktop Runtime installed, Windows will display a popup with a direct link to install it.</p>
+            </div>
+          </div>
+
           <div class="faq-item">
             <button class="faq-question">
               <span>Does WebToApp Studio build my web app or provide SaaS analytics?</span>
