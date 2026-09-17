@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initAppSimulator();
   initMiniIconStudio();
   initMiniSplashStudio();
@@ -528,4 +529,66 @@ function initMiniSplashStudio() {
   }
 
   renderSplash();
+}
+
+/* ==========================================================================
+   7. Day / Night Mode (Light / Dark Theme)
+   ========================================================================== */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  if (!toggleBtn) return;
+
+  function updateThemeState(theme, animate = false) {
+    if (animate) {
+      document.documentElement.classList.add('theme-transition');
+    }
+
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      toggleBtn.setAttribute('aria-label', 'Switch to Night Mode (Dark)');
+      toggleBtn.setAttribute('title', 'Switch to Night Mode (Dark)');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      toggleBtn.setAttribute('aria-label', 'Switch to Day Mode (Light)');
+      toggleBtn.setAttribute('title', 'Switch to Day Mode (Light)');
+    }
+
+    if (animate) {
+      setTimeout(() => {
+        document.documentElement.classList.remove('theme-transition');
+      }, 300);
+    }
+  }
+
+  // Initial state synchronization
+  const isCurrentlyLight = document.documentElement.getAttribute('data-theme') === 'light';
+  updateThemeState(isCurrentlyLight ? 'light' : 'dark', false);
+
+  toggleBtn.addEventListener('click', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const targetTheme = isLight ? 'dark' : 'light';
+
+    try {
+      localStorage.setItem('wildcat_theme', targetTheme);
+    } catch(e) {}
+
+    updateThemeState(targetTheme, true);
+  });
+
+  // Listen to OS system color scheme changes if user hasn't set explicit preference
+  if (window.matchMedia) {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+    const handleOsChange = (e) => {
+      try {
+        if (!localStorage.getItem('wildcat_theme')) {
+          updateThemeState(e.matches ? 'light' : 'dark', true);
+        }
+      } catch(err) {}
+    };
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleOsChange);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleOsChange);
+    }
+  }
 }

@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('wildcat_theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        } catch(e) {}
+      })();
+    </script>
     
     <!-- Primary Meta Tags -->
     <title>WebToApp Studio Pro Documentation - Convert Web Apps to Windows EXE, Linux & Android</title>
@@ -59,14 +67,20 @@
 <body>
     <!-- Sidebar -->
     <aside class="docs-sidebar">
-        <a href="../index.html" style="text-decoration:none;color:inherit;">
-            <div class="docs-brand">
-                <div class="docs-brand-logo">
-                    <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <div class="docs-brand-header">
+            <a href="../index.html" style="text-decoration:none;color:inherit;">
+                <div class="docs-brand">
+                    <div class="docs-brand-logo">
+                        <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h2>WebToApp Studio Pro</h2>
                 </div>
-                <h2>WebToApp Studio Pro</h2>
-            </div>
-        </a>
+            </a>
+            <button class="docs-theme-toggle" id="docsThemeToggle" aria-label="Toggle Day or Night Mode" title="Toggle Day or Night Mode">
+                <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
         <div style="margin: 0 0 14px; font-size: 0.82rem;"><a href="../index.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">&larr; Return to wildcatstudio.us</a></div>
         <input type="text" id="docsSearch" class="docs-search" placeholder="Search documentation...">
 
@@ -819,6 +833,36 @@ cd myapp/
                 link.style.display = text.includes(val) ? 'block' : 'none';
             });
         });
+
+        // Day / Night Mode Toggle
+        const docsToggleBtn = document.getElementById('docsThemeToggle');
+        if (docsToggleBtn) {
+            function updateDocsTheme(theme, animate = false) {
+                if (animate) document.documentElement.classList.add('theme-transition');
+                if (theme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    docsToggleBtn.setAttribute('aria-label', 'Switch to Night Mode (Dark)');
+                    docsToggleBtn.setAttribute('title', 'Switch to Night Mode (Dark)');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    docsToggleBtn.setAttribute('aria-label', 'Switch to Day Mode (Light)');
+                    docsToggleBtn.setAttribute('title', 'Switch to Day Mode (Light)');
+                }
+                if (animate) {
+                    setTimeout(() => document.documentElement.classList.remove('theme-transition'), 300);
+                }
+            }
+
+            const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            updateDocsTheme(current, false);
+
+            docsToggleBtn.addEventListener('click', () => {
+                const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+                const nextTheme = isLight ? 'dark' : 'light';
+                try { localStorage.setItem('wildcat_theme', nextTheme); } catch(e) {}
+                updateDocsTheme(nextTheme, true);
+            });
+        }
     </script>
 </body>
 </html>

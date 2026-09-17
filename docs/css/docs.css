@@ -5,10 +5,35 @@
     --border: #30363d;
     --text-primary: #f0f6fc;
     --text-secondary: #8b949e;
+    --text-body: #c9d1d9;
     --accent: #58a6ff;
     --accent-glow: rgba(88, 166, 255, 0.15);
     --success: #3fb950;
     --code-bg: #161b22;
+    --code-color: #79c0ff;
+}
+
+[data-theme="light"] {
+    --bg-page: #f8fafc;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --border: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-body: #334155;
+    --accent: #1d68bd;
+    --accent-glow: rgba(29, 104, 189, 0.12);
+    --success: #16a34a;
+    --code-bg: #f1f5f9;
+    --code-color: #0969da;
+    color-scheme: light;
+}
+
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease !important;
 }
 
 * {
@@ -40,12 +65,55 @@ body {
     flex-direction: column;
 }
 
+.docs-brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
 .docs-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-    padding-left: 8px;
+    gap: 10px;
+    padding-left: 4px;
+}
+
+.docs-theme-toggle {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-page);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+}
+
+.docs-theme-toggle:hover {
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+.docs-theme-toggle .icon-sun {
+    display: block;
+}
+
+.docs-theme-toggle .icon-moon {
+    display: none;
+}
+
+[data-theme="light"] .docs-theme-toggle .icon-sun {
+    display: none;
+}
+
+[data-theme="light"] .docs-theme-toggle .icon-moon {
+    display: block;
 }
 
 .docs-brand-logo {
@@ -155,14 +223,14 @@ h3 {
 }
 
 p {
-    color: #c9d1d9;
+    color: var(--text-body);
     margin-bottom: 16px;
 }
 
 ul, ol {
     margin-left: 24px;
     margin-bottom: 20px;
-    color: #c9d1d9;
+    color: var(--text-body);
 }
 
 li {
@@ -176,7 +244,7 @@ code {
     border-radius: 4px;
     font-family: Consolas, monospace;
     font-size: 13px;
-    color: #79c0ff;
+    color: var(--code-color);
 }
 
 pre {
@@ -236,5 +304,5 @@ th {
 }
 
 td {
-    color: #c9d1d9;
+    color: var(--text-body);
 }
