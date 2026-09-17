@@ -83,8 +83,8 @@
       "operatingSystem": "Windows 10, Windows 11, Ubuntu Linux, Debian, Android",
       "applicationCategory": "DeveloperApplication",
       "applicationSubCategory": "Compiler & Desktop App Packaging Suite",
-      "softwareVersion": "1.5.3",
-      "fileSize": "80.20MB",
+      "softwareVersion": "1.5.4",
+      "fileSize": "90.86MB",
       "downloadUrl": "https://github.com/djacidfx/webtoapp-releases/releases/latest",
       "offers": {
         "@type": "Offer",
@@ -372,7 +372,7 @@
       <div class="container">
         <div class="badge-pill">
           <span class="pill-dot"></span>
-          <span>v1.5.3 Released • Complete Windows MSIX Toolchain & Splash Studio</span>
+          <span>v1.5.4 Released • Windows Authenticode Code Signing & Splash Studio</span>
         </div>
 
         <h1 class="hero-title">
@@ -386,7 +386,7 @@
         <div class="hero-cta-group">
           <a href="#downloads" class="btn btn-primary btn-lg">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-            Download v1.5.3 Free
+            Download v1.5.4 Free
           </a>
           <a href="https://buymeacoffee.com/wildcatstudio" target="_blank" rel="noopener" class="btn btn-bmac btn-lg">
             <span>☕</span> Buy Me a Coffee
@@ -925,11 +925,22 @@
 
           <!-- Milestone 4: Integrated Splash Studio (Shipped) -->
           <div class="roadmap-card shipped">
-            <span class="roadmap-status-badge badge-shipped">⚡ Shipped & Ready • v1.5.3</span>
+            <span class="roadmap-status-badge badge-shipped">⚡ Shipped & Ready • v1.5.0</span>
             <h3 class="roadmap-title">Integrated Splash Studio & Visual Brand Builder</h3>
             <p class="roadmap-desc">Interactive design workbench for startup screens. Compose branded logo splash screens or fit high-resolution artwork with custom typography, 6 curated gradients, startup indicators, live desktop simulation, and 1-click project application.</p>
             <div class="roadmap-meta">
               <span>Target: Windows, Android & Linux</span>
+              <span style="color:#34d399; font-weight:600;">Available Now</span>
+            </div>
+          </div>
+
+          <!-- Milestone 5: Windows Authenticode Code Signing Pipeline (Shipped) -->
+          <div class="roadmap-card shipped">
+            <span class="roadmap-status-badge badge-shipped">⚡ Shipped & Ready • v1.5.4</span>
+            <h3 class="roadmap-title">Windows Authenticode Code Signing Pipeline</h3>
+            <p class="roadmap-desc">Post-build signing for exported desktop executables (.exe) using Windows Authenticode to eliminate SmartScreen "unknown publisher" warnings. Supports local PFX files (OV), Windows Certificate Store (EV hardware tokens like SafeNet/YubiKey) via SHA-1 thumbprint, zero CLI password exposure, RFC 3161 timestamping, and non-blocking in-place retry signing.</p>
+            <div class="roadmap-meta">
+              <span>Target: Windows (Live in Studio)</span>
               <span style="color:#34d399; font-weight:600;">Available Now</span>
             </div>
           </div>
@@ -1064,7 +1075,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag blue">OFFICIAL DISTRIBUTION HUB</span>
-          <h2 class="section-title">Download WebToApp Studio Pro v1.5.3</h2>
+          <h2 class="section-title">Download WebToApp Studio Pro v1.5.4</h2>
           <p class="section-desc">Choose between zero-install standalone bundles or ultra-compact runtime editions.</p>
         </div>
 
@@ -1075,8 +1086,8 @@
             <span class="pkg-platform">Windows 10 / 11 (64-Bit)</span>
             <h3 class="pkg-title">Standalone Edition</h3>
             <p class="pkg-meta">Includes embedded .NET runtime. Double-click and launch immediately with zero prompts or installation steps.</p>
-            <div style="font-size:0.85rem;font-weight:700;margin-bottom:12px;color:#38bdf8;">Size: 80.20 MB • Self-Contained</div>
-            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.3/WebToApp-Studio-v1.5.3.zip" class="btn btn-primary" download>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:12px;color:#38bdf8;">Size: 90.86 MB • Self-Contained</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.4/WebToApp-Studio-v1.5.4.zip" class="btn btn-primary" download>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Download Standalone .zip
             </a>
@@ -1093,8 +1104,8 @@
             <span class="pkg-platform">Windows 10 / 11 (64-Bit)</span>
             <h3 class="pkg-title">Lightweight Edition</h3>
             <p class="pkg-meta">Ultra-compact archive. Requires the free Microsoft .NET 8.0 Desktop Runtime pre-installed on the host machine.</p>
-            <div style="font-size:0.85rem;font-weight:700;margin-bottom:12px;color:#cbd5e1;">Size: 28.75 MB • Fast Download</div>
-            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.3/WebToApp-Studio-v1.5.3-Lightweight.zip" class="btn btn-secondary" download>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:12px;color:#cbd5e1;">Size: 41.52 MB • Fast Download</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.4/WebToApp-Studio-v1.5.4-Lightweight.zip" class="btn btn-secondary" download>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Download Lightweight .zip
             </a>
@@ -1114,8 +1125,8 @@
             <span class="pkg-platform">Ubuntu / Debian / Mint</span>
             <h3 class="pkg-title">Debian Package</h3>
             <p class="pkg-meta">Native Linux .deb installer with desktop launcher, icon registration, and standard system integration.</p>
-            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 4.56 MB • .deb Package</div>
-            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.3/WebToApp-Studio-Pro_1.5.3_amd64.deb" class="btn btn-secondary" download>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 4.57 MB • .deb Package</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.4/WebToApp-Studio-Pro_1.5.4_amd64.deb" class="btn btn-secondary" download>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Download Ubuntu .deb
             </a>
@@ -1126,8 +1137,8 @@
             <span class="pkg-platform">Linux x64 Portable</span>
             <h3 class="pkg-title">Portable AppDir</h3>
             <p class="pkg-meta">Universal portable Linux archive. Extract and run on any modern Linux distribution without root installation.</p>
-            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 4.56 MB • .tar.gz Archive</div>
-            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.3/WebToApp-Studio-Pro-Linux-x64-v1.5.3-Portable.tar.gz" class="btn btn-secondary" download>
+            <div style="font-size:0.85rem;font-weight:700;margin-bottom:16px;color:#cbd5e1;">Size: 4.57 MB • .tar.gz Archive</div>
+            <a href="https://github.com/djacidfx/webtoapp-releases/releases/download/v1.5.4/WebToApp-Studio-Pro-Linux-x64-v1.5.4-Portable.tar.gz" class="btn btn-secondary" download>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Download Portable .tar.gz
             </a>
@@ -1142,45 +1153,45 @@
 
           <div class="hash-row">
             <div>
-              <div style="font-weight:700;color:#fff;">WebToApp-Studio-v1.5.3.zip</div>
-              <div class="hash-code">581c13dc14876caa222e7d08afb462a0992f9d976c95fd79ad169f419a060716</div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-v1.5.4.zip</div>
+              <div class="hash-code">10018d02e88d4a6b9ab7e71a87ff80733910a5d2b53736f54f1cd3219d6ba81f</div>
             </div>
             <div style="display:flex;gap:10px;align-items:center;">
-              <a href="https://www.virustotal.com/gui/file/581c13dc14876caa222e7d08afb462a0992f9d976c95fd79ad169f419a060716" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
-              <button class="copy-hash-btn" data-hash="581c13dc14876caa222e7d08afb462a0992f9d976c95fd79ad169f419a060716">Copy Hash</button>
+              <a href="https://www.virustotal.com/gui/file/10018d02e88d4a6b9ab7e71a87ff80733910a5d2b53736f54f1cd3219d6ba81f" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="10018d02e88d4a6b9ab7e71a87ff80733910a5d2b53736f54f1cd3219d6ba81f">Copy Hash</button>
             </div>
           </div>
 
           <div class="hash-row">
             <div>
-              <div style="font-weight:700;color:#fff;">WebToApp-Studio-v1.5.3-Lightweight.zip</div>
-              <div class="hash-code">07bea510ed6a902436f2c34d5f8a2c12aac961818679600de642f4bd72ee38d8</div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-v1.5.4-Lightweight.zip</div>
+              <div class="hash-code">3a3cbf8b98b22d67f36c6d3829cf52013d815b3a2b93022e9e58e0e591ffa7b3</div>
             </div>
             <div style="display:flex;gap:10px;align-items:center;">
-              <a href="https://www.virustotal.com/gui/file/07bea510ed6a902436f2c34d5f8a2c12aac961818679600de642f4bd72ee38d8" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
-              <button class="copy-hash-btn" data-hash="07bea510ed6a902436f2c34d5f8a2c12aac961818679600de642f4bd72ee38d8">Copy Hash</button>
+              <a href="https://www.virustotal.com/gui/file/3a3cbf8b98b22d67f36c6d3829cf52013d815b3a2b93022e9e58e0e591ffa7b3" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="3a3cbf8b98b22d67f36c6d3829cf52013d815b3a2b93022e9e58e0e591ffa7b3">Copy Hash</button>
             </div>
           </div>
 
           <div class="hash-row">
             <div>
-              <div style="font-weight:700;color:#fff;">WebToApp-Studio-Pro_1.5.3_amd64.deb</div>
-              <div class="hash-code">14a3dce999cc8b1be4a26cc5935ef48f46fb6ea188219f718f9f10c3dc1ddf08</div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-Pro_1.5.4_amd64.deb</div>
+              <div class="hash-code">f0fcd340483a4f87122d888354273e60c48d79f5fc9cdd8d16c0410476e7257b</div>
             </div>
             <div style="display:flex;gap:10px;align-items:center;">
-              <a href="https://www.virustotal.com/gui/file/14a3dce999cc8b1be4a26cc5935ef48f46fb6ea188219f718f9f10c3dc1ddf08" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
-              <button class="copy-hash-btn" data-hash="14a3dce999cc8b1be4a26cc5935ef48f46fb6ea188219f718f9f10c3dc1ddf08">Copy Hash</button>
+              <a href="https://www.virustotal.com/gui/file/f0fcd340483a4f87122d888354273e60c48d79f5fc9cdd8d16c0410476e7257b" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="f0fcd340483a4f87122d888354273e60c48d79f5fc9cdd8d16c0410476e7257b">Copy Hash</button>
             </div>
           </div>
 
           <div class="hash-row">
             <div>
-              <div style="font-weight:700;color:#fff;">WebToApp-Studio-Pro-Linux-x64-v1.5.3-Portable.tar.gz</div>
-              <div class="hash-code">73e139f1544cd0ad0faa27edde10e16c93ee1691c88f572cdb646fa2fa60fa2c</div>
+              <div style="font-weight:700;color:#fff;">WebToApp-Studio-Pro-Linux-x64-v1.5.4-Portable.tar.gz</div>
+              <div class="hash-code">5164fcbc552fc8f8e46bacfadc15f148af4d3662574e97be646d3800af6c5409</div>
             </div>
             <div style="display:flex;gap:10px;align-items:center;">
-              <a href="https://www.virustotal.com/gui/file/73e139f1544cd0ad0faa27edde10e16c93ee1691c88f572cdb646fa2fa60fa2c" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
-              <button class="copy-hash-btn" data-hash="73e139f1544cd0ad0faa27edde10e16c93ee1691c88f572cdb646fa2fa60fa2c">Copy Hash</button>
+              <a href="https://www.virustotal.com/gui/file/5164fcbc552fc8f8e46bacfadc15f148af4d3662574e97be646d3800af6c5409" target="_blank" rel="noopener" class="status-badge" style="text-decoration:none;">70+ Clean</a>
+              <button class="copy-hash-btn" data-hash="5164fcbc552fc8f8e46bacfadc15f148af4d3662574e97be646d3800af6c5409">Copy Hash</button>
             </div>
           </div>
 
@@ -1562,7 +1573,7 @@
             <li><a href="#splash-studio" class="footer-link">Splash Studio</a></li>
             <li><a href="#comparison" class="footer-link">Architecture Comparison</a></li>
             <li><a href="#roadmap" class="footer-link">Development Roadmap</a></li>
-            <li><a href="#downloads" class="footer-link">Download v1.5.3</a></li>
+            <li><a href="#downloads" class="footer-link">Download v1.5.4</a></li>
             <li><a href="#faq" class="footer-link">FAQ &amp; Security</a></li>
           </ul>
         </div>

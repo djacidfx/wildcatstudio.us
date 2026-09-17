@@ -32,7 +32,7 @@ PREFER ZERO INSTALLATIONS? USE STANDALONE EDITION:
 --------------------------------------------------------------------------------
 If you prefer not to install the .NET Desktop Runtime on your host machine,
 download the completely self-contained STANDALONE EDITION:
--> WebToApp-Studio-v1.5.3.zip
+-> WebToApp-Studio-v1.5.4.zip
 
 The Standalone Edition includes the embedded .NET runtime and launches immediately
 out of the box with zero prompts, zero installations, and zero prerequisites!
