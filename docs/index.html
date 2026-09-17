@@ -80,7 +80,8 @@
         <div class="nav-section-title">Guides & Workflows</div>
         <nav class="docs-nav">
             <a href="#url-mode">4. Converting a Live Website</a>
-            <a href="#local-mode">5. Converting Static HTML5</a>
+            <a href="#local-mode">5. Local Files & Frameworks</a>
+            <a href="#backend-architecture" style="padding-left: 20px; font-size: 12px; color: #fbbf24;">↳ Backend Limitations & APIs</a>
             <a href="#html5-games">6. HTML5 Games & Audio</a>
             <a href="#icons-branding">7. Custom Icons & Branding</a>
             <a href="#splash-offline">8. Splash & Offline Screens</a>
@@ -198,16 +199,122 @@
             <p><strong>External Link Routing:</strong> When "Open External Links in Default Browser" is enabled, any links directing to other domains or opened with <code>target="_blank"</code> will launch in the user's default browser (e.g. Google Chrome), keeping your application window dedicated to your main site.</p>
         </section>
 
-        <!-- 5. STATIC HTML5 MODE -->
+        <!-- 5. STATIC HTML5 MODE & COMPATIBILITY -->
         <section id="local-mode">
-            <h2>5. Converting Static HTML/CSS/JS (Offline Mode)</h2>
-            <p>Offline Mode embeds your static website folder directly inside the desktop application package.</p>
+            <h2>5. Local Files &amp; Framework Compatibility (Offline Mode)</h2>
+            <p>Offline Mode bundles your entire static frontend folder directly inside the desktop application package. Files are served over an internal secure virtual host (<code>https://app.local/</code> on Windows, <code>https://appassets.androidplatform.net/</code> on Android), eliminating browser security blocks, <code>file://</code> protocol CORS limitations, and external server dependencies.</p>
+
+            <div class="card-box">
+                <h3>🚀 Custom Start Entrypoints (Beyond <code>index.html</code>)</h3>
+                <p>While <code>index.html</code> is the standard web default, WebToApp Studio Pro does <strong>not</strong> require your entry file to be named <code>index.html</code>. In Studio under <strong>1. Source Settings &rarr; Start Entry File</strong>, you can specify any entrypoint filename or relative subfolder path:</p>
+                <ul>
+                    <li><strong>Custom HTML Filenames:</strong> <code>app.html</code>, <code>main.html</code>, <code>home.html</code>, <code>game.html</code>, <code>dashboard.html</code>, or <code>index.htm</code>.</li>
+                    <li><strong>Subdirectory Build Folders:</strong> If your framework outputs to a nested directory, you can specify paths like <code>dist/index.html</code>, <code>build/index.html</code>, <code>public/index.html</code>, <code>out/index.html</code>, or <code>client/index.html</code> without rearranging your project structure.</li>
+                    <li><strong>Embedded Documents (PDF):</strong> You can even set a PDF document (e.g. <code>user-manual.pdf</code>) as your start file—Chromium's high-performance native PDF engine will render the document directly inside the desktop application window.</li>
+                </ul>
+            </div>
+
+            <h3>⚡ Supported Frameworks &amp; Build Tools</h3>
+            <p>Any modern JavaScript library or framework that compiles to static client-side HTML, JavaScript, and CSS runs smoothly inside WebToApp Studio Pro:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Framework / Tool</th>
+                        <th>Build Command / Output</th>
+                        <th>Packaging Configuration Tip</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Vite (React, Vue, Svelte, Vanilla)</strong></td>
+                        <td><code>npm run build</code> &rarr; <code>dist/</code></td>
+                        <td>Ensure relative asset paths in <code>vite.config.js</code>: set <code>base: './'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>React (Create React App / Webpack)</strong></td>
+                        <td><code>npm run build</code> &rarr; <code>build/</code></td>
+                        <td>Add <code>"homepage": "./"</code> to your <code>package.json</code> before running build.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Next.js (Static Export)</strong></td>
+                        <td><code>npx next build</code> &rarr; <code>out/</code></td>
+                        <td>Set <code>output: 'export'</code> in <code>next.config.js</code> to generate a pure static distribution.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nuxt.js (Vue)</strong></td>
+                        <td><code>npx nuxi generate</code> &rarr; <code>.output/public/</code></td>
+                        <td>Static site generation outputs full client-side bundles with pre-rendered HTML.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Astro</strong></td>
+                        <td><code>npm run build</code> &rarr; <code>dist/</code></td>
+                        <td>Set <code>output: 'static'</code> in <code>astro.config.mjs</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SvelteKit</strong></td>
+                        <td><code>npm run build</code> &rarr; <code>build/</code></td>
+                        <td>Install and configure <code>@sveltejs/adapter-static</code> in <code>svelte.config.js</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Angular</strong></td>
+                        <td><code>ng build</code> &rarr; <code>dist/&lt;app&gt;/browser/</code></td>
+                        <td>Set <code>--base-href ./</code> during build or configure <code>baseHref</code> in <code>angular.json</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>🎮 HTML5 Games, WebAssembly (WASM) &amp; 3D Graphics</h3>
+            <p>WebToApp Studio Pro is engineered with zero-latency hardware GPU acceleration enabled by default:</p>
             <ul>
-                <li>Ensure an entrypoint file exists in your folder (typically <code>index.html</code>).</li>
-                <li>Assets are served via the internal secure origin <code>https://app.local/</code>.</li>
-                <li>All relative paths (e.g. <code>&lt;script src="js/app.js"&gt;</code>, <code>&lt;img src="img/logo.png"&gt;</code>) work out of the box.</li>
-                <li>Local storage and IndexedDB remain persistent between app restarts.</li>
+                <li><strong>Phaser.js &amp; PixiJS:</strong> 60 FPS / 120 FPS high-performance 2D canvas and WebGL rendering.</li>
+                <li><strong>Construct 3:</strong> Export as "HTML5 Website / Web", select the export directory in Studio, and build.</li>
+                <li><strong>Godot 4 (HTML5 / Web Export):</strong> Full support for WebAssembly (<code>.wasm</code>), WebGL 2.0, and Web Audio.</li>
+                <li><strong>Unity WebGL:</strong> Export for WebGL; the internal virtual host streams <code>.wasm</code> and <code>.data</code> binary containers with correct MIME headers automatically.</li>
+                <li><strong>RPG Maker (MV / MZ):</strong> Export for Web/HTML5; loads sound banks, spritesheets, and maps without CORS issues.</li>
+                <li><strong>Three.js &amp; Babylon.js:</strong> Full WebGL, WebGL 2.0, and WebGPU support for 3D interactive applications.</li>
             </ul>
+
+            <div class="tip-box">
+                <h4>Streaming MIME Type Support</h4>
+                <p>The built-in virtual host automatically detects, headers, and streams all web formats from memory:</p>
+                <p><code>.html</code>, <code>.htm</code>, <code>.js</code>, <code>.mjs</code>, <code>.css</code>, <code>.json</code>, <code>.wasm</code>, <code>.svg</code>, <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.gif</code>, <code>.webp</code>, <code>.ico</code>, <code>.bmp</code>, <code>.mp3</code>, <code>.ogg</code>, <code>.wav</code>, <code>.m4a</code>, <code>.mp4</code>, <code>.webm</code>, <code>.woff</code>, <code>.woff2</code>, <code>.ttf</code>, <code>.otf</code>, <code>.txt</code>, <code>.xml</code>, <code>.pdf</code>, plus binary octet-streams.</p>
+            </div>
+
+            <h3>💾 Client-Side Storage &amp; Local Databases</h3>
+            <p>Desktop applications built with WebToApp maintain dedicated, isolated user data directories:</p>
+            <ul>
+                <li><strong>LocalStorage &amp; SessionStorage:</strong> Synchronous key-value storage persisted across restarts.</li>
+                <li><strong>IndexedDB:</strong> High-capacity client-side object storage. Fully compatible with ORMs and helper libraries like <strong>Dexie.js</strong>, <strong>PouchDB</strong>, and <strong>LokiJS</strong>.</li>
+                <li><strong>Native SQLite 3 Bridge:</strong> Direct access to <code>window.desktopApp.db</code> for high-throughput relational SQL storage with ACID transactions and Write-Ahead Logging (WAL).</li>
+            </ul>
+
+            <!-- SUBSECTION: BACKEND ARCHITECTURE -->
+            <div id="backend-architecture" class="card-box" style="margin-top: 32px; border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.05);">
+                <h3 style="color: #fbbf24; display: flex; align-items: center; gap: 8px;">
+                    <span>⚠️</span> What WebToApp CANNOT Run (Server-Side Limitations &amp; Architectures)
+                </h3>
+                <p>WebToApp Studio Pro packages client-side web applications running inside an optimized Chromium browser environment. <strong>It does not include backend daemon runtimes</strong> such as:</p>
+                <ul style="color: #e2e8f0;">
+                    <li><strong>No Raw PHP Scripts:</strong> Files ending in <code>.php</code> (e.g. Laravel or WordPress backend scripts) cannot execute locally because there is no Apache/Nginx web server or PHP-FPM interpreter embedded.</li>
+                    <li><strong>No Node.js Server Daemons:</strong> Files like <code>server.js</code> or Express APIs cannot run directly inside the client view because browser runtimes do not expose Node's internal OS system APIs (<code>fs</code>, <code>net</code>, <code>child_process</code>).</li>
+                    <li><strong>No Python / Ruby / C# Backends:</strong> Python scripts (Django, Flask, FastAPI) or Ruby on Rails servers cannot run without an external Python or Ruby interpreter.</li>
+                </ul>
+
+                <h4 style="color: #38bdf8; margin: 18px 0 8px;">How to Architect Full-Stack Web Apps for Desktop:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 12px;">
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 16px;">
+                        <h5 style="color: #38bdf8; margin: 0 0 8px; font-size: 0.95rem;">Architecture 1: Static Frontend + Cloud API (Best Performance)</h5>
+                        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">Run your build command (<code>npm run build</code>) to produce static HTML/JS/CSS. Package that output folder in <strong>Local Folder</strong> mode.</p>
+                        <p style="font-size: 0.85rem; color: #94a3b8; margin: 0;">Your JavaScript frontend uses standard <code>fetch()</code> or <code>axios</code> to communicate with your remote cloud server (e.g. <code>https://api.yourdomain.com</code>). Assets load instantaneously with zero hosting latency!</p>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 16px;">
+                        <h5 style="color: #38bdf8; margin: 0 0 8px; font-size: 0.95rem;">Architecture 2: Live Website URL Mode (Zero Refactoring)</h5>
+                        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">If your project is heavily server-rendered (PHP/Laravel, Django, Ruby on Rails, or WordPress), host it normally on your web server.</p>
+                        <p style="font-size: 0.85rem; color: #94a3b8; margin: 0;">In WebToApp Studio, select <strong>Website URL</strong> mode and enter your domain (e.g. <code>https://app.yourdomain.com</code>). Your entire full-stack app runs as a dedicated native desktop software!</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 6. HTML5 GAMES -->

@@ -206,6 +206,22 @@
         },
         {
           "@type": "Question",
+          "name": "What file types and web frameworks can I run in Local Folder mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WebToApp Studio Pro is not restricted to index.html. You can configure any start entry file (e.g. app.html, main.html, game.html) or subdirectory path (e.g. dist/index.html, build/index.html). It natively supports modern frontend SPAs (React, Vue, Svelte, Angular, Vite), static exports from Next.js and Nuxt, 2D/3D game engines (Phaser, Construct 3, Godot 4, Unity WebGL, RPG Maker), WebAssembly (.wasm), and local databases (IndexedDB, Native SQLite 3 Bridge). Detailed guides are available in our Documentation Hub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run server-side backends like Node.js, PHP, or Python inside a Local Folder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. WebToApp Studio Pro runs client-side web technologies in a sandboxed, high-performance browser environment without embedding server daemons like Apache, PHP-FPM, Node.js server runtimes, or Python. Full-stack applications should either: 1) package their static build (Vite/React/Vue/HTML) in Local Folder mode connecting to a remote cloud API via fetch/axios, or 2) use Website URL mode to wrap their live hosted web application into a desktop executable."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How does AES-256 asset encryption protect my source code?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -1237,6 +1253,48 @@
             </button>
             <div class="faq-answer">
               <p>If you packaged a <strong>Live Website URL</strong>, changes deployed to your web host reflect instantly to all desktop users next time they launch your app. For apps built from a <strong>Local Folder</strong>, you can distribute updated ZIPs/installers or leverage the Microsoft Store's automated background delta update system.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What file types and web frameworks can I run in Local Folder mode?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>WebToApp Studio Pro is not restricted to plain <code>index.html</code> files. You can configure <strong>any custom start entry file</strong> (e.g. <code>app.html</code>, <code>main.html</code>, <code>game.html</code>) or subdirectory entry point (e.g. <code>dist/index.html</code>, <code>build/index.html</code>, <code>public/index.html</code>) right inside Studio.</p>
+              <p>Because the app runs on a modern embedded Chromium engine (WebView2), it natively supports:</p>
+              <ul>
+                <li><strong>Modern SPAs &amp; Frameworks:</strong> React, Vue.js, Svelte, Angular, SolidJS (bundled with Vite, Webpack, or Rollup), and static exports from Next.js, Nuxt, and Astro.</li>
+                <li><strong>HTML5 2D/3D Games:</strong> Phaser, Construct 3, Godot 4 Web exports, Unity WebGL, RPG Maker MV/MZ, Three.js, and Babylon.js.</li>
+                <li><strong>WebAssembly &amp; Rich Media:</strong> Streaming <code>.wasm</code> binaries, HTML5 Canvas/WebGL 2.0, audio (<code>.mp3</code>, <code>.wav</code>, <code>.ogg</code>), video (<code>.mp4</code>, <code>.webm</code>), and custom fonts.</li>
+                <li><strong>Local Storage &amp; Databases:</strong> LocalStorage, IndexedDB (Dexie.js, PouchDB), and our built-in <strong>Native SQLite Bridge</strong> (<code>window.desktopApp.db</code>).</li>
+              </ul>
+              <p style="margin-top: 10px;">
+                <a href="docs/#local-mode" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 Read the full Framework &amp; File Compatibility Guide in our Documentation &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I run server-side backends like Node.js, PHP, or Python inside a Local Folder?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>No.</strong> WebToApp Studio Pro packages client-side web technologies running in a sandboxed, ultra-fast browser view. It does not bundle background server daemons like Apache, PHP-FPM, Node.js server runtimes (<code>server.js</code>), Python interpreters, or Ruby.</p>
+              <p>However, running full-stack applications is easy using two proven architectures:</p>
+              <ol style="margin-left: 20px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+                <li style="margin-bottom: 6px;"><strong>Static Frontend + Cloud API (Recommended):</strong> Build your frontend (Vite, React, Vue, HTML/JS) and package it as a Local Folder. Have your JavaScript <code>fetch()</code> or <code>axios</code> calls connect to your remote cloud API or server.</li>
+                <li><strong>Website URL Mode:</strong> If your application is deeply server-side rendered (e.g. PHP/Laravel, Django templates, WordPress), choose <strong>Website URL</strong> mode in Studio to wrap your live hosted web application into a native desktop executable with zero server reconfiguration.</li>
+              </ol>
+              <p style="margin-top: 10px;">
+                <a href="docs/#backend-architecture" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 Learn more about full-stack &amp; backend architectures in Documentation &rarr;</span>
+                </a>
+              </p>
             </div>
           </div>
 
