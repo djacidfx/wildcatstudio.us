@@ -84,7 +84,7 @@
       "applicationCategory": "DeveloperApplication",
       "applicationSubCategory": "Compiler & Desktop App Packaging Suite",
       "softwareVersion": "1.5.3",
-      "fileSize": "69.19MB",
+      "fileSize": "80.20MB",
       "downloadUrl": "https://github.com/djacidfx/webtoapp-releases/releases/latest",
       "offers": {
         "@type": "Offer",
@@ -116,6 +116,14 @@
       "@type": "FAQPage",
       "@id": "https://wildcatstudio.us/#faq",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What needs to be installed on my machine to run the Lightweight Edition vs Standalone Edition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Standalone Edition (80.20 MB) has zero prerequisites and embeds the entire .NET runtime so you can extract and run immediately. The Lightweight Edition (28.75 MB) requires the free Microsoft .NET 8.0 Desktop Runtime (x64) installed on the host machine. Both editions run on Windows 10 (1809+) and Windows 11 with Microsoft Edge WebView2."
+          }
+        },
         {
           "@type": "Question",
           "name": "Does WebToApp Studio build my web app or provide SaaS analytics?",
@@ -214,10 +222,10 @@
         },
         {
           "@type": "Question",
-          "name": "Why might an antivirus scanner or VirusTotal flag a \"Trojan.Injector\" or heuristic warning on the Standalone ZIP?",
+          "name": "Why does VirusTotal show a single detection (e.g. Bkav 'W32.Malware.B...') on the Windows ZIP packages?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "This is a recognized heuristic false positive. The Standalone Edition embeds the entire self-contained Microsoft .NET Core runtime (including coreclr.dll, hostfxr.dll, and native in-memory runtime extraction loaders) so end users can launch the application immediately without installing .NET prerequisites. Because some malware strains also use in-memory loaders, overly broad or outdated heuristic signatures from minor scanners (such as Zillya or generic machine-learning rules) can temporarily misidentify standard Microsoft .NET runtime loaders as an \"injector\" or \"trojan.\" How you can verify that your package is 100% clean and safe: All Tier-1 Security Engines are Clean: The world's top security vendors\u2014including Microsoft Defender, Kaspersky, Bitdefender, Sophos, Symantec/Broadcom, Google, Avast/AVG, CrowdStrike, and SentinelOne\u2014rate WebToApp Studio completely clean with zero detections. Individual Executables are 0/70 Clean: If you scan the compiled binaries directly (WebToExe.Studio.exe and WebToExe.Runtime.exe), they achieve a flawless 0 detections across all 70+ engines on VirusTotal (even on the minor scanners that flagged the raw ZIP archive). Informational IDS Sandbox Rules (Snort / Proofpoint): VirusTotal logs labeled \"Observed Google DNS over HTTPS\" or \"experimental TCP options\" under crowdsourced IDS rules are low-severity informational logs from VirusTotal's automated VM network sandbox, not threat detections. Lightweight Alternative: If your organizational security policy requires a 0/0 score across every single minor scanner on VirusTotal, download the Lightweight Edition, which uses your machine's installed .NET 8.0 runtime and has zero bundled runtime DLLs."
+            "text": "This is a recognized heuristic false positive from a single minor scanner (Bkav). Generic signatures formatted like W32.Malware.B[Hex] are automated machine-learning heuristics rather than detections of known malware. All Tier-1 security engines (Microsoft Defender, Kaspersky, Bitdefender, Sophos, ESET-NOD32, Avast, Malwarebytes, Google, CrowdStrike Falcon, SentinelOne) rate the packages 100% clean, and Linux packages achieve a flawless 0 detections across all 60+ engines."
           }
         },
         {
