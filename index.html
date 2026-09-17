@@ -222,6 +222,62 @@
         },
         {
           "@type": "Question",
+          "name": "Does WebToApp Studio include tools to design app icons and splash screens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! WebToApp Studio includes two built-in visual creative studios: Icon Studio and Splash Studio. Icon Studio features an interactive monogram generator (squircle, circle, rounded, square shapes with curated gradients) that compiles multi-resolution .ico files (16px to 256px) with live previews for Windows Taskbar, Android Launcher, and Microsoft Store tile. Splash Studio features a 960x640 Retina master canvas, gradient themes, animated loading spinners or pulsing dots, an artwork fitter (Cover, Contain, Stretch), and a live alpha fade-out preview simulation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do custom deep links and protocol handlers (myapp://) work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you enable Custom Deep-Linking, WebToApp Studio automatically registers your custom URI protocol (e.g. myapp://, crm://) in the Windows registry, Linux, and MSIX. Clicking matching links in web browsers, emails, or Discord launches your application or brings the existing window to the front without opening duplicate instances, dispatching the URL directly to JavaScript via window.desktopApp.onDeepLink(url => ...)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I restrict navigation to specific approved domains (Domain Whitelisting)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. In Tab 4 (Security & Controls), you can define Allowed Navigation Domains (e.g. *.mycompany.com, checkout.stripe.com). The application window is strictly locked to approved domains, and any unauthorized external redirects or links are either blocked or automatically opened in the user's default desktop browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the built-in SQLite database work, and can I use it in my app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WebToApp Studio Pro includes an embedded native SQLite 3 database engine accessible in JavaScript via window.desktopApp.db. It supports parameterized queries, non-queries, and atomic transactions (executeBatch) with Write-Ahead Logging (WAL) concurrency and origin isolation. Zero external database drivers, ODBC setups, or server installations are needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I create a Windows setup installer wizard (setup.exe) for my app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Deliverables in Studio, toggle 'Generate Inno Setup Script (.iss)'. WebToApp produces a complete, pre-configured setup_script.iss file with your app name, version, icons, shortcuts, and Control Panel uninstaller. You can compile it in under 10 seconds using the free Inno Setup Compiler into a single, professional setup.exe installer wizard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I test install Microsoft Store (MSIX) packages on my PC without a paid developer account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! WebToApp Studio Pro contains an internal RSA-2048 certificate generator. When compiling an MSIX package, it automatically generates Install-TestCertificate.ps1. Running this script trusts your build locally, allowing you and your clients to install and test the .msix file directly via the Windows App Installer with zero certificate fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Multi-Build, and how does it compile for multiple platforms at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multi-Build allows you to click one button in WebToApp Studio to compile your application for all three target operating systems simultaneously: Windows Desktop (.exe), Linux Debian package (.deb) and portable tarball (.tar.gz), and Android Studio Project / Google Play APK assets."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How does AES-256 asset encryption protect my source code?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -1293,6 +1349,131 @@
               <p style="margin-top: 10px;">
                 <a href="docs/#backend-architecture" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
                   <span>📖 Learn more about full-stack &amp; backend architectures in Documentation &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does WebToApp Studio include tools to design app icons and splash screens?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Yes!</strong> WebToApp Studio includes two dedicated creative workbenches built directly into the UI:</p>
+              <ul>
+                <li><strong>Integrated Icon Studio:</strong> Create clean, professional application icons without opening Photoshop. Generate custom geometric monograms (Squircle, Circle, Rounded, Square) with curated color gradients and auto-extracted app initials. The studio automatically compiles a 6-layer multi-resolution <code>.ico</code> file (16px to 256px) and displays live mockups on the Windows Taskbar, Android Launcher, and Microsoft Store tile.</li>
+                <li><strong>Integrated Splash Studio:</strong> Compose startup screens on a 960×640 Retina master canvas. Customize brand typography, select from 6 backdrop gradients, choose an animated loading indicator (Spinning Ring or Pulsing Dots), or fit existing artwork banners (Cover, Contain, Stretch). It even features a <em>Simulate Splash Fade</em> button to test alpha fade transitions.</li>
+              </ul>
+              <p style="margin-top: 10px;">
+                <a href="docs/#icons-branding" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 Read the Icon Studio &amp; Splash Studio Guides in Documentation &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do custom deep links and protocol handlers (myapp://) work?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Custom deep-linking allows external websites, emails, or chat apps (like Slack and Discord) to launch your desktop software and route users to specific views or content.</p>
+              <p>In WebToApp Studio under <strong>Tab 4: Security &amp; Controls</strong>, simply enable <strong>Custom Deep-Linking</strong> and choose your protocol name (e.g. <code>myapp</code>, <code>crm</code>). When compiled, Windows registers <code>myapp://</code> in the OS registry.</p>
+              <p>If your application is already running, WebToApp brings your existing window immediately to the front (avoiding duplicate instances) and dispatches the link to JavaScript via <code>window.desktopApp.onDeepLink(url => ...)</code>.</p>
+              <p style="margin-top: 10px;">
+                <a href="docs/#deep-linking" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 View JavaScript Deep-Link code snippets in Documentation &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I restrict navigation to specific approved domains (Domain Whitelisting)?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Yes.</strong> In <strong>Tab 4: Security &amp; Controls</strong>, you can define a list of <strong>Allowed Navigation Domains</strong> (e.g. <code>*.mycompany.com</code>, <code>checkout.stripe.com</code>, <code>auth0.com</code>).</p>
+              <p>Any attempt to navigate the desktop application window to an unlisted external domain is strictly intercepted. When paired with <em>Open External Links in Default Browser</em>, unlisted links safely launch in the user's primary desktop browser (Chrome/Edge), keeping your software environment secure and isolated from rogue redirects and phishing.</p>
+              <p style="margin-top: 10px;">
+                <a href="docs/#security" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 Learn more about Sandboxing &amp; Security in Documentation &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the built-in SQLite database work, and can I use it in my app?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>WebToApp Studio Pro includes an embedded, high-performance <strong>SQLite 3</strong> relational database engine. With zero external drivers, ODBC configurations, or server setups, your JavaScript code can query local SQLite databases directly via <code>window.desktopApp.db</code>.</p>
+              <ul>
+                <li><strong>ACID Reliability:</strong> Full support for atomic multi-statement transactions (<code>executeBatch</code>) with automatic rollback on error.</li>
+                <li><strong>High Concurrency:</strong> Built-in Write-Ahead Logging (WAL mode) allows background reads without locking active write queries.</li>
+                <li><strong>Studio Tooling:</strong> Includes pre-built schema templates (Notes, Key-Value Settings, User Auth) and drag-and-drop <code>.sql</code> schema file loaders.</li>
+              </ul>
+              <p style="margin-top: 10px;">
+                <a href="docs/#sqlite-database" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 Read the SQLite Database API Reference &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I create a Windows setup installer wizard (setup.exe) for my app?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Under <strong>Quality of Life &amp; Deliverables</strong> in Studio, check <strong>Generate Inno Setup Script (.iss)</strong>.</p>
+              <p>When you build your executable, WebToApp generates a production-ready <code>setup_script.iss</code> file pre-populated with your app name, version, company metadata, desktop shortcut checkboxes, Start Menu group, and Windows Control Panel uninstaller. You can compile this script in under 10 seconds using the free, open-source <strong>Inno Setup Compiler</strong> to produce a single <code>[AppName]_Setup.exe</code> wizard!</p>
+              <p style="margin-top: 10px;">
+                <a href="docs/#inno-setup" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 View the Inno Setup Compilation Guide &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I test install Microsoft Store (MSIX) packages on my PC without a paid developer account?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Yes!</strong> Normally, Windows requires expensive commercial code-signing certificates ($300+/year) or an active Microsoft Partner Center account to test <code>.msix</code> packages. WebToApp Studio Pro solves this with an <strong>automated RSA-2048 test certificate generator</strong>.</p>
+              <p>When building for MSIX, Studio automatically outputs <code>Install-TestCertificate.ps1</code>. Running this script safely trusts your build locally, allowing you, your QA testers, and your clients to double-click and install the <code>.msix</code> package directly via Windows App Installer with zero errors.</p>
+              <p style="margin-top: 10px;">
+                <a href="docs/#msix-sideload" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 Read the MSIX Sideloading Walkthrough &rarr;</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is Multi-Build, and how does it compile for multiple platforms at once?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>In the top platform target selector of WebToApp Studio, select <strong>Multi-Build</strong>.</p>
+              <p>Clicking <strong>BUILD ALL PLATFORMS</strong> compiles your project simultaneously into three dedicated platform folders:</p>
+              <ol style="margin-left: 20px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+                <li><strong>Windows Desktop:</strong> Standalone <code>.exe</code> executable and optional portable ZIP.</li>
+                <li><strong>Ubuntu Linux:</strong> Debian binary package (<code>.deb</code>) and universal portable AppDir (<code>.tar.gz</code>).</li>
+                <li><strong>Android Mobile:</strong> 100% turnkey Android Studio Gradle project and Google Play publishing assets.</li>
+              </ol>
+              <p style="margin-top: 10px;">
+                <a href="docs/#multi-platform" style="display: inline-flex; align-items: center; gap: 6px; color: #38bdf8; font-weight: 600; text-decoration: none; font-size: 0.92rem;">
+                  <span>📖 Read more about Multi-Build platform outputs &rarr;</span>
                 </a>
               </p>
             </div>

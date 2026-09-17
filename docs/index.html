@@ -74,36 +74,47 @@
         <nav class="docs-nav">
             <a href="#overview" class="active">1. Overview & Architecture</a>
             <a href="#requirements">2. System Requirements</a>
-            <a href="#quickstart">3. Quick Start (30 Seconds)</a>
+            <a href="#quickstart">3. Quick Start & Samples</a>
         </nav>
 
-        <div class="nav-section-title">Guides & Workflows</div>
+        <div class="nav-section-title">Core Guides</div>
         <nav class="docs-nav">
             <a href="#url-mode">4. Converting a Live Website</a>
             <a href="#local-mode">5. Local Files & Frameworks</a>
             <a href="#backend-architecture" style="padding-left: 20px; font-size: 12px; color: #fbbf24;">↳ Backend Limitations & APIs</a>
             <a href="#html5-games">6. HTML5 Games & Audio</a>
-            <a href="#icons-branding">7. Custom Icons & Branding</a>
-            <a href="#splash-offline">8. Splash & Offline Screens</a>
+            <a href="#icons-branding">7. Icons & Icon Studio</a>
+            <a href="#splash-offline">8. Splash & Splash Studio</a>
         </nav>
 
-        <div class="nav-section-title">Publishing & Stores</div>
+        <div class="nav-section-title">Security & Integration</div>
         <nav class="docs-nav">
-            <a href="google-play-guide.html" style="color: #34d399;">📱 Google Play Store Guide</a>
+            <a href="#security">9. Security, Sandboxing & Domains</a>
+            <a href="#tray-window">10. System Tray & Kiosk Mode</a>
+            <a href="#sqlite-database">11. SQLite Database Bridge</a>
+            <a href="#deep-linking">12. Deep-Linking (myapp://)</a>
+        </nav>
+
+        <div class="nav-section-title">Packaging & Distribution</div>
+        <nav class="docs-nav">
+            <a href="#inno-setup">13. Inno Setup Wizard (.iss)</a>
+            <a href="#msix-sideload">14. Microsoft Store & Sideload</a>
+            <a href="#google-play">15. Android & Google Play</a>
+            <a href="#ubuntu-linux">16. Ubuntu Linux & Debian (.deb)</a>
+            <a href="#multi-platform">17. Multi-Build (All Platforms)</a>
+            <a href="#updater">18. 1-Click Auto-Updater</a>
+        </nav>
+
+        <div class="nav-section-title">Dedicated Store Guides</div>
+        <nav class="docs-nav">
+            <a href="google-play-guide.html" style="color: #34d399;">📱 Google Play Publishing Guide</a>
             <a href="microsoft-store-guide.html" style="color: #38bdf8;">🏬 Microsoft Store (MSIX) Guide</a>
         </nav>
 
-        <div class="nav-section-title">Security & Production</div>
+        <div class="nav-section-title">Support & FAQ</div>
         <nav class="docs-nav">
-            <a href="#security">9. DevTools & Code Protection</a>
-            <a href="#tray-window">10. System Tray & Kiosk Mode</a>
-            <a href="#sqlite-database">11. SQLite Database Bridge</a>
-            <a href="#updater">12. 1-Click Auto-Updater</a>
-            <a href="#google-play">13. Dual Export & Google Play</a>
-            <a href="#ubuntu-linux">14. Ubuntu Linux & Debian (.deb)</a>
-            <a href="#multi-platform">15. Multi-Build (All Platforms)</a>
-            <a href="#faq">16. Frequently Asked Questions</a>
-            <a href="#troubleshooting">17. Troubleshooting & Support</a>
+            <a href="#faq">19. Frequently Asked Questions</a>
+            <a href="#troubleshooting">20. Troubleshooting & Support</a>
         </nav>
     </aside>
 
@@ -167,23 +178,47 @@
             </ul>
         </section>
 
-        <!-- 3. QUICK START -->
+        <!-- 3. QUICK START & SAMPLES -->
         <section id="quickstart">
-            <h2>3. Quick Start (Build in 30 Seconds)</h2>
+            <h2>3. Quick Start &amp; 1-Click Sample Projects</h2>
             <ol>
                 <li>Launch <code>WebToApp-Studio.exe</code>.</li>
-                <li>Under <strong>1. Source</strong>, choose <em>Website URL</em> (enter your website) or <em>Local HTML5 Folder</em> (pick your folder containing <code>index.html</code>).</li>
+                <li>Under <strong>1. Source</strong>, choose <em>Website URL</em> (enter your website) or <em>Local HTML5 Folder</em>.</li>
                 <li>Under <strong>2. Branding</strong>, enter your Application Name (e.g. <code>My Awesome App</code>) and select an icon.</li>
                 <li>Under <strong>3. Window</strong>, choose a preset (e.g. <code>1280 × 800</code>).</li>
                 <li>Click the primary button: <strong>BUILD EXECUTABLE</strong>.</li>
                 <li>Once the progress bar hits 100%, click <strong>Test Run App</strong> to verify your newly generated desktop application!</li>
             </ol>
-            <div class="tip-box" style="margin-top: 15px;">
-                <h4>Distribution Deliverables & Inno Setup Script (.iss)</h4>
-                <p>In the Studio builder under <strong>Deliverables</strong>, you can optionally enable:</p>
+
+            <div class="card-box" style="margin-top: 18px; border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.05);">
+                <h3 style="color: #38bdf8; display: flex; align-items: center; gap: 8px;">
+                    <span>🚀</span> Test-Drive Instantly with 1-Click Sample Projects
+                </h3>
+                <p>Don't have your web files ready yet? WebToApp Studio Pro includes two fully functioning sample projects built right into the UI under <strong>1. Source &rarr; Local HTML5 Folder</strong>:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 12px;">
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 14px;">
+                        <h4 style="color: #a78bfa; margin-top: 0; display: flex; align-items: center; gap: 6px;">
+                            <span>🎮</span> Try Sample Game (Phaser.js)
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">Loads an offline 2D arcade game built with Phaser.js, WebGL hardware acceleration, spatial Web Audio, and keyboard input.</p>
+                        <p style="font-size: 0.84rem; color: #94a3b8; margin: 0;">Click the button in Studio to auto-configure paths, branding, and window settings, then hit <strong>Build</strong> to verify audio and graphics performance.</p>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 14px;">
+                        <h4 style="color: #38bdf8; margin-top: 0; display: flex; align-items: center; gap: 6px;">
+                            <span>📊</span> Try Sample Dashboard (Chart.js)
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">Loads a responsive financial analytics dashboard with dynamic canvas charts, dark mode CSS, and client-side data filters.</p>
+                        <p style="font-size: 0.84rem; color: #94a3b8; margin: 0;">Perfect for validating responsive desktop window resizing, min/max dimensions, and UI rendering.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box" style="margin-top: 18px;">
+                <h4>Automated Deliverables</h4>
+                <p>Under <strong>Quality of Life &amp; Deliverables</strong> in Studio, you can toggle:</p>
                 <ul>
-                    <li><strong>Windows Portable .ZIP:</strong> Bundles your entire compiled executable folder into a clean, ready-to-share portable archive.</li>
-                    <li><strong>Inno Setup Script (.iss):</strong> Generates a production-ready <code>setup_script.iss</code> file pre-configured with your app name, version, icons, uninstaller, and desktop shortcuts, ready to compile into a Windows setup wizard (.exe) using the free <a href="https://jrsoftware.org/isdl.php" target="_blank" rel="noopener" style="color: #38bdf8;">Inno Setup Compiler</a>.</li>
+                    <li><strong>Windows Portable .ZIP:</strong> Automatically zips your compiled executable and runtime into a single, clean archive ready for client delivery or GitHub Releases.</li>
+                    <li><strong>Inno Setup Script (.iss):</strong> Generates an installer compilation script to build professional Windows setup wizards (see <a href="#inno-setup" style="color: #38bdf8;">Section 13</a>).</li>
                 </ul>
             </div>
         </section>
@@ -328,28 +363,93 @@
             </ul>
         </section>
 
-        <!-- 7. ICONS & BRANDING -->
+        <!-- 7. ICONS & BRANDING (ICON STUDIO) -->
         <section id="icons-branding">
-            <h2>7. Custom Icons & Executable Branding</h2>
-            <p>You can upload either a <code>.ico</code> file or a standard <code>.png</code> image. WebToApp Studio Pro's built-in image processor will automatically generate multi-resolution icon layers (16x16, 32x32, 48x48, 64x64, 128x128, and 256x256) to ensure your app icon is razor sharp on both the Windows taskbar and desktop shortcuts.</p>
+            <h2>7. Custom Icons &amp; Integrated Icon Studio</h2>
+            <p>Branding is essential for a professional desktop application. WebToApp Studio Pro includes both a standard icon importer and a full-featured <strong>Integrated Icon Studio</strong> design workbench accessible directly from <strong>Tab 2: Branding &amp; Identity &rarr; Launch Icon Studio</strong>.</p>
+
+            <div class="card-box">
+                <h3 style="color: #38bdf8;">🎨 What Icon Studio Does:</h3>
+                <ul>
+                    <li><strong>Visual Monogram Generator:</strong> Generate branded app icons from scratch with zero design skills. Choose between 4 modern geometric silhouettes (<strong>Squircle</strong>, <strong>Rounded Rectangle</strong>, <strong>Smooth Circle</strong>, or <strong>Square</strong>) and 8 curated gradient color presets.</li>
+                    <li><strong>Automatic Initials Extraction:</strong> Automatically extracts 1 or 2 letter monograms from your Application Name (e.g. <em>"My Desktop App" &rarr; "MD"</em>) with clean, centered typography.</li>
+                    <li><strong>Multi-Resolution .ICO Compiler:</strong> WebToApp's pure .NET image pipeline automatically renders and packs 6 embedded resolution layers into a single <code>.ico</code> file: <code>16×16</code>, <code>32×32</code>, <code>48×48</code>, <code>64×64</code>, <code>128×128</code>, and <code>256×256 px</code>. This guarantees crisp, pixel-perfect rendering across Windows desktop shortcuts, taskbars, and Explorer zoom levels.</li>
+                    <li><strong>Multi-Platform Live Previews:</strong> See exactly how your icon will appear in production across three live device mockups:
+                        <ul>
+                            <li><strong>Windows Taskbar:</strong> Renders inside a simulated Windows 11 taskbar next to running apps.</li>
+                            <li><strong>Android Launcher:</strong> Previewed inside a mobile squircle icon badge on a phone home screen.</li>
+                            <li><strong>Microsoft Store Tile:</strong> Rendered on a live Windows Store square app tile.</li>
+                        </ul>
+                    </li>
+                    <li><strong>1-Click Actions:</strong> Click <strong>Apply to Current Project</strong> to immediately update your project configuration, or <strong>Export Master PNG</strong> to download the 512×512 source file for marketing assets.</li>
+                </ul>
+            </div>
         </section>
 
-        <!-- 8. SPLASH & OFFLINE -->
+        <!-- 8. SPLASH & SPLASH STUDIO -->
         <section id="splash-offline">
-            <h2>8. Splash Screens & Offline Fallbacks</h2>
-            <p><strong>Custom Splash Screen:</strong> When enabled, a borderless window displays your logo immediately upon launch. As soon as the underlying web engine finishes rendering the DOM, the splash screen performs a smooth alpha fade-out transition.</p>
+            <h2>8. Splash Screens, Splash Studio &amp; Offline Fallbacks</h2>
+            <p>Give your desktop application an instant, polished software feel with custom startup splash screens and automated offline reconnect views.</p>
+
+            <div class="card-box" style="margin-top: 18px; border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.05);">
+                <h3 style="color: #38bdf8;">✨ Integrated Splash Studio</h3>
+                <p>Launch the built-in <strong>Splash Studio</strong> from <strong>Tab 6: Splash &amp; Polish</strong> to visually design custom startup screens with live rendering:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 12px;">
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 14px;">
+                        <h4 style="color: #38bdf8; margin-top: 0;">Mode 1: Branded Logo Splash</h4>
+                        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">Renders a 960×640 Retina master canvas. Center your project logo, customize your application title and subtitle typography, choose from 6 curated backdrop gradients, and pick an animated loading indicator (<strong>Spinning Ring</strong> or <strong>Pulsing Dots</strong>).</p>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 14px;">
+                        <h4 style="color: #a78bfa; margin-top: 0;">Mode 2: Full Artwork Fitter</h4>
+                        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">Drag and drop promotional banners or game concept art (480×320 base format). Choose between <strong>Cover</strong>, <strong>Contain</strong>, or <strong>Stretch</strong> fit modes, and use the matte color picker to match background borders seamlessly.</p>
+                    </div>
+                </div>
+                <ul style="margin-top: 14px;">
+                    <li><strong>Simulate Splash Fade:</strong> Click the simulation button in Studio to preview the smooth alpha fade-out transition before building.</li>
+                    <li><strong>1-Click Apply:</strong> Automatically saves the splash PNG, syncs the project background color hex code, and enables splash screen execution.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box" style="margin-top: 18px;">
+                <h4>📶 Offline Connection Error Page (URL Mode)</h4>
+                <p>When packaging a live website with <strong>Enable Offline Connection Error Page</strong> activated: if the user's internet connection drops, the app intercepts the browser <code>ERR_INTERNET_DISCONNECTED</code> screen and displays a dark, branded reconnect screen with automated background ping listeners. As soon as network connectivity is restored, the application resumes automatically with zero manual page refreshes.</p>
+            </div>
         </section>
 
-        <!-- 9. SECURITY -->
+        <!-- 9. SECURITY & SANDBOXING -->
         <section id="security">
-            <h2>9. DevTools & Code Protection</h2>
-            <p>For commercial releases, you generally do not want end-users viewing your proprietary JavaScript code or modifying DOM variables:</p>
-            <ul>
-                <li><strong>Disable Developer Tools (F12):</strong> Suppresses F12, Ctrl+Shift+I, and inspect tools.</li>
-                <li><strong>Disable Right-Click Context Menu:</strong> Removes the default browser context menu.</li>
-                <li><strong>Disable Text Selection:</strong> Gives the application a genuine native software appearance.</li>
-                <li><strong>Single Instance Mutex:</strong> Prevents opening multiple copies, avoiding state collisions and excessive memory consumption.</li>
-            </ul>
+            <h2>9. Security Controls, Sandboxing &amp; Domain Whitelisting</h2>
+            <p>For commercial software releases, client kiosks, and enterprise platforms, WebToApp Studio Pro provides comprehensive runtime sandboxing and anti-tamper controls:</p>
+
+            <div class="card-box">
+                <h3 style="color: #38bdf8;">🌐 Allowed Navigation Domains (Domain Whitelisting)</h3>
+                <p>In <strong>Tab 4: Security &amp; Controls</strong>, developers can define a strict whitelist of permitted navigation domains (e.g. <code>*.mycompany.com</code>, <code>checkout.stripe.com</code>, <code>auth0.com</code>):</p>
+                <ul>
+                    <li><strong>Restricted Web View:</strong> The internal browser window is locked strictly to your application's domain and approved third-party authorization providers.</li>
+                    <li><strong>Phishing &amp; Redirect Defense:</strong> If a user clicks an unapproved external link or an untrusted redirect is attempted, navigation is blocked inside the app window.</li>
+                    <li><strong>Default Browser Routing:</strong> When combined with "Open External Links in Default Browser", any unlisted links or <code>target="_blank"</code> links will safely launch in the user's primary desktop browser (e.g. Chrome, Edge), keeping your desktop app window dedicated exclusively to your platform.</li>
+                </ul>
+            </div>
+
+            <div class="card-box" style="margin-top: 18px;">
+                <h3 style="color: #38bdf8;">🔒 Anti-Tampering &amp; Code Protection</h3>
+                <ul>
+                    <li><strong>Block Remote Debugging Port:</strong> Prevents unauthorized users or scrapers from launching the executable with Chrome's <code>--remote-debugging-port</code> flag to inspect your DOM or extract proprietary frontend tokens.</li>
+                    <li><strong>Disable Developer Tools (F12):</strong> Completely suppresses F12, Ctrl+Shift+I, Ctrl+Shift+J, and inspect menus.</li>
+                    <li><strong>Disable Context Menu:</strong> Suppresses right-click browser inspection menus for a true native application look and feel.</li>
+                    <li><strong>Disable Text Selection:</strong> Injects CSS to prevent highlighting UI buttons, labels, and layouts (<code>user-select: none</code>).</li>
+                    <li><strong>Disable Password Autosave:</strong> Prevents browser popups asking users to save passwords—ideal for point-of-sale systems, medical software, and public kiosks.</li>
+                </ul>
+            </div>
+
+            <div class="card-box" style="margin-top: 18px;">
+                <h3 style="color: #38bdf8;">🛡️ Profile Isolation &amp; Session Privacy</h3>
+                <ul>
+                    <li><strong>Single Instance Mutex:</strong> Prevents opening multiple instances of your software, avoiding duplicate database locks, high memory usage, and state collisions.</li>
+                    <li><strong>Clear Browsing Data on Exit:</strong> Automatically wipes cookies, session storage, and cache upon closing the application window.</li>
+                    <li><strong>Custom User Agent:</strong> Set a custom User Agent string so your backend servers can distinguish desktop app requests from standard web browsers.</li>
+                </ul>
+            </div>
         </section>
 
         <!-- 10. SYSTEM TRAY -->
@@ -428,25 +528,97 @@ console.log("Engine:", version.sqliteVersion, "Path:", version.databasePath);</c
             </div>
         </section>
 
-        <!-- 12. AUTO-UPDATER -->
-        <section id="updater">
-            <h2>12. 1-Click In-App Auto-Updater</h2>
-            <p>WebToApp Studio Pro features a built-in automated software update engine that allows buyers to upgrade to new releases without manual downloads or re-extracting zip files.</p>
-            
+        <!-- 12. DEEP LINKING -->
+        <section id="deep-linking">
+            <h2>12. Custom OS Deep-Linking &amp; Protocol Handlers (myapp://)</h2>
+            <p>WebToApp Studio Pro enables native OS deep-linking so web applications, emails, QR codes, and external software can launch and communicate directly with your desktop application.</p>
+
             <div class="card-box">
-                <h3>How It Works for Buyers:</h3>
+                <h3 style="color: #38bdf8;">⚡ How OS Deep-Linking Works:</h3>
                 <ol>
-                    <li>On startup (or by clicking <strong>Check Updates</strong> in the header), the Studio checks the remote manifest.</li>
-                    <li>If a newer version exists, a glowing green notification appears: <code>Update vX.X Available!</code>.</li>
-                    <li>Clicking the notification opens the <strong>Release Notes Modal</strong> detailing the changelog.</li>
-                    <li>Clicking <strong>1-Click Update & Restart</strong> downloads the release package, automatically extracts the new binaries over the existing folder, and restarts the application in ~2 seconds.</li>
+                    <li>In WebToApp Studio under <strong>Tab 4: Security &amp; Controls &rarr; Custom Deep-Linking</strong>, toggle <strong>Enable Custom Protocol Handler</strong>.</li>
+                    <li>Enter your desired custom protocol scheme (e.g. <code>myapp</code>, <code>crm</code>, <code>gamehub</code>). When compiled, Windows automatically registers <code>myapp://</code> in the system registry.</li>
+                    <li><strong>Single-Instance IPC:</strong> If your application is already running and a user clicks a link like <code>myapp://orders/detail?id=1024</code> in Google Chrome, Slack, or an email, WebToApp brings your existing window immediately to the front (no duplicate instances opened) and passes the URL to JavaScript in real time.</li>
+                </ol>
+            </div>
+
+            <div class="card-box" style="margin-top: 18px;">
+                <h3 style="color: #38bdf8;">💻 JavaScript Bridge API (`window.desktopApp.onDeepLink`)</h3>
+                <p>Listen for incoming deep-link events directly from your client-side JavaScript:</p>
+                <pre><code>// 1. Listen for dynamic deep-links while the app is already open:
+window.desktopApp?.onDeepLink((incomingUrl) => {
+    console.log("Deep link received:", incomingUrl);
+    // Example: myapp://profile?user_id=894&tab=activity
+    const parsed = new URL(incomingUrl);
+    const userId = parsed.searchParams.get("user_id");
+    if (userId) {
+        navigateToUserProfile(userId);
+    }
+});
+
+// 2. Query initial deep link if the app was launched by clicking a link:
+const launchUrl = window.desktopApp?.getLaunchUrl();
+if (launchUrl) {
+    console.log("App launched via deep link:", launchUrl);
+    handleDeepLinkRoute(launchUrl);
+}</code></pre>
+            </div>
+
+            <div class="tip-box" style="margin-top: 18px;">
+                <h4>Protocol Scheme Validation Rules</h4>
+                <p>Protocol schemes must begin with a lowercase letter, be between 2 and 32 characters in length, and contain only lowercase alphanumeric characters, dots (<code>.</code>), or dashes (<code>-</code>). Reserved operating system schemes (e.g. <code>http</code>, <code>https</code>, <code>file</code>, <code>mailto</code>, <code>ms-windows-store</code>) are automatically rejected to preserve system security.</p>
+            </div>
+        </section>
+
+        <!-- 13. INNO SETUP WIZARD SCRIPT GENERATOR -->
+        <section id="inno-setup">
+            <h2>13. Inno Setup Windows Installer Wizard (.iss)</h2>
+            <p>While WebToApp Studio Pro outputs clean, portable Windows desktop binaries, commercial developers often require a standard Windows setup wizard (<code>setup.exe</code>) with desktop shortcuts and Control Panel uninstallers.</p>
+
+            <div class="card-box">
+                <h3 style="color: #38bdf8;">🛠️ Automated Inno Setup Script Generation</h3>
+                <p>When you enable <strong>Generate Inno Setup Script (.iss)</strong> in Studio under Deliverables, WebToApp automatically generates a production-grade <code>setup_script.iss</code> file inside your build output folder:</p>
+                <ul>
+                    <li><strong>Pre-Populated Metadata:</strong> Automatically configures your Application Name, Version, Company, Copyright, and target executable name.</li>
+                    <li><strong>Smart Shortcuts:</strong> Pre-configures Start Menu program groups, optional Desktop icon checkboxes, and clean uninstaller shortcuts.</li>
+                    <li><strong>64-bit Architecture:</strong> Sets <code>ArchitecturesInstallIn64BitMode=x64</code> to ensure seamless installation into <code>Program Files</code>.</li>
+                    <li><strong>Registry Integration:</strong> Configures Windows Add/Remove Programs keys with publisher information, estimated disk size, and clean uninstaller hooks.</li>
+                </ul>
+
+                <h4 style="margin-top: 16px;">How to Compile into `setup.exe` in 10 Seconds:</h4>
+                <ol>
+                    <li>Download and install the free, open-source <a href="https://jrsoftware.org/isdl.php" target="_blank" rel="noopener" style="color: #38bdf8;">Inno Setup Compiler</a>.</li>
+                    <li>Right-click the generated <code>setup_script.iss</code> in your output folder and click <strong>Compile</strong> (or press <kbd>Ctrl+F9</kbd> in Inno Setup).</li>
+                    <li>In less than 10 seconds, Inno Setup compresses your entire app into a single, branded Windows installer wizard: <code>Output/[AppName]_Setup.exe</code>!</li>
                 </ol>
             </div>
         </section>
 
-        <!-- 13. DUAL EXPORT & GOOGLE PLAY STORE PUBLISHING -->
+        <!-- 14. MICROSOFT STORE & SIDELOADING -->
+        <section id="msix-sideload">
+            <h2>14. Microsoft Store (MSIX) &amp; Free Local Sideloading</h2>
+            <p>WebToApp Studio Pro includes a native pure .NET Microsoft Store packager that generates signed <code>.msix</code> packages for modern Windows 10 and Windows 11 app deployment.</p>
+
+            <div class="card-box">
+                <h3 style="color: #38bdf8;">🧪 1-Click Free Local Sideload Testing</h3>
+                <p>Normally, Windows requires expensive commercial code-signing certificates ($300+/year) or an active Microsoft Partner Center subscription to test <code>.msix</code> packages. WebToApp Studio Pro solves this with an <strong>Automated RSA-2048 Certificate Generator</strong>:</p>
+                <ul>
+                    <li>When compiling an MSIX package, WebToApp Studio automatically generates a dedicated test certificate and an automated sideloading script: <code>Install-TestCertificate.ps1</code>.</li>
+                    <li><strong>How to Install on Any PC:</strong> Right-click <code>Install-TestCertificate.ps1</code> and choose <em>Run with PowerShell</em> (or run in an elevated terminal). This safely adds the test certificate to your machine's <code>TrustedPeople</code> certificate store.</li>
+                    <li>Once installed, you and your beta testers or clients can double-click the <code>.msix</code> file and install the application directly through the native Windows App Installer with zero errors!</li>
+                </ul>
+            </div>
+
+            <div class="tip-box" style="margin-top: 18px;">
+                <h4>🏬 Submitting to the Official Microsoft Store</h4>
+                <p>When ready to publish commercially to the Microsoft Store, simply paste your reserved <strong>Package Name</strong>, <strong>Publisher ID</strong> (e.g. <code>CN=...</code>), and <strong>Publisher Display Name</strong> from Partner Center into <strong>Tab 7: Microsoft Store</strong>. Microsoft signs the package automatically upon store ingestion!</p>
+                <p><a href="microsoft-store-guide.html" style="color: #38bdf8; font-weight: 700; text-decoration: none;">📖 Read our complete step-by-step Microsoft Store Submission Guide &rarr;</a></p>
+            </div>
+        </section>
+
+        <!-- 15. DUAL EXPORT & GOOGLE PLAY STORE PUBLISHING -->
         <section id="google-play">
-            <h2>13. Dual Export & Google Play Store Publishing</h2>
+            <h2>15. Android &amp; Google Play Store Publishing</h2>
             <p><strong>WebToApp Studio Pro</strong> includes a built-in cross-platform compilation engine that outputs both standalone Windows Desktop executables and production-ready Android Studio projects / Google Play App Bundles (<code>.aab</code>).</p>
 
             <div class="card-box">
@@ -459,11 +631,13 @@ console.log("Engine:", version.sqliteVersion, "Path:", version.databasePath);</c
                             <li><strong>⚡ Dual Build (Both):</strong> Compiles both Windows and Android packages in a single click!</li>
                         </ul>
                     </li>
-                    <li>Open <strong>Tab 6: Android & Play Store</strong> to customize:
+                    <li>Open <strong>Tab 8: Android &amp; Play Store</strong> to customize:
                         <ul>
                             <li><strong>Package Name:</strong> Reverse-domain identifier (e.g., <code>com.mycompany.myapp</code>). Use the "Auto-generate" button for instant formatting.</li>
                             <li><strong>Version Code:</strong> Google Play incrementing build number (e.g. <code>1</code>, <code>2</code>, <code>3</code>).</li>
                             <li><strong>Orientation:</strong> Choose Portrait, Landscape, or Sensor auto-rotation.</li>
+                            <li><strong>Hardware Permissions:</strong> 1-click toggles for Camera, Microphone, and Storage access.</li>
+                            <li><strong>Keystore Management:</strong> Choose <em>Auto-Generate Production Keystore</em>, <em>Debug Only</em>, or attach your own existing signing key.</li>
                             <li><strong>WebViewAssetLoader:</strong> Automatically serves local static files over <code>https://appassets.androidplatform.net/</code>, ensuring modern Web Audio, Canvas, and localStorage work flawlessly without CORS blocks.</li>
                             <li><strong>Pull to Refresh:</strong> Native Android <code>SwipeRefreshLayout</code> gesture.</li>
                         </ul>
@@ -484,33 +658,22 @@ console.log("Engine:", version.sqliteVersion, "Path:", version.databasePath);</c
                     </a>
                 </div>
             </div>
-
-            <div class="card-box" style="margin-top: 18px;">
-                <h3>📦 Opening & Publishing Your Android App</h3>
-                <p>WebToApp Studio Pro produces a turnkey project ZIP: <code>[AppName]_Android_Studio_Project.zip</code> containing:</p>
-                <ul>
-                    <li>Complete Gradle build scripts (<code>build.gradle.kts</code>, <code>settings.gradle.kts</code>) configured for Android 14 (API 34).</li>
-                    <li>Optimized launcher icons across all 5 mipmap densities (<code>mdpi</code>, <code>hdpi</code>, <code>xhdpi</code>, <code>xxhdpi</code>, <code>xxxhdpi</code>).</li>
-                    <li><code>GOOGLE_PLAY_PUBLISH_GUIDE.txt</code> with step-by-step instructions for uploading to the Google Play Console.</li>
-                    <li>If Java JDK / Android SDK is installed on your computer, WebToApp Studio Pro compiles the <code>.aab</code> and <code>.apk</code> binaries automatically!</li>
-                </ul>
-            </div>
         </section>
 
-        <!-- 14. UBUNTU LINUX & DEBIAN PACKAGING -->
+        <!-- 16. UBUNTU LINUX & DEBIAN PACKAGING -->
         <section id="ubuntu-linux">
-            <h2>14. Ubuntu Linux & Debian Packaging (.deb)</h2>
+            <h2>16. Ubuntu Linux &amp; Debian Packaging (.deb)</h2>
             <p>WebToApp Studio Pro features a native pure C# Debian packaging engine that compiles genuine binary <code>.deb</code> packages directly on Windows with <strong>zero external toolchains, WSL, or Docker required</strong>.</p>
 
             <div class="card-box">
-                <h3>🐧 How to Export for Ubuntu & Debian:</h3>
+                <h3>🐧 How to Export for Ubuntu &amp; Debian:</h3>
                 <ol>
-                    <li>In the top target selector bar, click <strong>Ubuntu Linux (.deb)</strong> or switch to tab <strong>7. Linux & Ubuntu</strong>.</li>
+                    <li>In the top target selector bar, click <strong>Ubuntu Linux (.deb)</strong> or switch to tab <strong>9. Linux &amp; Ubuntu</strong>.</li>
                     <li>Configure your Debian package properties:
                         <ul>
                             <li><strong>Debian Package Name:</strong> Lowercase package identifier (e.g. <code>com.wildcatstudio.myapp</code> or <code>myapp</code>).</li>
                             <li><strong>Target Architecture:</strong> Choose <code>all</code> (universal compatibility across x86_64, arm64, and Raspberry Pi) or specific target architectures (<code>amd64</code>, <code>arm64</code>).</li>
-                            <li><strong>Debian Section & Categories:</strong> Choose standard Debian sections (<code>utils</code>, <code>web</code>, <code>games</code>, <code>graphics</code>, <code>net</code>) and desktop categories for GNOME / Ubuntu Dash.</li>
+                            <li><strong>Debian Section &amp; Categories:</strong> Choose standard Debian sections (<code>utils</code>, <code>web</code>, <code>games</code>, <code>graphics</code>, <code>net</code>) and desktop categories for GNOME / Ubuntu Dash.</li>
                             <li><strong>Dependencies:</strong> Pre-configured with automatic fallbacks: <code>python3, python3-gi, gir1.2-webkit2-4.1 | gir1.2-webkit2-4.0 | chromium-browser | google-chrome-stable</code>.</li>
                         </ul>
                     </li>
@@ -536,12 +699,12 @@ cd myapp/
             </div>
         </section>
 
-        <!-- 15. MULTI-BUILD -->
+        <!-- 17. MULTI-BUILD -->
         <section id="multi-platform">
-            <h2>15. Multi-Build (All Platforms in 1-Click)</h2>
+            <h2>17. Multi-Build (All Platforms in 1-Click)</h2>
             <p>Ship everywhere simultaneously with the <strong>Multi-Build</strong> target.</p>
             <div class="card-box">
-                <p>Selecting <strong>Multi-Build</strong> allows you to click one button and generate:</p>
+                <p>Selecting <strong>Multi-Build</strong> in the top target bar allows you to click one button and compile:</p>
                 <ul>
                     <li><strong>Windows (.exe):</strong> Standalone lightweight WebView2 desktop application.</li>
                     <li><strong>Android (.zip):</strong> 100% turnkey Android Studio project + Google Play publishing assets (or compiled APK/AAB).</li>
@@ -551,15 +714,37 @@ cd myapp/
             </div>
         </section>
 
-        <!-- 16. FAQ -->
+        <!-- 18. AUTO-UPDATER -->
+        <section id="updater">
+            <h2>18. 1-Click In-App Auto-Updater</h2>
+            <p>WebToApp Studio Pro features a built-in automated software update engine that allows buyers to upgrade to new releases without manual downloads or re-extracting zip files.</p>
+            
+            <div class="card-box">
+                <h3>How It Works for Buyers:</h3>
+                <ol>
+                    <li>On startup (or by clicking <strong>Check Updates</strong> in the header), the Studio checks the remote manifest.</li>
+                    <li>If a newer version exists, a glowing green notification appears: <code>Update vX.X Available!</code>.</li>
+                    <li>Clicking the notification opens the <strong>Release Notes Modal</strong> detailing the changelog.</li>
+                    <li>Clicking <strong>1-Click Update &amp; Restart</strong> downloads the release package, automatically extracts the new binaries over the existing folder, and restarts the application in ~2 seconds.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 19. FAQ -->
         <section id="faq">
-            <h2>16. Frequently Asked Questions (FAQ)</h2>
+            <h2>19. Frequently Asked Questions (FAQ)</h2>
             <div class="card-box">
                 <h4>Q: Do my buyers need to install Python or Node.js to use the generated app?</h4>
                 <p>No! The Windows output executable is completely standalone and runs directly on Windows 10 and Windows 11. The Ubuntu Linux package includes standard system dependencies installed automatically via <code>apt</code>.</p>
 
                 <h4>Q: Can I compile Ubuntu .deb packages directly on a Windows PC?</h4>
                 <p>Yes! WebToApp Studio Pro contains a custom pure C# Unix <code>ar</code> archive writer and gzip tarball generator built on .NET 8 BCL. It generates 100% compliant Debian binary packages directly on Windows without WSL or Docker.</p>
+
+                <h4>Q: How does the built-in SQLite database work, and can I use it in my app?</h4>
+                <p>WebToApp Studio includes an embedded SQLite 3 engine exposed directly to JavaScript at <code>window.desktopApp.db</code>. It supports parameterized queries, non-queries, and atomic transactions (<code>executeBatch</code>) with zero external drivers or server installations required.</p>
+
+                <h4>Q: How do custom deep links (myapp://) work?</h4>
+                <p>When custom deep-linking is enabled, WebToApp registers your chosen URI scheme in Windows. Clicking links in web pages, Discord, or emails launches your application or brings the existing instance to the front, dispatching the URL directly to <code>window.desktopApp.onDeepLink()</code>.</p>
 
                 <h4>Q: Can I sell the applications I build with WebToApp Studio Pro?</h4>
                 <p>Yes! Any applications you compile are 100% yours to sell, distribute, or license to clients royalty-free.</p>
@@ -569,9 +754,9 @@ cd myapp/
             </div>
         </section>
 
-        <!-- 17. TROUBLESHOOTING & SUPPORT -->
+        <!-- 20. TROUBLESHOOTING & SUPPORT -->
         <section id="troubleshooting">
-            <h2>17. Troubleshooting & Support</h2>
+            <h2>20. Troubleshooting &amp; Support</h2>
             <div class="card-box">
                 <h4>Problem: "Missing WebView2 Runtime" alert on an older PC</h4>
                 <p>Solution: Microsoft Edge WebView2 is built into Windows 11 and recent Windows 10 updates. If testing on an older Windows 10 build, download the free evergreen runtime installer from Microsoft's official site: <code>https://developer.microsoft.com/microsoft-edge/webview2/</code>.</p>
