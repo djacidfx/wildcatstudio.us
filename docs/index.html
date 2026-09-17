@@ -101,8 +101,9 @@
             <a href="#msix-sideload">14. Microsoft Store & Sideload</a>
             <a href="#google-play">15. Android & Google Play</a>
             <a href="#ubuntu-linux">16. Ubuntu Linux & Debian (.deb)</a>
-            <a href="#multi-platform">17. Multi-Build (All Platforms)</a>
-            <a href="#updater">18. 1-Click Auto-Updater</a>
+            <a href="#pwa-studio">17. Integrated PWA Studio</a>
+            <a href="#multi-platform">18. Multi-Build (All Platforms)</a>
+            <a href="#updater">19. 1-Click Auto-Updater</a>
         </nav>
 
         <div class="nav-section-title">Dedicated Store Guides</div>
@@ -113,8 +114,8 @@
 
         <div class="nav-section-title">Support & FAQ</div>
         <nav class="docs-nav">
-            <a href="#faq">19. Frequently Asked Questions</a>
-            <a href="#troubleshooting">20. Troubleshooting & Support</a>
+            <a href="#faq">20. Frequently Asked Questions</a>
+            <a href="#troubleshooting">21. Troubleshooting & Support</a>
         </nav>
     </aside>
 
@@ -152,14 +153,14 @@
                         <li><strong>Operating System:</strong> Windows 10 (1809+) or Windows 11 (64-bit).</li>
                         <li><strong>Runtime:</strong> Embedded .NET runtime included inside the executable.</li>
                         <li><strong>Web Engine:</strong> Microsoft Edge WebView2 (standard on modern Windows).</li>
-                        <li>Just extract <code>WebToApp-Studio-v1.5.4.zip</code> and run <code>WebToExe.Studio.exe</code> immediately.</li>
+                        <li>Just extract <code>WebToApp-Studio-v1.5.3.zip</code> and run <code>WebToExe.Studio.exe</code> immediately.</li>
                     </ul>
                 </div>
                 <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid #334155; border-radius: 8px; padding: 18px;">
                     <h3 style="color: #cbd5e1; margin-top: 0; display: flex; align-items: center; gap: 8px;">
                         <span>🪶</span> Lightweight Edition (Fast Download)
                     </h3>
-                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 12px;">Ultra-compact download (~41 MB). Relies on the host's installed .NET runtime.</p>
+                    <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 12px;">Ultra-compact download (~28 MB). Relies on the host's installed .NET runtime.</p>
                     <ul style="font-size: 0.88rem; color: #94a3b8; padding-left: 20px; line-height: 1.6;">
                         <li><strong>Operating System:</strong> Windows 10 (1809+) or Windows 11 (64-bit).</li>
                         <li><strong>Host Requirement:</strong> <a href="https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 700; text-decoration: underline;">Microsoft .NET 8.0 Desktop Runtime (x64)</a>.
@@ -699,9 +700,40 @@ cd myapp/
             </div>
         </section>
 
-        <!-- 17. MULTI-BUILD -->
+        <!-- 17. INTEGRATED PWA STUDIO -->
+        <section id="pwa-studio">
+            <h2>17. Integrated PWA Studio &amp; Service Worker Generator</h2>
+            <p>Convert any web application or static HTML5 project into an installable, offline-capable <strong>Progressive Web App (PWA)</strong> with zero npm or Node.js dependencies.</p>
+
+            <div class="card-box">
+                <h3 style="color: #38bdf8;">🌐 W3C Web App Manifest &amp; Maskable Safe-Zone Icons</h3>
+                <p>WebToApp Studio Pro outputs standard W3C Web App Manifest files (<code>manifest.json</code> and <code>manifest.webmanifest</code>) supporting display modes (<em>standalone, fullscreen, minimal-ui</em>), screen orientations, theme and background colors, and app shortcuts. It also generates the complete PWA icon hierarchy (192px, 512px, 180px apple-touch-icon, and 512px maskable icons with an 80% safe zone inner diameter on solid backgrounds to guarantee Android squircle/circle masks never clip the icon glyph).</p>
+            </div>
+
+            <div class="card-box" style="margin-top: 18px;">
+                <h3 style="color: #38bdf8;">⚡ Pure Vanilla JS Service Worker (`sw.js`) &amp; 3 Caching Strategies</h3>
+                <p>Features a compact (~3 KB) pure vanilla JavaScript service worker with automatic cache versioning (<code>appSlug-cache-vX.Y.Z</code>), legacy cache purging upon activation, and 3 enterprise caching strategies:</p>
+                <ul>
+                    <li><strong>Stale-While-Revalidate:</strong> Instant response from cache while quietly fetching updates from the network in the background.</li>
+                    <li><strong>Cache-First (Offline-First):</strong> Prioritizes cache hits for blazingly fast load times and reliable offline game/doc execution.</li>
+                    <li><strong>Network-First:</strong> Attempts network retrieval with a 3.5-second timeout; falls back to cache or offline screen if disconnected.</li>
+                </ul>
+            </div>
+
+            <div class="card-box" style="margin-top: 18px;">
+                <h3 style="color: #38bdf8;">🛠️ 1-Click Actions &amp; Live Previews</h3>
+                <p>The interactive PWA Studio (Tab 10) provides live reactive previews (Mobile Phone with Android squircle safe-zone overlay, Desktop Window, and Branded Glassmorphic Offline Fallback Screen) alongside 3 one-click actions:</p>
+                <ul>
+                    <li><strong>Inject into Project:</strong> Non-destructively generates manifest, service worker, icons, and injects registration tags into <code>index.html</code> with idempotence protection.</li>
+                    <li><strong>Export PWA Zip:</strong> Packages a ready-to-deploy <code>[app]_v[version]_PWA.zip</code> with complete documentation and quick-start deployment guide.</li>
+                    <li><strong>Copy &lt;head&gt; Snippet:</strong> Instantly copies HTML registration tags to clipboard.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 18. MULTI-BUILD -->
         <section id="multi-platform">
-            <h2>17. Multi-Build (All Platforms in 1-Click)</h2>
+            <h2>18. Multi-Build (All Platforms in 1-Click)</h2>
             <p>Ship everywhere simultaneously with the <strong>Multi-Build</strong> target.</p>
             <div class="card-box">
                 <p>Selecting <strong>Multi-Build</strong> in the top target bar allows you to click one button and compile:</p>
@@ -709,14 +741,15 @@ cd myapp/
                     <li><strong>Windows (.exe):</strong> Standalone lightweight WebView2 desktop application.</li>
                     <li><strong>Android (.zip):</strong> 100% turnkey Android Studio project + Google Play publishing assets (or compiled APK/AAB).</li>
                     <li><strong>Ubuntu Linux (.deb):</strong> Debian installer package and portable Linux AppDir tarball.</li>
+                    <li><strong>PWA Web App (.zip):</strong> Standalone W3C manifest, service worker, offline fallback screen, and icon suite.</li>
                 </ul>
-                <p>Perfect for indie developers, game studios, and SaaS founders who want cross-platform distribution without maintaining three different build pipelines.</p>
+                <p>Perfect for indie developers, game studios, and SaaS founders who want cross-platform distribution without maintaining four different build pipelines.</p>
             </div>
         </section>
 
-        <!-- 18. AUTO-UPDATER -->
+        <!-- 19. AUTO-UPDATER -->
         <section id="updater">
-            <h2>18. 1-Click In-App Auto-Updater</h2>
+            <h2>19. 1-Click In-App Auto-Updater</h2>
             <p>WebToApp Studio Pro features a built-in automated software update engine that allows buyers to upgrade to new releases without manual downloads or re-extracting zip files.</p>
             
             <div class="card-box">
@@ -730,9 +763,9 @@ cd myapp/
             </div>
         </section>
 
-        <!-- 19. FAQ -->
+        <!-- 20. FAQ -->
         <section id="faq">
-            <h2>19. Frequently Asked Questions (FAQ)</h2>
+            <h2>20. Frequently Asked Questions (FAQ)</h2>
             <div class="card-box">
                 <h4>Q: Do my buyers need to install Python or Node.js to use the generated app?</h4>
                 <p>No! The Windows output executable is completely standalone and runs directly on Windows 10 and Windows 11. The Ubuntu Linux package includes standard system dependencies installed automatically via <code>apt</code>.</p>
@@ -754,9 +787,9 @@ cd myapp/
             </div>
         </section>
 
-        <!-- 20. TROUBLESHOOTING & SUPPORT -->
+        <!-- 21. TROUBLESHOOTING & SUPPORT -->
         <section id="troubleshooting">
-            <h2>20. Troubleshooting &amp; Support</h2>
+            <h2>21. Troubleshooting &amp; Support</h2>
             <div class="card-box">
                 <h4>Problem: "Missing WebView2 Runtime" alert on an older PC</h4>
                 <p>Solution: Microsoft Edge WebView2 is built into Windows 11 and recent Windows 10 updates. If testing on an older Windows 10 build, download the free evergreen runtime installer from Microsoft's official site: <code>https://developer.microsoft.com/microsoft-edge/webview2/</code>.</p>
