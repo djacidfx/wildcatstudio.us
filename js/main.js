@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initAppSimulator();
   initMiniIconStudio();
+  initMiniSplashStudio();
   initHashCopy();
   initFaqAccordion();
   initMobileNav();
@@ -247,4 +248,245 @@ function initMobileNav() {
       }
     });
   }
+}
+
+
+/* ==========================================================================
+   2b. Interactive Mini Splash Studio Playground
+   ========================================================================== */
+function initMiniSplashStudio() {
+  const canvas = document.getElementById('webSplashCanvas');
+  const titleInput = document.getElementById('webSplashTitle');
+  const subtitleInput = document.getElementById('webSplashSubtitle');
+  const fontSelect = document.getElementById('webSplashFont');
+  const paletteSwatches = document.querySelectorAll('#webSplashPalettes .color-swatch');
+  const indicatorBtns = document.querySelectorAll('#webSplashIndicators .shape-btn');
+  const fadeBtn = document.getElementById('btnSimulateWebFade');
+  const windowMockup = document.getElementById('webSplashWindow');
+
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  let title = 'My Desktop App';
+  let subtitle = 'Loading Application...';
+  let font = 'system';
+  let bg1 = '#0f172a';
+  let bg2 = '#1e293b';
+  let indicator = 'bar';
+  const accentColor = '#38bdf8';
+
+  function drawRoundedRect(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w - r, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    ctx.lineTo(x + w, y + h - r);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    ctx.lineTo(x + r, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    ctx.lineTo(x, y + r);
+    ctx.quadraticCurveTo(x, y, x + r, y);
+    ctx.closePath();
+  }
+
+  function renderSplash() {
+    const width = 960;
+    const height = 640;
+
+    // 1. Reset path & clear
+    ctx.clearRect(0, 0, width, height);
+    ctx.beginPath();
+
+    ctx.save();
+
+    // 2. Background gradient
+    const grad = ctx.createLinearGradient(0, 0, width, height);
+    grad.addColorStop(0, bg1);
+    grad.addColorStop(1, bg2);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, width, height);
+
+    // 3. Subtle radial center glow
+    const radial = ctx.createRadialGradient(width / 2, height / 2 - 40, 10, width / 2, height / 2 - 40, 380);
+    radial.addColorStop(0, 'rgba(255, 255, 255, 0.06)');
+    radial.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    ctx.fillStyle = radial;
+    ctx.fillRect(0, 0, width, height);
+
+    // 4. Center App Logo Monogram
+    const logoCenterY = 220;
+    const logoSize = 130;
+    ctx.save();
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(29, 104, 189, 0.35)';
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.7)';
+    ctx.lineWidth = 4;
+    drawRoundedRect((width - logoSize) / 2, logoCenterY - (logoSize / 2), logoSize, logoSize, 30);
+    ctx.fill();
+    ctx.stroke();
+
+    // Lightning bolt in center
+    ctx.beginPath();
+    ctx.font = '64px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    ctx.fillStyle = '#ffffff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.shadowColor = '#38bdf8';
+    ctx.shadowBlur = 18;
+    ctx.fillText('⚡', width / 2, logoCenterY);
+    ctx.restore();
+    ctx.beginPath();
+
+    // 5. Typography selection
+    let fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    if (font === 'geometric') fontFamily = '"Trebuchet MS", Impact, Arial Black, sans-serif';
+    else if (font === 'serif') fontFamily = 'Georgia, "Times New Roman", serif';
+    else if (font === 'mono') fontFamily = 'Consolas, "Courier New", monospace';
+
+    // 6. Title
+    ctx.font = `bold 42px ${fontFamily}`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
+    ctx.shadowBlur = 12;
+    ctx.shadowOffsetY = 4;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText(title, width / 2, 410);
+
+    // 7. Subtitle
+    ctx.font = `500 22px ${fontFamily}`;
+    ctx.shadowBlur = 8;
+    ctx.shadowOffsetY = 2;
+    ctx.globalAlpha = 0.8;
+    ctx.fillStyle = '#94a3b8';
+    ctx.fillText(subtitle, width / 2, 465);
+    ctx.globalAlpha = 1.0;
+    ctx.shadowColor = 'transparent';
+
+    // 8. Startup Indicator
+    if (indicator === 'bar') {
+      const barW = 320;
+      const barH = 8;
+      const barX = (width - barW) / 2;
+      const barY = 540;
+
+      // Track
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+      drawRoundedRect(barX, barY, barW, barH, 4);
+      ctx.fill();
+
+      // Active fill
+      ctx.beginPath();
+      ctx.fillStyle = accentColor;
+      ctx.shadowColor = accentColor;
+      ctx.shadowBlur = 12;
+      drawRoundedRect(barX, barY, barW * 0.65, barH, 4);
+      ctx.fill();
+      ctx.shadowColor = 'transparent';
+      ctx.beginPath();
+    } else if (indicator === 'ring') {
+      const ringX = width / 2;
+      const ringY = 545;
+      const radius = 16;
+
+      ctx.beginPath();
+      ctx.arc(ringX, ringY, radius, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(ringX, ringY, radius, -Math.PI / 2, Math.PI * 0.85);
+      ctx.strokeStyle = accentColor;
+      ctx.lineWidth = 4;
+      ctx.shadowColor = accentColor;
+      ctx.shadowBlur = 10;
+      ctx.stroke();
+      ctx.shadowColor = 'transparent';
+      ctx.beginPath();
+    } else if (indicator === 'dots') {
+      const dotY = 545;
+      const dots = [
+        { x: width / 2 - 24, r: 5, alpha: 0.5 },
+        { x: width / 2, r: 7, alpha: 1.0 },
+        { x: width / 2 + 24, r: 5, alpha: 0.5 }
+      ];
+      dots.forEach(d => {
+        ctx.beginPath();
+        ctx.arc(d.x, dotY, d.r, 0, Math.PI * 2);
+        ctx.fillStyle = accentColor;
+        ctx.globalAlpha = d.alpha;
+        ctx.shadowColor = accentColor;
+        ctx.shadowBlur = 8;
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1.0;
+      ctx.shadowColor = 'transparent';
+      ctx.beginPath();
+    }
+
+    // 1px inner border
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(1, 1, width - 2, height - 2);
+
+    ctx.restore();
+    ctx.beginPath();
+  }
+
+  // Event Listeners
+  if (titleInput) {
+    titleInput.addEventListener('input', (e) => {
+      title = e.target.value.trim() || 'My Application';
+      renderSplash();
+    });
+  }
+
+  if (subtitleInput) {
+    subtitleInput.addEventListener('input', (e) => {
+      subtitle = e.target.value.trim() || 'Loading Application...';
+      renderSplash();
+    });
+  }
+
+  if (fontSelect) {
+    fontSelect.addEventListener('change', (e) => {
+      font = e.target.value;
+      renderSplash();
+    });
+  }
+
+  paletteSwatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      paletteSwatches.forEach(s => s.classList.remove('active'));
+      swatch.classList.add('active');
+      bg1 = swatch.dataset.bg1 || '#0f172a';
+      bg2 = swatch.dataset.bg2 || '#1e293b';
+      renderSplash();
+    });
+  });
+
+  indicatorBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      indicatorBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      indicator = btn.dataset.ind || 'bar';
+      renderSplash();
+    });
+  });
+
+  if (fadeBtn && windowMockup) {
+    fadeBtn.addEventListener('click', () => {
+      windowMockup.style.opacity = '0';
+      windowMockup.style.transform = 'scale(0.96)';
+      setTimeout(() => {
+        windowMockup.style.opacity = '1';
+        windowMockup.style.transform = 'scale(1)';
+      }, 1500);
+    });
+  }
+
+  renderSplash();
 }
