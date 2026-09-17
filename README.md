@@ -23,7 +23,7 @@ Visit the production site at: **[https://wildcatstudio.us](https://wildcatstudio
 
 ## 📂 Repository Structure
 
-`	ext
+```text
 wildcatstudio.us/
 ├── index.html            # Main landing page & interactive showcases
 ├── 404.html              # Custom branded 404 fallback
@@ -34,7 +34,7 @@ wildcatstudio.us/
 ├── js/                   # Interactive studio simulators & UI logic
 ├── docs/                 # Documentation pages and user guides
 └── *.png                 # Brand icons, favicons, and social preview cards
-`
+```
 
 ---
 
