@@ -1461,6 +1461,18 @@ body {
   border: 1px solid rgba(225, 29, 72, 0.4);
 }
 
+.badge-research {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.roadmap-card.research {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(14, 22, 38, 0.85) 100%);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.1);
+}
+
 .roadmap-title {
   font-size: 1.25rem;
   font-weight: 800;
