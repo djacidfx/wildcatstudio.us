@@ -227,27 +227,66 @@ function initFaqAccordion() {
    5. Mobile Navigation
    ========================================================================== */
 function initMobileNav() {
-  const toggle = document.querySelector('.mobile-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const toggle = document.getElementById('mobileNavToggle') || document.querySelector('.mobile-toggle');
+  const navLinks = document.getElementById('mainNavLinks') || document.querySelector('.nav-links');
+  const iconHamburger = toggle ? toggle.querySelector('.icon-hamburger') : null;
+  const iconClose = toggle ? toggle.querySelector('.icon-close') : null;
 
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      const isVisible = getComputedStyle(navLinks).display !== 'none';
-      if (isVisible) {
-        navLinks.style.display = 'none';
-      } else {
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '72px';
-        navLinks.style.left = '0';
-        navLinks.style.right = '0';
-        navLinks.style.background = '#0a0f1d';
-        navLinks.style.padding = '24px';
-        navLinks.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+  if (!toggle || !navLinks) return;
+
+  function closeMenu() {
+    navLinks.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    if (iconHamburger) iconHamburger.style.display = 'block';
+    if (iconClose) iconClose.style.display = 'none';
+  }
+
+  function openMenu() {
+    navLinks.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    if (iconHamburger) iconHamburger.style.display = 'none';
+    if (iconClose) iconClose.style.display = 'block';
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.contains('is-open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close when clicking any nav link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 1024) {
+        closeMenu();
       }
     });
-  }
+  });
+
+  // Close when clicking outside header
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('is-open') && !toggle.contains(e.target) && !navLinks.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Clean up if window resized above mobile breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024 && navLinks.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
 }
 
 
