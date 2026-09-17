@@ -1088,7 +1088,7 @@
           </div>
 
           <div style="margin-top:16px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:6px;font-size:0.82rem;color:#94a3b8;line-height:1.5;">
-            ℹ️ <strong>Security &amp; Integrity Notice:</strong> All release packages and executables are verified clean across 70+ industry-standard security vendors. Any occasional heuristic label from minor scanners on self-contained ZIP bundles is a recognized false positive caused by embedded .NET Core runtime loaders. <a href="#faq-false-positives" style="color:var(--blue-light);text-decoration:underline;">Read our FAQ on false positives &rarr;</a>
+            🛡️ <strong>Security &amp; Integrity Notice:</strong> All release packages are verified clean across 67+ industry-standard security engines on VirusTotal (including Microsoft Defender, Kaspersky, Bitdefender, Sophos, and ESET). An isolated flag by Bkav (labeled generically as <em>W32.Malware.B...</em>) is a recognized heuristic false positive triggered on newly compressed .NET release archives. <a href="#faq-false-positives" style="color:var(--blue-light);text-decoration:underline;">Read our explanation on false positives &rarr;</a>
           </div>
         </div>
 
@@ -1243,17 +1243,17 @@
 
           <div class="faq-item" id="faq-false-positives">
             <button class="faq-question">
-              <span>Why might an antivirus scanner or VirusTotal flag a "Trojan.Injector" or heuristic warning on the Standalone ZIP?</span>
+              <span>Why does VirusTotal show a single detection (e.g. Bkav 'W32.Malware.B...') on the Windows ZIP packages?</span>
               <span class="faq-toggle-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>This is a recognized <strong>heuristic false positive</strong>. The Standalone Edition embeds the entire self-contained Microsoft .NET Core runtime (including <code>coreclr.dll</code>, <code>hostfxr.dll</code>, and native in-memory runtime extraction loaders) so end users can launch the application immediately without installing .NET prerequisites. Because some malware strains also use in-memory loaders, overly broad or outdated heuristic signatures from minor scanners (such as Zillya or generic machine-learning rules) can temporarily misidentify standard Microsoft .NET runtime loaders as an "injector" or "trojan."</p>
-              <p><strong>How you can verify that your package is 100% clean and safe:</strong></p>
+              <p>This is a recognized <strong>heuristic false positive</strong> from a single minor scanner (<strong>Bkav</strong>). In antivirus taxonomy, generic signatures formatted like <code>W32.Malware.B[HexCode]</code> are automated machine-learning heuristics rather than detections of known malware. When a newly published application or compressed ZIP bundle has not yet established multi-week global cloud reputation, aggressive heuristic engines can temporarily flag the internal compression headers or single-file runtime loaders.</p>
+              <p><strong>Why you can trust WebToApp Studio Pro:</strong></p>
               <ul style="margin: 8px 0 12px 20px; color: var(--text-muted); line-height: 1.6;">
-                <li><strong>All Tier-1 Security Engines are Clean:</strong> The world's top security vendors—including <strong>Microsoft Defender, Kaspersky, Bitdefender, Sophos, Symantec/Broadcom, Google, Avast/AVG, CrowdStrike, and SentinelOne</strong>—rate WebToApp Studio completely clean with zero detections.</li>
-                <li><strong>Individual Executables are 0/70 Clean:</strong> If you scan the compiled binaries directly (<code>WebToExe.Studio.exe</code> and <code>WebToExe.Runtime.exe</code>), they achieve a flawless <strong>0 detections across all 70+ engines</strong> on VirusTotal (even on the minor scanners that flagged the raw ZIP archive).</li>
-                <li><strong>Informational IDS Sandbox Rules (Snort / Proofpoint):</strong> VirusTotal logs labeled <em>"Observed Google DNS over HTTPS"</em> or <em>"experimental TCP options"</em> under crowdsourced IDS rules are low-severity informational logs from VirusTotal's automated VM network sandbox, not threat detections.</li>
-                <li><strong>Lightweight Alternative:</strong> If your organizational security policy requires a 0/0 score across every single minor scanner on VirusTotal, download the <strong>Lightweight Edition</strong>, which uses your machine's installed .NET 8.0 runtime and has zero bundled runtime DLLs.</li>
+                <li><strong>Every Tier-1 Industry Engine is 100% Clean:</strong> The world's leading enterprise security vendors—including <strong>Microsoft Defender, Kaspersky, Bitdefender, Sophos, ESET-NOD32, Avast/AVG, Malwarebytes, Google, CrowdStrike Falcon, SentinelOne, Symantec/Broadcom, and TrendMicro</strong>—rate all WebToApp Studio packages completely clean with zero detections.</li>
+                <li><strong>Linux Packages are 0/61 Clean:</strong> The Debian (<code>.deb</code>) and Linux Portable (<code>.tar.gz</code>) packages, which share the exact same core compiler engine, have <strong>0 detections across all 60+ engines</strong> on VirusTotal.</li>
+                <li><strong>Direct Microsoft .NET Toolchain:</strong> WebToApp Studio Pro is compiled strictly with the official Microsoft .NET 8.0 SDK and contains no third-party packers, obfuscators, or suspicious native libraries.</li>
+                <li><strong>Zero Telemetry or Data Collection:</strong> The Studio contains zero trackers, analytics beacons, or remote telemetry. What you build stays strictly on your local device.</li>
               </ul>
             </div>
           </div>
