@@ -8,6 +8,16 @@ The official landing page, interactive product showcases, documentation portal, 
 
 ---
 
+## 🏛️ Project Background & Evolution
+
+**WildCat Studio** and its companion software ecosystem (including **WebToApp Studio Pro**) represent more than two years of dedicated internal research, engineering, and iterative development. 
+
+Over the past few months, the projects entered an intensive modernization and stabilization phase—rigorously refactoring core codebases, upgrading target SDKs and export runtimes, modernizing user interfaces, and establishing automated release and verification pipelines. 
+
+We have officially commenced publishing our suite of applications, official repositories, and public documentation to GitHub. As this rollout progresses, additional utilities, platform toolchains, and companion repositories will continue to be introduced on a rolling basis.
+
+---
+
 ## 🌐 Live Portal
 
 Visit the production site at: **[https://wildcatstudio.us](https://wildcatstudio.us)**
