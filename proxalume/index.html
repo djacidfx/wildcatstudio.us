@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    try {
+      const saved = localStorage.getItem('wildcat_theme');
+      if (saved === 'light' || (!saved && matchMedia('(prefers-color-scheme: light)').matches)) document.documentElement.dataset.theme = 'light';
+    } catch (_) {}
+  </script>
+  <title>Proxalume Studio | Software Intelligence Workbench | WildCat Studio</title>
+  <meta name="description" content="Explore Proxalume Studio, WildCat Studio's local-first software intelligence workbench for source-code architecture, binary analysis, software supply-chain review and digital forensics.">
+  <meta name="author" content="WildCat Studio">
+  <meta name="theme-color" content="#1d68bd">
+  <link rel="canonical" href="https://wildcatstudio.us/proxalume/">
+  <meta property="og:site_name" content="WildCat Studio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wildcatstudio.us/proxalume/">
+  <meta property="og:title" content="Proxalume Studio — See the whole system">
+  <meta property="og:description" content="Source intelligence, binary inspection, software supply-chain review and forensic evidence workflows in one local-first desktop workbench.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Proxalume Studio | WildCat Studio">
+  <meta name="twitter:description" content="Explore the architecture and capabilities behind the Proxalume software intelligence workbench.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/proxalume.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Proxalume Studio","applicationCategory":"DeveloperApplication","operatingSystem":"Windows x64, Linux x64","url":"https://wildcatstudio.us/proxalume/","description":"A local-first workbench for source code, binary analysis, software supply chain and digital forensic evidence.","publisher":{"@type":"Organization","name":"WildCat Studio","url":"https://wildcatstudio.us/"}}
+  </script>
+</head>
+<body class="px-page">
+  <a class="px-skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container px-header">
+      <a href="../" class="brand-link">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+        <span class="brand-text"><span class="brand-title">WildCat Studio</span><span class="brand-subtitle">Project showcase</span></span>
+      </a>
+      <div class="px-header-actions">
+        <a href="../" class="px-home">Studio home</a>
+        <button type="button" id="px-theme" class="theme-toggle-btn" aria-label="Switch color theme" title="Switch color theme" hidden>
+          <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 15A9 9 0 0 1 9 4a9 9 0 1 0 11 11Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="px-hero">
+      <div class="container px-hero-grid">
+        <div>
+          <p class="px-eyebrow"><span class="px-dot"></span> WildCat Studio · Software engineering</p>
+          <h1>Proxalume <span>Studio</span></h1>
+          <p class="px-tagline">See the whole system.<br>Understand every layer.</p>
+          <p class="px-lede">A software intelligence workbench that turns complex codebases, compiled programs and forensic artifacts into navigable evidence. Built for the people who need to understand how software really works—not simply what it looks like from the outside.</p>
+          <div class="px-actions">
+            <a class="px-button px-primary" href="https://proxalume.com/">Visit Proxalume <span aria-hidden="true">↗</span></a>
+            <a class="px-button" href="#capabilities">Explore the workbench</a>
+          </div>
+          <p class="px-status"><strong>Development spotlight:</strong> Version 2.0.8 has reached release-candidate verification. Production packages and the expanded web platform are being evaluated before publication. This page does not announce a new download.</p>
+        </div>
+        <figure class="px-hero-figure">
+          <svg viewBox="0 0 600 454" role="img" aria-labelledby="graph-title graph-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="graph-title">Illustrative software relationship map</title>
+            <desc id="graph-desc">A source graph connecting a request to a route, controller, service, model and data store, with an adjacent binary instruction path.</desc>
+            <defs>
+              <linearGradient id="px-panel" x2="1" y2="1"><stop stop-color="#182943"/><stop offset="1" stop-color="#0b1424"/></linearGradient>
+              <pattern id="px-grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#345173" stroke-opacity=".35"/></pattern>
+              <marker id="px-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7Z" fill="#60a5fa"/></marker>
+            </defs>
+            <rect x="1" y="1" width="598" height="452" rx="19" fill="url(#px-panel)" stroke="#385375"/>
+            <path d="M1 43H599" stroke="#385375"/>
+            <circle cx="22" cy="22" r="4" fill="#fb7185"/><circle cx="36" cy="22" r="4" fill="#fbbf24"/><circle cx="50" cy="22" r="4" fill="#34d399"/>
+            <text x="76" y="26" fill="#cbd5e1" font-size="13" font-family="system-ui,sans-serif">PROXALUME / RELATIONSHIP MODEL</text>
+            <rect x="16" y="59" width="568" height="293" rx="10" fill="url(#px-grid)"/>
+            <g fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#px-arrow)">
+              <path d="M143 111H225"/><path d="M375 111H456"/><path d="M510 140V195"/><path d="M456 225H375"/><path d="M225 225H143"/><path d="M300 254V292" stroke-dasharray="5 5"/>
+            </g>
+            <g font-family="system-ui,sans-serif" font-size="14" text-anchor="middle" fill="#e2e8f0">
+              <rect x="32" y="82" width="111" height="58" rx="8" fill="#112d48" stroke="#60a5fa"/><text x="87" y="116">Request</text>
+              <rect x="225" y="82" width="150" height="58" rx="8" fill="#112d48" stroke="#60a5fa"/><text x="300" y="116">Route</text>
+              <rect x="456" y="82" width="111" height="58" rx="8" fill="#112d48" stroke="#60a5fa"/><text x="511" y="116">Controller</text>
+              <rect x="456" y="195" width="111" height="60" rx="8" fill="#312540" stroke="#fb7185"/><text x="511" y="230">Service</text>
+              <rect x="225" y="195" width="150" height="60" rx="8" fill="#133b39" stroke="#34d399"/><text x="300" y="230">Model</text>
+              <rect x="32" y="195" width="111" height="60" rx="8" fill="#133b39" stroke="#34d399"/><text x="87" y="230">Data store</text>
+              <rect x="225" y="292" width="150" height="42" rx="8" fill="#202c40" stroke="#94a3b8" stroke-dasharray="4 3"/><text x="300" y="317" font-size="12">Inferred relation</text>
+            </g>
+            <path d="M32 375H568" stroke="#385375"/>
+            <g font-family="ui-monospace,monospace" font-size="12" fill="#93c5fd"><text x="32" y="397">SOURCE</text><text x="224" y="397">BINARY</text><text x="416" y="397">EVIDENCE</text></g>
+            <g font-family="system-ui,sans-serif" font-size="13" fill="#e2e8f0"><text x="32" y="420">Symbols &amp; edges</text><text x="224" y="420">Functions &amp; flow</text><text x="416" y="420">Findings &amp; exports</text></g>
+          </svg>
+          <figcaption>Illustrative architecture diagram — not an application screenshot.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <nav class="px-toc" aria-label="On this page">
+      <div class="container"><a href="#mission">Overview</a><a href="#capabilities">Capabilities</a><a href="#workflow">Workflows</a><a href="#platform">Web platform</a><a href="#engineering">Engineering</a><a href="#availability">Availability</a><a href="#faq">FAQ</a></div>
+    </nav>
+    <section id="mission" class="container px-section">
+      <p class="px-eyebrow">01 / Project overview</p>
+      <h2>Software is more than a collection of files.</h2>
+      <div class="px-two">
+        <div><p>Maintaining unfamiliar applications, reviewing legacy systems or investigating a compiled program often means piecing together information from many different tools. Proxalume brings those perspectives into one desktop environment so an engineer can follow a relationship from a source symbol to a dependency, a request path, a finding or a binary function.</p><p>The project combines a C#/.NET 10 analysis engine and Avalonia desktop interface with a separate commercial web platform. Its central idea is evidence-driven understanding: make relationships visible, distinguish known facts from inferences, and keep the analyst in control of the conclusions.</p></div>
+        <aside class="px-card px-accent"><h3>Designed for real engineering work</h3><ul><li>Understand unfamiliar repositories and legacy systems.</li><li>Investigate dependency chains and architectural changes.</li><li>Inspect compiled programs without launching the target during static analysis.</li><li>Preserve findings and share review evidence.</li></ul></aside>
+      </div>
+      <div class="px-metrics"><div><strong>2D + 3D</strong><span>Architecture visualization</span></div><div><strong>Source + binary</strong><span>Complementary analysis layers</span></div><div><strong>Windows + Linux</strong><span>Desktop package targets</span></div><div><strong>Local-first</strong><span>Core static inspection</span></div></div>
+    </section>
+    <section id="capabilities" class="px-band"><div class="container px-section">
+      <p class="px-eyebrow">02 / Workbench capabilities</p>
+      <h2>One environment. Multiple ways to investigate.</h2>
+      <p class="px-intro">Capabilities vary with language, architecture, file format and available evidence. Each view answers a different question about the system.</p>
+      <div class="px-cards">
+        <article class="px-card"><span class="px-number">01 · SOURCE</span><h3>Multi-language intelligence</h3><p>Inspect PHP and Laravel, JavaScript and TypeScript, C#, Python, Java, C/C++, SQL and supported configuration files. Discover symbols, imports, declarations, calls and dependency relationships. The C# analyzer uses Roslyn; analysis depth differs across languages.</p></article>
+        <article class="px-card"><span class="px-number">02 · GRAPH</span><h3>2D relationship explorer</h3><p>Navigate a directed graph of files, classes and functions. Follow callers and dependencies, isolate nearby components, investigate cycles and trace paths. Distinct relationship evidence helps separate resolved references from inferred links.</p></article>
+        <article class="px-card"><span class="px-number">03 · VISUALIZATION</span><h3>3D Code City</h3><p>Explore a codebase as an architectural landscape. Buildings encode measures such as lines of code and complexity, making dense areas and large components easier to identify. The visualization is a starting point for investigation, not a quality score.</p></article>
+        <article class="px-card"><span class="px-number">04 · WEB SYSTEMS</span><h3>Laravel and database flow</h3><p>Follow statically discovered routes, middleware, controllers, services, Eloquent relationships, migrations and Blade templates. Connect recognized frontend API requests to backend routes and inspect schema relationships across the application.</p></article>
+        <article class="px-card"><span class="px-number">05 · CHANGE</span><h3>Impact and snapshot comparison</h3><p>Compare saved analyses and local Git revisions. Identify added, removed and changed components, inspect complexity and line-count changes, and trace potentially affected callers and dependencies. Track new, resolved and persistent findings over time.</p></article>
+        <article class="px-card"><span class="px-number">06 · QUALITY</span><h3>Security and project health</h3><p>Investigate potential injection, unsafe execution, hardcoded secrets, risky deserialization and other supported rules. Review source locations and analysis coverage, including skipped or unsupported input. Findings are leads, not definitive vulnerability judgments.</p></article>
+        <article class="px-card"><span class="px-number">07 · BINARY</span><h3>Binary Workbench</h3><p>Inspect PE, ELF, Mach-O and correctly configured raw or firmware images. Explore hashes, strings, imports, functions, cross-references, instructions and control-flow graphs. Record annotations and review native pseudo-C recovery alongside disassembly.</p><p class="px-small">x86/x64 and ARM families have deeper documented coverage; MIPS, PowerPC and RISC-V results require particular care. Managed .NET assemblies receive metadata summaries rather than full reconstructed C#.</p></article>
+        <article class="px-card"><span class="px-number">08 · SUPPLY CHAIN</span><h3>Dependencies and provenance</h3><p>Inventory supported npm, Composer and NuGet manifests and lockfiles. Produce CycloneDX software bills of materials, examine cached or imported advisory information, request online advisory lookups when appropriate, and compare hashes and supported provenance attestations.</p></article>
+        <article class="px-card"><span class="px-number">09 · FORENSICS</span><h3>Digital forensic evidence</h3><p>Investigate supported Windows minidumps, shortcut and Prefetch artifacts, and read-only browser SQLite histories. Evaluate YARA and Sigma rules, compare API contracts and export evidence into tamper-evident case containers with integrity records.</p></article>
+      </div>
+      <aside class="px-callout"><strong>Evidence, not certainty.</strong> Static analysis cannot observe every runtime path, reflection target or dynamically constructed relationship. Pseudo-C is approximate, and a matching hash or an empty findings list does not establish that software is safe. Execution and debugging are separate actions requiring an appropriate isolated environment.</aside>
+    </div></section>
+    <section id="workflow" class="container px-section">
+      <p class="px-eyebrow">03 / Practical workflows</p><h2>From questions to evidence.</h2>
+      <div class="px-flow">
+        <article><span>01</span><h3>Open</h3><p>Choose a local project, supported binary or forensic artifact. For a remote repository, use the configured Git client.</p></article>
+        <article><span>02</span><h3>Analyze</h3><p>Build the relationship graph or inspect file structure. Review what was analyzed, what was inferred and what could not be understood.</p></article>
+        <article><span>03</span><h3>Investigate</h3><p>Trace dependencies, compare snapshots, inspect a function or evaluate a finding against its underlying evidence.</p></article>
+        <article><span>04</span><h3>Document</h3><p>Export structured results, record annotations or preserve a case for follow-up review and collaboration.</p></article>
+      </div>
+      <div class="px-two px-spaced">
+        <article class="px-card"><h3>Example: onboarding to a Laravel application</h3><p>A developer can begin with a repository graph, inspect the routes and controller relationships, follow models to their migrations, and compare the result with a baseline before changing a shared service. This makes the review more focused than reading files in isolation.</p></article>
+        <article class="px-card"><h3>Example: reviewing an unfamiliar executable</h3><p>An analyst can examine file metadata, imported functions, strings and cross-references without starting the program. Function graphs and approximate pseudo-C help prioritize further investigation; notes and exports preserve the rationale for later review.</p></article>
+      </div>
+      <h3 class="px-subhead">Interoperable outputs</h3>
+      <p>Use JSON and CSV for structured data, SARIF for static-analysis findings, DOT and GraphML for graph interchange, CycloneDX for component inventories, and supported forensic case bundles for evidence workflows. Export coverage depends on the analysis type. The built-in offline guide provides documentation without a network connection.</p>
+    </section>
+    <section id="platform" class="px-band"><div class="container px-section">
+      <p class="px-eyebrow">04 / Commercial ecosystem</p><h2>Beyond the desktop application.</h2>
+      <p class="px-intro">Proxalume is being developed as an integrated product ecosystem, with the desktop workbench at its center and a Laravel-based web platform for accounts, licensing, service and distribution.</p>
+      <div class="px-system" aria-label="Conceptual product architecture">
+        <div class="px-system-core"><span class="px-number">DESKTOP</span><strong>Proxalume Studio</strong><p>Local analysis, evidence, licensing and verified updates</p></div>
+        <div class="px-system-divider" aria-hidden="true">↕</div>
+        <div class="px-system-core"><span class="px-number">WEB PLATFORM</span><strong>Proxalume.com</strong><p>Accounts, entitlements, support and controlled software distribution</p></div>
+        <div class="px-system-branches"><div>Customer portal</div><div>Team &amp; seats</div><div>Commerce</div><div>Admin Center</div></div>
+      </div>
+      <p class="px-caption">Conceptual system diagram. It describes product responsibilities, not private infrastructure.</p>
+      <div class="px-cards">
+        <article class="px-card"><h3>Licensing &amp; customer accounts</h3><p>The licensing architecture supports device activation, trials, customer entitlements and offline validation after activation. The portal is designed to let customers manage their account, releases and devices according to their plan.</p></article>
+        <article class="px-card"><h3>Organizations &amp; commerce</h3><p>The commercial platform is designed around individual, team and enterprise licensing, seat allocation, billing and order history. Expanded workflows include organization management, partner and affiliate operations, and customer inquiries.</p></article>
+        <article class="px-card"><h3>Admin Center &amp; operations</h3><p>The next website update introduces a broader operations-oriented Admin Center with executive dashboards, module overviews, role-aware navigation, support, finance, reporting, maintenance and system-health workflows. These enhancements are under acceptance review; their presence in a candidate is not confirmation they are live.</p></article>
+      </div>
+    </div></section>
+    <section id="engineering" class="container px-section">
+      <p class="px-eyebrow">05 / Engineering philosophy</p><h2>Local-first, evidence-led, release-controlled.</h2>
+      <div class="px-two">
+        <article class="px-card"><h3>Privacy and user control</h3><p>Core static analysis is designed to run locally without background telemetry. Repository cloning, update checks, online advisory queries and explicitly configured integrations may require network access. A local workflow does not mean every optional feature is offline.</p><p>License activation requires a connection; valid activated licenses support offline use. Current plan and release terms are available from the product website.</p></article>
+        <article class="px-card"><h3>Controlled release engineering</h3><p>Builds target Windows and Linux, with signed update manifests, integrity inventories, differential patches, checksums and a software bill of materials. Releases are evaluated through code review, regression tests, package verification and installation checks before distribution.</p><p>Update signing is distinct from operating-system code-signing certificates. Signatures prove the integrity and origin of the signed data within their trust model, not that a program is free of defects.</p></article>
+      </div>
+      <div class="px-metrics"><div><strong>C#</strong><span>Analysis engine</span></div><div><strong>.NET 10</strong><span>Desktop runtime</span></div><div><strong>Avalonia</strong><span>Desktop UI</span></div><div><strong>Laravel</strong><span>Web ecosystem</span></div></div>
+    </section>
+    <section id="availability" class="px-band"><div class="container px-section">
+      <p class="px-eyebrow">06 / Platform and release availability</p><h2>Built for Windows and Linux.</h2>
+      <div class="px-two">
+        <article class="px-card"><h3>Windows x64</h3><p>Installer and portable ZIP distribution formats. Keep the portable application's companion files together when extracting it.</p><div class="px-chips"><span>Setup EXE</span><span>Portable ZIP</span></div></article>
+        <article class="px-card"><h3>Linux x64</h3><p>Debian and Ubuntu-style packages, RPM packages, AppImage and portable tarball formats. Choose the format appropriate for your distribution and consult the release notes for runtime requirements.</p><div class="px-chips"><span>DEB</span><span>RPM</span><span>AppImage</span><span>tar.gz</span></div></article>
+      </div>
+      <p class="px-small px-spaced">No macOS desktop package is currently provided. Support for inspecting Mach-O or ARM binaries is not a claim of native desktop support on those host platforms. Package formats listed here are build targets; only officially published assets are available for distribution.</p>
+      <div class="px-roadmap">
+        <article><span class="px-number">FOUNDATION</span><h3>Source intelligence</h3><p>Graph model, language analysis, project health and evidence exports.</p></article>
+        <article><span class="px-number">EXPANSION</span><h3>Binary and forensic workflows</h3><p>Function inspection, native-code reading aids, dependency review and case management.</p></article>
+        <article><span class="px-number">CURRENT FOCUS · 2.0.8</span><h3>Stabilization and release acceptance</h3><p>Native packaging, update reliability, licensing resilience and the expanded commercial web platform.</p></article>
+        <article><span class="px-number">ONGOING DEVELOPMENT</span><h3>Depth, reliability and usability</h3><p>Continue improving analysis accuracy, workflow ergonomics, documentation and platform validation. Future scope is subject to testing and release decisions.</p></article>
+      </div>
+    </div></section>
+    <section id="faq" class="container px-section">
+      <p class="px-eyebrow">07 / Frequently asked questions</p><h2>What to know before exploring Proxalume.</h2>
+      <div class="px-faq">
+        <details><summary>Is Proxalume the same as WebToApp Studio Pro?</summary><p>No. Both are WildCat Studio projects. WebToApp packages existing web applications into desktop or mobile projects; Proxalume is a software-analysis and investigation workbench.</p></details>
+        <details><summary>Does Proxalume upload my source code?</summary><p>Core static analysis is local-first. Optional network features such as cloning, update checks and explicitly requested advisory lookups have separate network requirements. Review the product documentation before using external integrations with sensitive projects.</p></details>
+        <details><summary>Can it reconstruct the original source of an executable?</summary><p>Native pseudo-C helps interpret machine code, but cannot recover original source, comments, names or types reliably in every case. It should be checked against the underlying instructions. Managed .NET metadata inspection is not full C# decompilation.</p></details>
+        <details><summary>Does it replace a debugger, security audit or forensic investigation?</summary><p>No. It provides evidence and navigation tools that complement specialist workflows. Unsupported constructs, incomplete evidence and runtime behavior require independent investigation.</p></details>
+        <details><summary>Can I use it offline?</summary><p>Core local analysis and the bundled guide work offline. Initial online license activation and optional network operations require connectivity. Offline use remains subject to the applicable license and trial terms.</p></details>
+        <details><summary>Where can I obtain the latest release or commercial terms?</summary><p>Visit the <a href="https://proxalume.com/">official Proxalume website</a> for current availability, published downloads, pricing and support. This studio showcase is not a download mirror and does not imply that a candidate has been released.</p></details>
+      </div>
+      <div class="px-cta"><div><p class="px-eyebrow">Explore the project</p><h2>Understand more of the software in front of you.</h2><p>Discover the official product site for current release information and licensing.</p></div><a class="px-button px-primary" href="https://proxalume.com/">Visit proxalume.com <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="px-footer"><div><strong>WildCat Studio</strong><p>Independent software engineering and developer tools.</p></div><nav aria-label="Footer"><a href="../">WebToApp Studio Pro</a><a href="./" aria-current="page">Proxalume Studio</a><a href="../docs/">Documentation</a><a href="https://proxalume.com/">Official Proxalume site</a></nav></div>
+      <div class="footer-bottom"><span>&copy; 2026 WildCat Studio. All rights reserved.</span><a class="px-home" href="#main">Back to top ↑</a></div>
+    </div>
+  </footer>
+  <script src="../js/proxalume.js" defer></script>
+</body>
+</html>
