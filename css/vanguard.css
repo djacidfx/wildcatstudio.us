@@ -1,0 +1,43 @@
+/* Shared showcase layout with a distinct sci-fi palette. */
+.vf-page { --px-accent:#67e8f9; --px-strong:#22d3ee; --px-outline:#285c72; }
+[data-theme="light"] .vf-page { --px-accent:#075985; --px-strong:#036987; --px-outline:#a7cad5; }
+.vf-page .vf-hero {background:radial-gradient(ellipse at 80% 15%,rgba(6,182,212,.14),transparent 55%),radial-gradient(ellipse at 10% 60%,rgba(99,102,241,.12),transparent 55%);}
+.vf-page .px-primary {background:#075985;border-color:#075985;color:#fff;}
+.vf-page .px-dot {background:#2dd4bf;}
+.vf-page .px-callout a {color:var(--px-accent);font-weight:700;}
+.vf-page .px-card,.vf-page .px-metrics div {border-top:2px solid var(--px-outline);}
+.vf-manual .vf-manual-intro {padding-block:45px 25px}
+.vf-manual .vf-manual-intro h1 {font-size:clamp(2rem,4.5vw,3.6rem)}
+.vf-manual-layout {display:grid;grid-template-columns:275px minmax(0,1fr);gap:24px;align-items:start;padding-bottom:60px}
+.vf-contents {position:sticky;top:85px;max-height:calc(100vh - 100px);overflow:auto;background:var(--bg-surface);border:1px solid var(--border-subtle);padding:18px;border-radius:12px}
+.vf-contents h2 {font-size:1.25rem;margin-bottom:12px}
+.vf-contents label {display:block;font-weight:700;font-size:.9rem}
+.vf-contents input {width:100%;padding:10px;border:1px solid var(--px-outline);border-radius:8px;background:var(--bg-dark);color:var(--text-main);font:inherit;margin:6px 0 10px}
+.vf-contents nav {display:grid;gap:4px}
+.vf-contents nav a {padding:7px 8px;border-radius:5px;font-size:.88rem;color:var(--px-accent);text-decoration:none}
+.vf-contents nav a:hover {background:var(--blue-subtle);text-decoration:underline}
+.vf-chapters {min-width:0}
+.vf-chapters section {scroll-margin-top:90px;padding:clamp(16px,3vw,28px);border:1px solid var(--px-outline);border-radius:12px;background:var(--bg-surface);margin:0 0 22px;overflow-wrap:anywhere}
+.vf-chapters h2 {font-size:clamp(1.35rem,2.8vw,2rem);color:var(--px-accent);margin:7px 0 12px}
+.vf-chapters p,.vf-chapters li {font-size:.96rem;line-height:1.65}
+.vf-chapters p {margin:8px 0 12px}
+.vf-chapters ul,.vf-chapters ol {padding-left:22px;margin:10px 0}
+.vf-chapters a {color:var(--px-accent);text-decoration:underline}
+.vf-chapters strong,.vf-chapters [class~="font-bold"],.vf-chapters [class~="font-black"] {font-weight:700}
+.vf-chapters [class~="font-mono"] {line-height:1.55}
+.vf-chapters [class~="uppercase"] {letter-spacing:.035em}
+.vf-chapters [class~="grid"] {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.vf-chapters [class~="grid"]>[class*="rounded"],.vf-chapters div[class*="p-4"][class*="border"],.vf-chapters div[class*="p-5"][class*="border"] {padding:15px;border:1px solid var(--border-subtle);border-radius:9px;background:var(--bg-card);min-width:0}
+.vf-chapters [class*="space-y-"]>*+* {margin-top:9px}
+.vf-chapters div[class~="flex"][class~="items-center"] {display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.vf-chapters code {background:var(--bg-surface-elevated);padding:2px 4px;border-radius:4px;font-size:.9em;white-space:normal}
+.vf-chapters [class*="overflow-x"] {overflow-x:auto}
+.vf-chapters table {border-collapse:collapse;width:100%;font-size:.9rem}
+.vf-chapters td,.vf-chapters th {padding:8px;border:1px solid var(--border-subtle);text-align:left}
+.vf-chapters [class~="border-b"] {border-bottom:1px solid var(--border-subtle);padding-bottom:9px;margin-bottom:13px}
+.vf-chapters [class*="tracking-widest"] {font-size:.78rem;color:var(--px-accent)}
+.vf-chapters [class*="text-rose-"],.vf-chapters [class*="text-amber-"],.vf-chapters [class*="text-cyan-"],.vf-chapters [class*="text-violet-"],.vf-chapters [class*="text-emerald-"] {color:var(--text-main)}
+.vf-chapters section[hidden],.vf-contents a[hidden] {display:none!important}
+@media(max-width:900px){.vf-manual-layout{grid-template-columns:1fr}.vf-contents{position:static;max-height:none}.vf-contents nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.vf-chapters [class~="grid"],.vf-contents nav{grid-template-columns:1fr}.vf-chapters section{padding:16px}}
+@media print{.vf-page header,.vf-page footer,.vf-contents,.vf-manual-intro .px-actions{display:none}.vf-manual-layout{display:block}.vf-chapters section{break-inside:auto;box-shadow:none}}

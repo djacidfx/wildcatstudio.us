@@ -1,0 +1,1271 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>try{const t=localStorage.getItem('wildcat_theme');if(t==='light'||(!t&&matchMedia('(prefers-color-scheme: light)').matches))document.documentElement.dataset.theme='light'}catch(_){}</script>
+<title>Vanguard Front — Commander's Tactical Field Manual | WildCat Studio</title><meta name="description" content="The complete player-facing Vanguard Front guide: Meridian Reach lore, planetary economy, research, fleets, diplomacy, radar, logistics, and advanced command systems.">
+<meta name="theme-color" content="#071a2c"><link rel="canonical" href="https://wildcatstudio.us/vanguard-front/documentation/">
+<meta property="og:site_name" content="WildCat Studio"><meta property="og:title" content="Vanguard Front — Commander's Tactical Field Manual"><meta property="og:description" content="The complete player-facing Vanguard Front guide: Meridian Reach lore, planetary economy, research, fleets, diplomacy, radar, logistics, and advanced command systems."><meta property="og:type" content="website"><meta property="og:url" content="https://wildcatstudio.us/vanguard-front/documentation/"><meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<link rel="stylesheet" href="../../css/style.css"><link rel="stylesheet" href="../../css/proxalume.css"><link rel="stylesheet" href="../../css/vanguard.css">
+</head><body class="px-page vf-page">
+  <a class="px-skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container px-header">
+      <a href="../../" class="brand-link">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+        <span class="brand-text"><span class="brand-title">WildCat Studio</span><span class="brand-subtitle">Field manual</span></span>
+      </a>
+      <div class="px-header-actions">
+        <a href="../../" class="px-home">Studio home</a>
+        <button type="button" id="px-theme" class="theme-toggle-btn" aria-label="Switch color theme" title="Switch color theme" hidden>
+          <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 15A9 9 0 0 1 9 4a9 9 0 1 0 11 11Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+<main id="main" class="container vf-manual"><section class="px-section vf-manual-intro"><p class="px-eyebrow">Vanguard Front · Commander reference</p><h1>Commander's <span>Field Manual</span></h1><p class="px-lede">The 20 operational chapters and lore briefing from the game's documented command manual, adapted for public reading.</p><div class="px-actions"><a class="px-button px-primary" href="../">← Project showcase</a><a class="px-button" href="https://vanguardfront.online/">Official game ↗</a><a class="px-button" href="https://vanguardfront.online/guide">Current in-game guide ↗</a></div><p class="px-status"><strong>Reference edition:</strong> Based on the 1.4.18 documentation snapshot. Content names use the shipped catalog; live overrides, game balance, available features and server settings may differ. Administrative implementation and restricted integration details are omitted. Use the official game for authoritative current values.</p><p class="px-small">New commander? Register at the official site, follow any required verification, and start in your homeworld's overview. Build resource production and power before committing to large fleets.</p></section><div class="vf-manual-layout"><aside class="vf-contents"><h2>Contents</h2><label for="vf-search">Search chapters</label><input type="search" id="vf-search" placeholder="Search the manual…" autocomplete="off"><p id="vf-result" role="status" class="px-small"></p><nav aria-label="Manual chapters"><a href="#lore">Chronicles of the Meridian Reach</a>
+<a href="#economy">1 · Economy and resources</a>
+<a href="#buildings">2 · Infrastructure</a>
+<a href="#facilities">3 · Industrial facilities</a>
+<a href="#research">4 · Research matrix</a>
+<a href="#fleet">5 · Fleet operations</a>
+<a href="#espionage-raid">6 · Reconnaissance and raid planning</a>
+<a href="#defense">7 · Planetary defense</a>
+<a href="#abort-protocols">8 · Task cancellation</a>
+<a href="#combat">9 · Combat, wreckfields and moons</a>
+<a href="#alliances">10 · Alliances and diplomacy</a>
+<a href="#chronicles">11 · Subspace Chronicles</a>
+<a href="#events">12 · Encounters and events</a>
+<a href="#radar-alarms">13 · Radar and alarms</a>
+<a href="#developer-api">14 · Companion integrations</a>
+<a href="#support-initiative">15 · Developer support</a>
+<a href="#simulator-manual">16 · Quantum battle simulator</a>
+<a href="#officers-manual">17 · High Command officers</a>
+<a href="#freight-manual">18 · Imperial Freight</a>
+<a href="#relocation-manual">19 · Planetary relocation</a>
+<a href="#acs-manual">20 · Alliance Combat System</a></nav></aside><article class="vf-chapters"><section id="lore" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-violet-500/60 bg-gradient-to-br from-slate-950 via-violet-950/20 to-slate-900 space-y-6 shadow-[0_0_35px_rgba(139,92,246,0.18)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-violet-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-violet-400 shadow-[0_0_12px_#a78bfa] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-violet-300 font-bold block">
+                        ARCHIVES OF THE HIGH ADMIRALTY // CLASSIFIED HISTORICAL LEDGER
+                    </span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">
+                        THE CHRONICLES OF THE MERIDIAN REACH &amp; THE AETHER GENESIS
+                    </h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-violet-950 text-violet-300 border border-violet-700 font-bold uppercase tracking-wider">
+                DECRYPTED ARCHIVE // ERA OF SILENT ENGINES
+            </span>
+        </div>
+
+        <!-- Lore Chapter 1 & 2: The Fall and The Genesis -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+            <div class="space-y-3 bg-slate-950/70 p-5 rounded-xl border border-violet-950/80">
+                <div class="flex items-center gap-2 text-violet-300 font-bold text-sm">
+                    <span>🌌</span>
+                    <span>I. The Collapse of the Old Hyperlanes</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-[11px]">
+                    Before the silence engulfed the outer arms, the Lane Dominion spanned eleven thousand mapped stellar gates. Planetary hubs traded trillions of metric tons of refined silicate and heavy alloys under a united trade mandate. That era ended in a solar instant during <strong class="text-violet-300">The Resonant Shiver</strong>—a cosmic collapse that fractured the central transit gate at Meridian Zero, severing colony clusters across the Orion Spur.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    Isolated across light-years of unbroken void, surviving colonies entered <em class="text-slate-300">The Dark Epoch</em>. Star systems devolved into sovereign feudal factions, each clawing for scrap metal, geothermal crystalline formations, and precious deposits of heavy hydrogen isotope to stave off atmospheric collapse.
+                </p>
+            </div>
+
+            <div class="space-y-3 bg-slate-950/70 p-5 rounded-xl border border-violet-950/80">
+                <div class="flex items-center gap-2 text-cyan-300 font-bold text-sm">
+                    <span>🔮</span>
+                    <span>II. The Discovery of Primordial Aether</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-[11px]">
+                    In deep subterranean crusts beneath the Meridian Reach's barren outer moons, exploratory mining crews uncovered stable crystalline anomalies radiating zero heat yet exerting localized gravitational distortions: <strong class="text-cyan-300">Primordial Aether</strong>.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    Unlike combustible hydrocarbons, Aether does not burn. Instead, when channeled through quantum catalytic resonators, it bends local spacetime tensors. This exotic particle powers sovereign civil architect sub-routines, stabilizes parallel subspace research laboratories, and synchronizes long-range early warning tactical radar arrays across entire solar systems.
+                </p>
+            </div>
+        </div>
+
+                <!-- Lore Chapter 3 & 4: Celestial Diversity & Precursor Relics -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+            <div class="space-y-3 bg-slate-950/70 p-5 rounded-xl border border-violet-950/80">
+                <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                    <span>🪐</span>
+                    <span>III. Celestial Typology &amp; Frontier Biospheres</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-[11px]">
+                    The worlds of the Meridian Reach vary dramatically in atmospheric density and seismic temperament. From scorching <strong class="text-rose-400">Volcanic Inferno</strong> worlds whose molten magma seas offer unprecedented metal mining extraction to sub-zero <strong class="text-cyan-400">Glacial Tundra</strong> biospheres where cryogenic deuterium condensation yields unmatched fuel reserves.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    Between them lie temperate <strong class="text-blue-400">Terrestrial</strong> cradle worlds, mineral-rich <strong class="text-amber-400">Arid Deserts</strong>, and hollowed-out <strong class="text-slate-300">Lunar Satellites</strong> formed from the shattered husks of cataclysmic fleet battles. Every planetary position dictates sunwing collector irradiation intensity, orbital defense vantage, and colony growth potential.
+                </p>
+            </div>
+
+            <div class="space-y-3 bg-slate-950/70 p-5 rounded-xl border border-violet-950/80">
+                <div class="flex items-center gap-2 text-emerald-300 font-bold text-sm">
+                    <span>🏛️</span>
+                    <span>IV. The Whispering Precursor Monoliths</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-[11px]">
+                    Scattered across subterranean fault lines and drifting dead-space hulks are the relics of the <em class="text-emerald-300">Aethelgard Precursors</em>—an ancient stellar civilization that unlocked zero-point energy eons before humankind split the atom. 
+                </p>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    Their abandoned hyper-spatial monoliths hum on harmonic tachyon wavelengths. When unearthed by archaeological survey teams, these monoliths grant quantum propulsion schematics, raw Aether caches, and enigmatic warnings concerning an impending shadow that once consumed their civilization from beyond the galactic rim.
+                </p>
+            </div>
+        </div>
+
+        <!-- Lore Chapter 5 & 6: Sovereign Dreadnought & Subspace Acceleration -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+            <div class="space-y-3 bg-slate-950/70 p-5 rounded-xl border border-violet-950/80">
+                <div class="flex items-center gap-2 text-rose-300 font-bold text-sm">
+                    <span>💥</span>
+                    <span>V. The Dawn of the Sovereign Dreadnought &amp; Capital Annihilators</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-[11px]">
+                    During the Siege of Terminus Prime, planetary defense shields proved impervious to conventional warden cruiser torpedo salvos and ironclad battleship batteries. In desperate response, Sovereign High Command mobilized the classified <strong class="text-rose-400">Sovereign Dreadnought</strong> initiative—colossal orbital super-structures housing twin gravimetric pulse superlasers.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    Eclipsing the obsolete, vulnerable Deathstar blueprints of the pre-war era, the Sovereign Dreadnought channels millions of megawatts directly from miniature artificial singularity cores. It can crack tectonic planetary crusts, vaporize lunar satellites, and withstand point-blank antimatter detonations through multi-layered phase-deflection shields.
+                </p>
+            </div>
+
+            <div class="space-y-3 bg-slate-950/70 p-5 rounded-xl border border-violet-950/80">
+                <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                    <span>⚡</span>
+                    <span>VI. Subspace Acceleration &amp; Quantum Matter Replication</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-[11px]">
+                    When the outer sectors erupted in synchronized combat, construction backlogs at orbital shipyards and axiom laboratorys threatened colonial survival. High Command physicists solved the bottleneck by harmonizing <strong class="text-amber-300">Subspace Aether Infusions</strong> with molecular nanite fabricators.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    Through quantum catalytic resonance, months of infrastructure assembly, weapons research, or dreadnought hull welding can now be folded into a single instantaneous Planck interval—giving commanders the power to instantly finish projects when critical defense emergencies arise.
+                </p>
+            </div>
+        </div>
+
+        <!-- The Three Sovereign Doctrines & Philosophy -->
+        <div class="space-y-3 font-mono">
+            <h3 class="text-xs font-bold uppercase text-slate-300 tracking-wider flex items-center gap-2">
+                <span class="text-amber-400">⚔️</span>
+                <span>The Three Sovereign Doctrines: The Path to Galactic Hegemony</span>
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <!-- Doctrine 1 -->
+                <div class="p-4 rounded-xl bg-gradient-to-b from-amber-950/40 via-slate-950 to-slate-950 border border-amber-600/40 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-amber-300 text-sm">The Collector</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-700 font-bold">INDUSTRIAL SOVEREIGN</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Followers of the Industrial Synod believe that wars are decided in the blast furnaces, not the stars. By supercharging deep-core magnetic plasma drills and reinforcing subterranean vault silos, Collectors out-produce every adversary and sustain continuous planetary expansion.
+                    </p>
+                    <div class="text-[10px] text-amber-300 font-bold pt-1 border-t border-slate-800">
+                        +25% Mine Throughput &bull; Geothermal Overclocking &bull; Silo Compression
+                    </div>
+                </div>
+
+                <!-- Doctrine 2 -->
+                <div class="p-4 rounded-xl bg-gradient-to-b from-rose-950/40 via-slate-950 to-slate-950 border border-rose-600/40 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-rose-300 text-sm">The General</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-950 text-rose-400 border border-rose-700 font-bold">ARMADA OVERLORD</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Heirs to the fractured Imperial Admiralty. Generals maintain that sovereign borders extend only as far as fleet cannons reach. They harness hyperdrive lattice tuning and recoil-damped kinetic batteries to conduct sudden devastating planetary orbital bombardments.
+                    </p>
+                    <div class="text-[10px] text-rose-300 font-bold pt-1 border-t border-slate-800">
+                        +100% Starship Combat Velocity &bull; +2 Fleet Slots &bull; Orbital Wreck Salvage
+                    </div>
+                </div>
+
+                <!-- Doctrine 3 -->
+                <div class="p-4 rounded-xl bg-gradient-to-b from-cyan-950/40 via-slate-950 to-slate-950 border border-cyan-600/40 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-cyan-300 text-sm">The Discoverer</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-700 font-bold">DEEP-SPACE VANGUARD</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Navigators and relic archivists who believe the salvation of humanity lies in charting forgotten sectors. Discoverers launch long-range deep-space expedition armadas, retrieve precursor technology artifacts, and terraform distant celestial worlds.
+                    </p>
+                    <div class="text-[10px] text-cyan-300 font-bold pt-1 border-t border-slate-800">
+                        +50% Expedition Yield &bull; Precursor Relic Discovery &bull; Farsight Array Overclock
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Sovereign Code of Fair Combat -->
+        <div class="p-4 rounded-xl bg-slate-950/90 border border-cyan-500/40 font-mono text-xs space-y-2">
+            <div class="flex items-center gap-2 text-cyan-300 font-bold uppercase text-[11px]">
+                <span>🛡️</span>
+                <span>The Sovereign Code of Fair Combat: The Non-Intervention Concordat</span>
+            </div>
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                By unanimous edict of the Interstellar Council of the Meridian Reach, orbital war is governed by strict tactical honor: <strong class="text-white">warships and planetary defenses can never be summoned from currency or bought with paper credits</strong>. Every warden cruiser, ironclad battleship, plasma cannon, and ordnance silo must be forged through raw planetary extraction, industrial fabrication, and tactical command. Aether acts exclusively as a strategic catalyst—powering civil management licenses, queue automations, and tactical intelligence networks.
+            </p>
+        </div>
+    </section>
+<section id="economy" class="hud-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+            <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+            <h2 class="text-lg font-bold font-mono text-cyan-300 uppercase tracking-wider">1. Economy, Energy &amp; Planetary Accrual</h2>
+        </div>
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            Vanguard Front features a continuous, stateless resource accrual engine running at high precision. Every planetary extraction facility deposits resources directly into containment silos second-by-second.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                    <strong class="text-slate-200">Metal (M)</strong>
+                </div>
+                <p class="text-slate-400 text-[11px]">Dense structural iron and titanium ore. Primary material for hulls, armor plating, and heavy mining infrastructure. Extracted via Deep-Seam Extractors.</p>
+                <div class="text-[10px] text-cyan-400 font-bold">Base Production: 30 units / hour</div>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                    <strong class="text-cyan-300">Crystal (C)</strong>
+                </div>
+                <p class="text-slate-400 text-[11px]">Silicate semiconductor lattices and focusing crystals. Required for electronic components, laser optics, and shield dome emitters. Extracted via Lattice Harvesters.</p>
+                <div class="text-[10px] text-cyan-400 font-bold">Base Production: 15 units / hour</div>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                    <strong class="text-emerald-300">Deuterium (D)</strong>
+                </div>
+                <p class="text-slate-400 text-[11px]">Heavy hydrogen isotope filtered from planetary hydrospheres. Used as impulse and hyperspace fuel, ember-core reactor feed, and research catalyst.</p>
+                <div class="text-[10px] text-cyan-400 font-bold">Base Production: 0 units / hour</div>
+            </div>
+        </div>
+
+        <div class="bg-slate-950 p-4 rounded-xl border border-cyan-900/50 space-y-2 font-mono text-xs">
+            <div class="text-amber-400 font-bold">⚡ Energy Balance Protocol:</div>
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                If total consumed energy exceeds available generation (<span class="text-rose-400 font-bold">Energy &lt; 0</span>), planetary mining operations suffer an automatic production throttle proportional to the deficit ratio:
+                <code class="text-cyan-300 bg-slate-900 px-1 py-0.5 rounded">Efficiency = Energy_Max / Energy_Used</code>. Construct additional Sunfield Arrays, deploy Sunwing Collectors, or commission Ember-Core Reactors to maintain 100% extraction efficiency.
+            </p>
+        </div>
+    </section>
+<section id="buildings" class="hud-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+            <span class="w-3 h-3 rounded-full bg-slate-400"></span>
+            <h2 class="text-lg font-bold font-mono text-slate-200 uppercase tracking-wider">2. Planetary Infrastructure &amp; Mining Formulas</h2>
+        </div>
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            Upgrading structural infrastructure increases resource throughput and storage thresholds according to canonical exponential curves:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <div class="text-cyan-300 font-bold">Deep-Seam Extractor Formula</div>
+                <div class="text-[11px] text-slate-300 space-y-1">
+                    <div>Production: <code class="text-cyan-300">30 &bull; Level &bull; 1.1^Level</code></div>
+                    <div>Metal Cost: <code class="text-cyan-300">60 &bull; 1.5^(Level - 1)</code></div>
+                    <div>Crystal Cost: <code class="text-cyan-300">15 &bull; 1.5^(Level - 1)</code></div>
+                    <div>Energy Consumption: <code class="text-amber-300">10 &bull; Level &bull; 1.1^Level</code></div>
+                </div>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <div class="text-cyan-300 font-bold">Lattice Harvester Formula</div>
+                <div class="text-[11px] text-slate-300 space-y-1">
+                    <div>Production: <code class="text-cyan-300">20 &bull; Level &bull; 1.1^Level</code></div>
+                    <div>Metal Cost: <code class="text-cyan-300">48 &bull; 1.6^(Level - 1)</code></div>
+                    <div>Crystal Cost: <code class="text-cyan-300">24 &bull; 1.6^(Level - 1)</code></div>
+                    <div>Energy Consumption: <code class="text-amber-300">10 &bull; Level &bull; 1.1^Level</code></div>
+                </div>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <div class="text-cyan-300 font-bold">Isotope Refinery Formula</div>
+                <div class="text-[11px] text-slate-300 space-y-1">
+                    <div>Production: <code class="text-cyan-300">10 &bull; Level &bull; 1.1^Level &bull; (1.44 - 0.004 &bull; MaxTemp)</code></div>
+                    <div>Metal Cost: <code class="text-cyan-300">225 &bull; 1.5^(Level - 1)</code></div>
+                    <div>Crystal Cost: <code class="text-cyan-300">75 &bull; 1.5^(Level - 1)</code></div>
+                    <div>Energy Consumption: <code class="text-amber-300">20 &bull; Level &bull; 1.1^Level</code></div>
+                </div>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <div class="text-cyan-300 font-bold">Sunfield Array &amp; Fusion Generation</div>
+                <div class="text-[11px] text-slate-300 space-y-1">
+                    <div>Sunfield Array Energy: <code class="text-emerald-300">20 &bull; Level &bull; 1.1^Level</code></div>
+                    <div>Ember-Core Reactor Energy: <code class="text-emerald-300">30 &bull; Level &bull; (1.05 + EnergyTech &bull; 0.01)^Level</code></div>
+                    <div>Fusion Deuterium Burn: <code class="text-rose-300">10 &bull; Level &bull; 1.1^Level units / hour</code></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="facilities" class="hud-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+            <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+            <h2 class="text-lg font-bold font-mono text-cyan-300 uppercase tracking-wider">3. Industrial Facilities &amp; Acceleration</h2>
+        </div>
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            Advanced facilities drastically reduce the real-world duration of structural upgrades, starship drydock fabrication, and scientific research:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100">Automaton Foundry</strong>
+                <p class="text-slate-400 text-[11px]">Automates construction logistics with cybernetic worker swarms. Each level accelerates planetary building upgrades.</p>
+                <div class="text-[10px] text-cyan-300">Speed Formula: Duration / (1 + Robotics Level)</div>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100">Swarm Nanoforge</strong>
+                <p class="text-slate-400 text-[11px]">The pinnacle of planetary manufacturing. Molecular nanite constructors cut construction and shipyard fabrication times in half per tier.</p>
+                <div class="text-[10px] text-cyan-300">Speed Formula: Duration / 2^(Nanite Level)</div>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100">Research Laboratory</strong>
+                <p class="text-slate-400 text-[11px]">Central quantum computational node for galactic research vectors. High laboratory tiers unlock advanced propulsion and weapon tech.</p>
+                <div class="text-[10px] text-cyan-300">Speed Formula: Duration / (1 + Lab Level)</div>
+            </div>
+        </div>
+    </section>
+<section id="research" class="hud-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+            <h2 class="text-lg font-bold font-mono text-emerald-300 uppercase tracking-wider">4. Galactic Research Matrix</h2>
+        </div>
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            Scientific discoveries apply empire-wide across all your colonies. Key technology vectors include:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-cyan-300">Propulsion Systems:</strong>
+                <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
+                    <li><strong class="text-slate-200">Burn Drive:</strong> Increases sub-light speed by +10% per level. Used by Courier Hauler, Dart Interceptors, Salvage Reclaimers.</li>
+                    <li><strong class="text-slate-200">Pulse Drive:</strong> Increases speed by +20% per level. Used by Warden Cruisers, Lancer Gunships, Hammerfall Bombers, Seedship Arks. Overhauls Courier Hauler drives at level 5.</li>
+                    <li><strong class="text-slate-200">Fold Drive:</strong> Increases speed by +30% per level. Used by Ironclad Battleships, Tempest Battlecruisers, Razorback Destroyers, Sovereign Dreadnoughts. Overhauls Hammerfall Bombers at level 8.</li>
+                </ul>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-cyan-300">Combat &amp; Tactical Systems:</strong>
+                <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
+                    <li><strong class="text-slate-200">Weapon Technology:</strong> Increases starship and defense grid attack power by +10% per level.</li>
+                    <li><strong class="text-slate-200">Barrier Theory:</strong> Increases defensive energy shields by +10% per level.</li>
+                    <li><strong class="text-slate-200">Hull Metallurgy:</strong> Strengthens ship hull integrity and structural points by +10% per level.</li>
+                    <li><strong class="text-slate-200">Stellar Cartography:</strong> Expands your empire's colonization capacity. Allows +1 new colony every 2 levels.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+<section id="fleet" class="hud-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-cyan-400 font-bold block">
+                        ARMADA COMMAND &bull; NAVAL OPERATIONS
+                    </span>
+                    <h2 class="text-lg sm:text-xl font-bold font-mono text-cyan-300 uppercase tracking-wider">
+                        5. Starship Hull Classifications &amp; The 8 Mission Directives
+                    </h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold uppercase">
+                DIRECTIVE DISPATCH MATRIX
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            Starships are assembled in planetary Heavy Shipyards, governed by Nanite acceleration and Propulsion tech tiers. Armada movements require Deuterium fuel calculated based on distance, ship mass, and engine efficiency. Vanguard Front commands <strong class="text-cyan-300">eight distinct mission directives</strong>:
+        </p>
+
+        <!-- The 8 Directives Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-rose-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-rose-400 font-bold">
+                    <span>⚔️</span>
+                    <span>1. Attack</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Engages enemy fleets and defensive batteries in up to 6 tactical combat rounds. Victorious armadas plunder up to <strong class="text-rose-300">50% of unprotected Metal, Crystal, and Deuterium</strong>.
+                </p>
+                <div class="text-[10px] text-rose-400 font-bold">Creates harvestable orbital debris fields.</div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-emerald-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-emerald-400 font-bold">
+                    <span>🚚</span>
+                    <span>2. Transport</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Carries designated payloads of Metal, Crystal, or Deuterium to friendly colonies or allied bases. Unloads freight upon arrival and automatically charts a return vector.
+                </p>
+                <div class="text-[10px] text-emerald-300 font-bold">A logistics mission rather than an attack.</div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-blue-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-blue-400 font-bold">
+                    <span>⚓</span>
+                    <span>3. Deploy</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Permanently relocates starships and cargo to another colony or lunar satellite under your sovereign control. If recalled en route, 100% of fuel consumed for the return is retained.
+                </p>
+                <div class="text-[10px] text-blue-300 font-bold">Crucial for fleet repositioning &amp; ninja defense.</div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-amber-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-amber-400 font-bold">
+                    <span>🛰️</span>
+                    <span>4. Espionage</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Deploys high-speed probes to scan foreign worlds. Depending on Signal Intelligence differentials, reports decrypt stored resources, defense installations, ship drydocks, and research tech.
+                </p>
+                <div class="text-[10px] text-amber-300 font-bold">Risk of counter-espionage destruction.</div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-cyan-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-cyan-400 font-bold">
+                    <span>🪐</span>
+                    <span>5. Colonize</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Dispatches a specialized Seedship Ark to unpopulated orbital coordinates (slots 1&ndash;15). Terraform and claim a new colony. Empire expansion limit is dictated by your <strong class="text-cyan-300">Stellar Cartography level</strong> (+1 colony every 2 levels).
+                </p>
+                <div class="text-[10px] text-cyan-300 font-bold">The Seedship Ark is consumed upon foundation.</div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-teal-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-teal-400 font-bold">
+                    <span>♻️</span>
+                    <span>6. Harvest / Recycle</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Sends heavy Salvage Reclaimers to orbital debris fields left behind by cataclysmic fleet battles. Gathers floating Metal and Crystal scrap, loading storage holds to maximum capacity before returning home.
+                </p>
+                <div class="text-[10px] text-teal-300 font-bold">High yield recovery for war veterans.</div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-violet-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-violet-400 font-bold">
+                    <span>💥</span>
+                    <span>7. Moon Destroy</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Dispatches planet-cracking Sovereign Dreadnought warships on a high-risk graviton beam sortie targeting an enemy lunar satellite. Can shatter the moon into debris or vaporize the attacking Sovereign Dreadnoughts.
+                </p>
+                <div class="text-[10px] text-violet-300 font-bold">Requires Sovereign Dreadnought; targets Moons only.</div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-purple-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-purple-400 font-bold">
+                    <span>🌌</span>
+                    <span>8. Expedition</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Sends exploratory flotillas into the deep void (<strong class="text-purple-300">Sector Slot 16</strong>). Uncover forgotten Precursor artifacts, free Aether caches, wandering alien merchant vessels, derelict ships, or survive hazardous black holes.
+                </p>
+                <div class="text-[10px] text-purple-300 font-bold">Expedition count scales with Stellar Cartography.</div>
+            </div>
+        </div>
+
+        <!-- Alliance Stationing Note -->
+        <div class="p-3 rounded-xl bg-slate-950 border border-indigo-900/40 text-[11px] font-mono text-slate-300 flex items-center justify-between gap-4">
+            <div>
+                <strong class="text-indigo-400">🛡️ Federation Stationing &amp; Defense (ACS):</strong> Command squadrons can be deployed and stationed in orbit of allied worlds via Concord Depots, forming unified defensive lines to repel incoming enemy armadas.
+            </div>
+            <a href="https://vanguardfront.online/game/alliance" class="text-cyan-400 hover:text-cyan-300 text-xs font-bold underline whitespace-nowrap">
+                Concord Depots &rarr;
+            </a>
+        </div>
+
+        <!-- Hull Classifications Summary -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs pt-2">
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span class="text-cyan-400">🚀</span>
+                    <span>Light &amp; Tactical Vessels</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    <strong>Dart Interceptor &amp; Lancer Gunship:</strong> Agile swarming units designed to absorb enemy fire and overwhelm static guns.<br>
+                    <strong>Warden Cruiser:</strong> Rapid-response hunter equipped with devastating Rapid Fire 6x against Dart Interceptors and 10x against Missile Batterys.<br>
+                    <strong>Small &amp; Bulk Freighter:</strong> The economic lifeblood of the empire, transporting 5,000 and 25,000 resource units respectively.
+                </p>
+            </div>
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span class="text-amber-400">⚡</span>
+                    <span>Capital &amp; Siege Leviathans</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    <strong>Ironclad Battleship &amp; Tempest Battlecruiser:</strong> Heavy-hitting capital dreadnoughts designed for ship-to-ship annihilation with heavy shields and anti-cruiser torpedoes.<br>
+                    <strong>Hammerfall Bomber &amp; Razorback Destroyer:</strong> Specialized planet-siege craft that decimate planetary defense batteries and counter tempest battlecruisers.<br>
+                    <strong>Sovereign Dreadnought (Graviton Matrix):</strong> The ultimate celestial terror capable of annihilating entire armadas and cracking planetary moons.
+                </p>
+            </div>
+        </div>
+    </section>
+<section id="espionage-raid" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-amber-500/60 bg-gradient-to-br from-slate-950 via-amber-950/20 to-slate-900 space-y-6 shadow-[0_0_35px_rgba(245,158,11,0.18)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-amber-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-amber-400 shadow-[0_0_12px_#fbbf24] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-amber-300 font-bold block">
+                        TACTICAL RECONNAISSANCE // AUTOMATED PLUNDER TELEMETRY
+                    </span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">
+                        6. Espionage Plunder Calculator &amp; 1-Click Quick-Raid Hook
+                    </h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-700 font-bold uppercase tracking-wider">
+                SUBSPACE MESSAGES // REAL-TIME RECON
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            When scouting enemy positions via the Subspace Intelligence terminal (<a href="https://vanguardfront.online/game/messages" class="text-cyan-400 underline hover:text-cyan-300">/game/messages</a>), your tactical HUD automatically evaluates target storage vaults using the canonical <strong class="text-amber-300">50% Plunder Doctrine</strong>.
+        </p>
+
+        <!-- Plunder Math Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-amber-500/40 space-y-2">
+                <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                    <span>⚖️</span>
+                    <span>The 50% Plunder Law</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    A victorious attack fleet can pillage exactly half of the target's unprotected reserves:
+                </p>
+                <div class="p-2.5 rounded bg-slate-950 border border-slate-800 text-[10px] space-y-1">
+                    <div>Plunderable Metal = <span class="text-slate-200 font-bold">50%</span> of stored Metal</div>
+                    <div>Plunderable Crystal = <span class="text-cyan-300 font-bold">50%</span> of stored Crystal</div>
+                    <div>Plunderable Deuterium = <span class="text-teal-300 font-bold">50%</span> of stored Deuterium</div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-cyan-500/40 space-y-2">
+                <div class="flex items-center gap-2 text-cyan-300 font-bold text-sm">
+                    <span>📦</span>
+                    <span>Cargo Fleet Computation</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    The report telemetry instantly calculates the exact hull count required to haul total plunder:
+                </p>
+                <div class="p-2.5 rounded bg-slate-950 border border-slate-800 text-[10px] space-y-1">
+                    <div><strong class="text-slate-100">Courier Hauler (5k cap):</strong> ceil(Total Plunder / 5,000)</div>
+                    <div><strong class="text-amber-300">Bulk Freighter (25k cap):</strong> ceil(Total Plunder / 25,000)</div>
+                    <div class="text-slate-400 text-[9px] pt-1">*Accounts for equal distribution across silos.</div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-emerald-500/40 space-y-2">
+                <div class="flex items-center gap-2 text-emerald-300 font-bold text-sm">
+                    <span>🚀</span>
+                    <span>1-Click [Dispatch Raid] Hook</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Every espionage report provides a direct one-click tactical dispatch trigger:
+                </p>
+                <p class="text-slate-300 text-[11px]">
+                    Clicking <strong class="text-emerald-400">[🚀 Dispatch Raid]</strong> immediately transfers you to Fleet Command (<span class="text-cyan-300">/game/fleet</span>) with the target galaxy, system, slot coordinates, Attack directive, and calculated cargo complement pre-populated!
+                </p>
+            </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/90 border border-amber-500/30 font-mono text-xs flex flex-wrap items-center justify-between gap-4">
+            <div class="space-y-1">
+                <span class="text-amber-300 font-bold uppercase text-[11px] flex items-center gap-2">
+                    <span>💡</span>
+                    <span>Tactical Raid Tip</span>
+                </span>
+                <p class="text-slate-300 text-[11px]">
+                    Always inspect the defender's Fleet &amp; Defense scan lines before dispatching cargo ships alone. If combat defenses or starships remain online, escort your transports with Warden Cruisers or Ironclad Battleships to prevent ambush!
+                </p>
+            </div>
+            <a href="https://vanguardfront.online/game/messages" class="px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/60 hover:bg-amber-500/30 text-amber-200 text-xs font-bold transition">
+                Open Subspace Intelligence &rarr;
+            </a>
+        </div>
+    </section>
+<section id="defense" class="hud-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+            <h2 class="text-lg font-bold font-mono text-emerald-300 uppercase tracking-wider">7. Planetary Defense Grid &amp; Reconstruction</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span class="text-emerald-400">🛡️</span>
+                    <span>Fortification Batteries</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Defensive emplacements guard planetary stockpiles without consuming fleet slots or fuel:
+                </p>
+                <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
+                    <li><strong class="text-slate-200">Missile Batterys &amp; Pulse Turrets:</strong> Cost-effective perimeter screen against incoming fighter swarms.</li>
+                    <li><strong class="text-slate-200">Lance Turrets &amp; Rail Cannons:</strong> High-density electromagnetic artillery designed to punch through capital armor.</li>
+                    <li><strong class="text-slate-200">Arc Projectors &amp; Plasma Bastions:</strong> Ultra-heavy planetary plasma fire capable of vaporizing heavy tempest battlecruisers.</li>
+                    <li><strong class="text-slate-200">Small &amp; Grand Ward Domes:</strong> High-capacity energy barriers that deflect bombardment until breached.</li>
+                </ul>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span class="text-cyan-400">🔧</span>
+                    <span>Automated 70% Field Reconstruction &amp; Missiles</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Following any hostile orbital engagement, <span class="text-emerald-300 font-bold">70% of destroyed planetary defenses automatically reconstruct</span> from wreckage without consuming any Metal, Crystal, or Deuterium.
+                </p>
+                <div class="p-2.5 rounded bg-slate-950 border border-slate-800 text-[11px] space-y-1">
+                    <div class="text-amber-300 font-bold">Ordnance Silo Warfare:</div>
+                    <p class="text-slate-400 text-[10px]">
+                        <strong>Strike Missiles (IPMs):</strong> Launched across systems to bypass defending fleets and wipe out targeted planetary defenses.<br>
+                        <strong>Interceptor Missiles (ABMs):</strong> Automatically intercept and detonate incoming enemy IPMs in high orbit (1 ABM neutralizes 1 IPM).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="abort-protocols" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-rose-500/60 bg-gradient-to-br from-slate-900 via-rose-950/20 to-slate-950 space-y-4">
+        <div class="flex items-center gap-3 border-b border-rose-900/60 pb-3">
+            <span class="w-3 h-3 rounded-full bg-rose-500 animate-pulse"></span>
+            <h2 class="text-lg font-black font-mono text-rose-300 uppercase tracking-wider">8. Task Cancellation &amp; 75% Resource Refund Protocol</h2>
+        </div>
+        
+        <p class="text-xs text-slate-200 font-mono leading-relaxed">
+            Vanguard Front provides an emergency abort mechanism across all construction queues, research vectors, and shipyard drydocks. If you clicked an upgrade by accident or need to divert resources to an urgent fleet defense, you can abort the task immediately.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-rose-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-rose-400 font-bold">
+                    <span>✕</span>
+                    <span>Building Upgrades</span>
+                </div>
+                <p class="text-slate-300 text-[11px]">
+                    Click the red <strong class="text-rose-300">[✕ ABORT]</strong> button on the active task banner in Resources or Facilities.
+                </p>
+                <div class="text-[10px] text-cyan-300 font-bold">Refund: 75% Metal, Crystal &amp; Deuterium instantly credited to current planet.</div>
+            </div>
+
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-rose-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-rose-400 font-bold">
+                    <span>✕</span>
+                    <span>Research Vectors</span>
+                </div>
+                <p class="text-slate-300 text-[11px]">
+                    Click <strong class="text-rose-300">[✕ ABORT]</strong> on the active research banner in the Research Matrix.
+                </p>
+                <div class="text-[10px] text-cyan-300 font-bold">Refund: 75% of scientific materials returned to colony storage.</div>
+            </div>
+
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-rose-900/60 space-y-2">
+                <div class="flex items-center gap-2 text-rose-400 font-bold">
+                    <span>✕</span>
+                    <span>Drydock Fabrication</span>
+                </div>
+                <p class="text-slate-300 text-[11px]">
+                    Click <strong class="text-rose-300">[✕ Abort]</strong> next to any pending ship or defense batch in the Shipyard or Defense queue table.
+                </p>
+                <div class="text-[10px] text-cyan-300 font-bold">Refund: 75% of remaining unfinished units refunded. Completed units remain intact.</div>
+            </div>
+        </div>
+
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-400">
+            <strong class="text-cyan-300">Real-Time State Synchronization:</strong> Aborting a task instantly dismisses the active timer banner, restores planetary balances in the HUD, releases the queue lock, and re-enables building cards without requiring a page reload.
+        </div>
+    </section>
+<section id="combat" class="hud-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-amber-400 shadow-[0_0_10px_#fbbf24] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-amber-300 font-bold block">
+                        TACTICAL ENGAGEMENT &bull; CASUALTY RECOVERY
+                    </span>
+                    <h2 class="text-lg sm:text-xl font-bold font-mono text-amber-300 uppercase tracking-wider">
+                        9. Combat Telemetry, Rapid Fire, Orbital Wreckfields &amp; Lunar Genesis
+                    </h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-800 font-bold uppercase">
+                COMBAT SUITE v14.0
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span>⚔️</span>
+                    <span>Tactical Combat Rounds</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Battles resolve in up to 6 simulated combat rounds. Each ship fires at an opposing unit. If the attacking vessel has Rapid Fire against the target class, it has a high percentage chance to fire an additional shot in the same round.
+                </p>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span>☄️</span>
+                    <span>Debris Fields &amp; Moons</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    30% of all metal and crystal from destroyed ships enters planetary orbit as harvestable debris. High-volume fleet clashes have up to a <span class="text-cyan-300 font-bold">20% chance to condense into a permanent Moon</span>, unlocking Farsight Arrays and Rift Anchors.
+                </p>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-teal-900/60 space-y-2">
+                <strong class="text-teal-300 flex items-center gap-2">
+                    <span>🛠️</span>
+                    <span>Space Dock Wreckfields</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Planets with an <strong class="text-teal-200">Orbital Space Dock</strong> capture up to <span class="text-emerald-300 font-bold">45% of defender starships</span> destroyed in battle as an orbital wreckfield. Rebuild and salvage them at a steep discount before the field decays!
+                </p>
+                <div class="text-[10px] text-teal-400 font-bold">Manage at /game/wreckfield.</div>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-indigo-900/60 space-y-2">
+                <strong class="text-indigo-300 flex items-center gap-2">
+                    <span>🌌</span>
+                    <span>Quantum Rift Anchors</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Constructed exclusively on Lunar surfaces. Connects your moon network to teleport massive armadas across infinite galactic light-years instantaneously with zero Deuterium cost and a 60-minute cooldown!
+                </p>
+                <div class="text-[10px] text-indigo-400 font-bold">Manage at /game/jump-gate.</div>
+            </div>
+        </div>
+    </section>
+<section id="alliances" class="hud-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-cyan-400 font-bold block">
+                        FEDERATION NETWORK &bull; DIPLOMATIC PORTALS
+                    </span>
+                    <h2 class="text-lg sm:text-xl font-bold font-mono text-cyan-300 uppercase tracking-wider">
+                        10. Diplomatic Alliances, Personalized Vanity Portals &amp; Interstellar Trader
+                    </h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold uppercase">
+                COALITION FRAMEWORK
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-cyan-300 flex items-center gap-2">
+                    <span>🤝</span>
+                    <span>Alliance Foundation</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Founding a federation requires constructing an <strong class="text-slate-200">Concord Depot</strong> and commissioning an interstellar charter with <strong class="text-cyan-300">5,000 Aether</strong> (configurable by High Command). Depots enable friendly fleet refueling and ACS stationing.
+                </p>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span>👑</span>
+                    <span>Governance &amp; Ranks</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Founders can establish custom ranks with granular permissions: Alliance Administration, Member Management, Hierarchy Promotion, Enlistment Review, and Broadcast Transmission. Transfer sovereignty or discharge members with one-click HUD authorization.
+                </p>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-emerald-900/60 space-y-2">
+                <strong class="text-emerald-300 flex items-center gap-2">
+                    <span>🌐</span>
+                    <span>Vanity URLs &amp; Portals</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Alliances can establish custom alphanumeric vanity URLs (<strong class="text-emerald-200">/{slug}</strong>), generating a personalized recruitment portal. Upload high-res WebP alliance banners and crests. Changing vanity slugs automatically preserves old links with 301 SEO redirects!
+                </p>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                <strong class="text-slate-100 flex items-center gap-2">
+                    <span>⚖️</span>
+                    <span>Interstellar Trader</span>
+                </strong>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Exchange surplus deuterium or metal at the Interstellar Trader using canonical 3:2:1 galactic market exchange ratios. A trusted trade terminal accessible whenever urgent shipyard construction demands emergency crystal.
+                </p>
+            </div>
+        </div>
+    </section>
+<section id="chronicles" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-cyan-500/60 bg-gradient-to-br from-slate-950 via-cyan-950/20 to-slate-900 space-y-6 shadow-[0_0_35px_rgba(6,182,212,0.18)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-cyan-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-cyan-400 shadow-[0_0_12px_#22d3ee] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-cyan-300 font-bold block">
+                        HOLONET BROADCAST FEED // GALACTIC TRANSMISSIONS
+                    </span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">
+                        11. Subspace Chronicles &amp; Holonet Transmissions
+                    </h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 border border-cyan-700 font-bold uppercase tracking-wider">
+                COMMUNICATIONS NETWORK // LIVE FEED
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            The Subspace Chronicles (<a href="https://vanguardfront.online/game/blog" class="text-cyan-400 underline hover:text-cyan-300">/game/blog</a>) serve as the High Admiralty's official public and in-game Holonet transmission feed. Here, Fleet Command disseminates tactical field dispatches, development logs, patch alerts, lore expansions, and sector bulletins.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-cyan-500/40 space-y-2">
+                <div class="flex items-center gap-2 text-cyan-300 font-bold text-sm">
+                    <span>📡</span>
+                    <span>Holonet Transmission Categories</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Filter transmissions by classification: <strong class="text-white">Transmissions</strong> (official declarations), <strong class="text-rose-400">Directives</strong> (rules of engagement), <strong class="text-violet-400">Chronicles</strong> (galactic lore), and <strong class="text-emerald-400">Engineering</strong> (technical patches &amp; patch logs).
+                </p>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-violet-500/40 space-y-2">
+                <div class="flex items-center gap-2 text-violet-300 font-bold text-sm">
+                    <span>📌</span>
+                    <span>Pinned Priority Broadcasts</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Critical high-priority updates and emergency mobilization orders are pinned to the top of the transmission feed with radiant cyber borders and prominent headline callouts.
+                </p>
+            </div>
+
+            <div class="bg-slate-900/90 p-4 rounded-xl border border-emerald-500/40 space-y-2">
+                <div class="flex items-center gap-2 text-emerald-300 font-bold text-sm">
+                    <span>📖</span>
+                    <span>Immersive Reading HUD</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Every article features high-res tactical imagery, estimated reading telemetry, publication timestamps, and interactive back navigation to return directly to the cockpit.
+                </p>
+            </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/90 border border-cyan-500/30 font-mono text-xs flex flex-wrap items-center justify-between gap-4">
+            <div class="space-y-1">
+                <span class="text-cyan-300 font-bold uppercase text-[11px] flex items-center gap-2">
+                    <span>📰</span>
+                    <span>Latest Transmission Directive</span>
+                </span>
+                <p class="text-slate-300 text-[11px]">
+                    Tune your comms transceiver to the latest bulletins to keep pace with balance adjustments, newly discovered sectors, and galactic events.
+                </p>
+            </div>
+            <a href="https://vanguardfront.online/game/blog" class="px-4 py-2 rounded-lg bg-cyan-500/20 border border-cyan-500/60 hover:bg-cyan-500/30 text-cyan-200 text-xs font-bold transition">
+                Tune Comms to Chronicles &rarr;
+            </a>
+        </div>
+    </section>
+<section id="events" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-amber-500/60 bg-gradient-to-br from-slate-950 via-amber-950/20 to-slate-900 space-y-6 shadow-[0_0_35px_rgba(245,158,11,0.18)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-amber-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-amber-400 shadow-[0_0_12px_#fbbf24] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-amber-300 font-bold block">
+                        SUB-SPACE COMMS ARRAY // REAL-TIME HOLOGRAPHIC ENCOUNTERS
+                    </span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">
+                        12. Emergent Sector Events &amp; NPC Encounters
+                    </h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-700 font-bold uppercase tracking-wider">
+                LIVE TELEMETRY // PROCEDURAL UNIVERSE
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+            The galaxy of the Meridian Reach is not an empty vacuum. As you administer your colonies and command your fleet, long-range orbital scanners and sub-space comms receivers will detect emergent anomalies, cosmic hazards, and roving star travelers that hail your command console.
+        </p>
+
+        <!-- Encounter Archetypes Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+            <!-- NPC Encounters -->
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-amber-500/40 space-y-3">
+                <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                    <span>📡</span>
+                    <span>Interactive NPC Hails</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Personalized diplomatic, mercantile, or hostile transmissions appearing directly in your Overview terminal:
+                </p>
+                <ul class="text-[10px] text-slate-300 space-y-1.5 list-disc list-inside">
+                    <li><strong class="text-cyan-300">Grand Merchant Xylar:</strong> Wandering Free Rim guild hauler offering favorable bulk trade contracts and Aether caches.</li>
+                    <li><strong class="text-rose-400">Dread Corsair Vane:</strong> Crimson Void pirate flotilla demanding tribute under threat of orbital bombardment. Fight back with planetary defenses or jam their sensors.</li>
+                    <li><strong class="text-emerald-300">Dr. Aris Thorne:</strong> Imperial Discovery xeno-archaeologist uncovering ancient Precursor monoliths beneath your crust.</li>
+                    <li><strong class="text-amber-300">Smuggler Zephyr:</strong> Null-zone black market operative peddling intercepted combat vessels and contraband ores.</li>
+                </ul>
+            </div>
+
+            <!-- Cosmic Good Events -->
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 space-y-3">
+                <div class="flex items-center gap-2 text-emerald-300 font-bold text-sm">
+                    <span>☄️</span>
+                    <span>Cosmic Fortunes &amp; Salvage</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Rare celestial opportunities that shower your planetary storehouses with refined alloys and starships:
+                </p>
+                <ul class="text-[10px] text-slate-300 space-y-1.5 list-disc list-inside">
+                    <li><strong class="text-white">Crystalline Mineral Comet:</strong> Dense titanium asteroid impacts safe desert terrain, ripe for industrial strip-mining.</li>
+                    <li><strong class="text-cyan-300">Derelict Tempest Battlecruiser Salvage:</strong> Ghost naval vessel discovered drifting in high orbit. Board and annex into your armada, or scrap for alloys.</li>
+                    <li><strong class="text-yellow-300">Solar Corona Energy Surge:</strong> Star enters hyper-active maximum, enabling Aether synthesis or refinery overclocking.</li>
+                </ul>
+            </div>
+
+            <!-- Hazard Sector Events -->
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-rose-500/40 space-y-3">
+                <div class="flex items-center gap-2 text-rose-300 font-bold text-sm">
+                    <span>⚡</span>
+                    <span>Sector Hazards &amp; Anomaly Invasions</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Hostile cosmic phenomena requiring rapid command decisions and engineering counter-measures:
+                </p>
+                <ul class="text-[10px] text-slate-300 space-y-1.5 list-disc list-inside">
+                    <li><strong class="text-amber-400">Ion Radiation Shockwave:</strong> Cosmic EMP storm threatens delicate crystal bays unless magnetic deflectors are polarized.</li>
+                    <li><strong class="text-rose-400">Subsurface Tectonic Fault:</strong> Magma fractures endanger metal excavation shafts; stabilize bedrock with alloy grout or tap geothermal steam.</li>
+                    <li><strong class="text-violet-400">Rogue AI Malware Probe:</strong> Autonomous cyber-drone attacks telemetry nodes; purge quantum cores or decompile alien algorithms for Aether.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/90 border border-amber-500/30 font-mono text-xs space-y-2">
+            <div class="flex items-center gap-2 text-amber-300 font-bold uppercase text-[11px]">
+                <span>🔔</span>
+                <span>Tactical Decision &amp; Audit Logs</span>
+            </div>
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                Active events feature live expiration timers. Every decision is logged in your Cryptographic Intelligence Inbox, with complete narrative debriefs of salvage harvested, tribute paid, or space battles won.
+            </p>
+        </div>
+    </section>
+<section id="radar-alarms" class="hud-panel p-6 sm:p-8 rounded-2xl border border-rose-900/60 bg-gradient-to-r from-rose-950/20 via-slate-900 to-slate-900 space-y-4">
+        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+            <span class="w-3 h-3 rounded-full bg-rose-500 animate-ping"></span>
+            <h2 class="text-lg font-bold font-mono text-rose-300 uppercase tracking-wider">13. Tactical Radar, Early Warning System &amp; Audio Alarms</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-rose-900/80 space-y-2">
+                <div class="flex items-center gap-2 text-rose-400 font-bold">
+                    <span>⚠️</span>
+                    <span>Red Alert Attack Warning</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Planetary sensor arrays actively scan for inbound hostile armadas (Attack, Espionage, Moon Destruction). When detected, an emergency Red Alert banner and modal popup trigger with live impact countdowns.
+                </p>
+                <div class="text-[10px] text-rose-300 font-bold">Includes instant fleet scramble &amp; defense grid response buttons.</div>
+            </div>
+
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-cyan-900/80 space-y-2">
+                <div class="flex items-center gap-2 text-cyan-400 font-bold">
+                    <span>🔊</span>
+                    <span>Synthesized Audio Klaxon</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Powered natively by the browser Web Audio API with zero external media files. Plays a pulsing dual-tone siren on hostile attacks, a chime on incoming allied cargo, and tactical chirps on sovereign directives.
+                </p>
+                <div class="text-[10px] text-cyan-300 font-bold">Preferences persist in local browser storage.</div>
+            </div>
+
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-emerald-900/80 space-y-2">
+                <div class="flex items-center gap-2 text-emerald-400 font-bold">
+                    <span>📦</span>
+                    <span>Allied Logistics Manifest</span>
+                </div>
+                <p class="text-slate-400 text-[11px] leading-relaxed">
+                    Friendly transports and deployments show live ETA countdowns along with exact payload figures for Metal, Crystal, and Deuterium being delivered to your silos.
+                </p>
+                <div class="text-[10px] text-emerald-300 font-bold">Includes real-time message stream notifications.</div>
+            </div>
+        </div>
+    </section>
+<section id="developer-api" class="hud-panel"><h2>14. Developer API Nexus &amp; companion integrations</h2><p>The game documentation describes scoped integrations for companion applications and external telemetry. Consult the official game's integration settings and documentation for supported interfaces and permitted use. Keep credentials private, and use only authorized tools. Operator endpoints and implementation details are outside this public player guide.</p></section>
+<section id="support-initiative" class="hud-panel"><h2>15. Admiralty R&amp;D initiative: developer support</h2><p>Vanguard Front is an independent WildCat Studio project. Voluntary contributions support continued development, hosting, infrastructure and balance work. Donations are distinct from the game's Aether and officer systems; consult current game terms for in-game purchases and benefits. The Admiralty Archives recognize supporters who provide their commander callsign. Support is optional.</p><p><a href="https://vanguardfront.online/support">Official support terminal</a> · <a href="https://buymeacoffee.com/wildcatstudio">Buy WildCat Studio a coffee</a></p></section>
+<section id="simulator-manual" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-cyan-500/60 bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950/20 space-y-6 shadow-[0_0_30px_rgba(6,182,212,0.15)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-cyan-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-cyan-400 shadow-[0_0_12px_#22d3ee] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-cyan-300 font-bold block">TACTICAL DOCTRINE // SECTION 16</span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">QUANTUM BATTLE SIMULATOR &amp; COMBAT FORECASTER</h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-700 font-bold uppercase tracking-wider">
+                ⚡ 100 AE PER RUN // ZERO ASSET RISK
+            </span>
+        </div>
+
+        <div class="space-y-4 font-mono text-xs">
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                Positioned directly on the <a href="https://vanguardfront.online/game/battle-reports#simulator" class="text-cyan-400 hover:underline font-bold">Battle Telemetry deck</a> below historical archives, the <strong class="text-white">Quantum Battle Simulator</strong> enables commanders to execute multi-round, full-scale tactical wargames between customized fleets and planetary defense installations before committing a single real hull into hyperspace.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-cyan-300 font-bold block uppercase text-[10px]">1. Deterministic Combat Engine</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Computes up to 6 combat rounds using true weapon-ray tracking, shield deflection thresholds, hull deterioration curves, and rapidfire probability matrices across all 18 ship types and 8 orbital defenses.
+                    </p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-emerald-300 font-bold block uppercase text-[10px]">2. Salvage &amp; Moon Forecasting</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Accurately projects resulting Metal &amp; Crystal orbital debris fields, calculates the exact number of Salvage Reclaimer vessels needed to harvest the field, and forecasts moon emergence probabilities (0% - 20%).
+                    </p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-amber-300 font-bold block uppercase text-[10px]">3. 3D Cinematic Replays</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Every simulation run generates full combat telemetry that can be launched immediately into the interactive canvas player to review laser trajectories, shield impacts, and structural explosions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/60 border border-cyan-800/40 text-[11px] text-slate-300 flex items-center justify-between">
+                <div>
+                    <span class="text-cyan-400 font-bold">Quick-Calibration Hooks:</span> Use the <span class="text-white font-bold">"Load Fleet"</span> and <span class="text-white font-bold">"Load Defenses"</span> buttons to instantly pull stationed armadas and planetary grids into the simulator.
+                </div>
+                <a href="https://vanguardfront.online/game/battle-reports#simulator" class="px-3 py-1 rounded bg-cyan-950 border border-cyan-700 text-cyan-300 hover:bg-cyan-900 font-bold transition flex-shrink-0">
+                    Launch Simulator &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+<section id="officers-manual" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-indigo-500/60 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950/20 space-y-6 shadow-[0_0_30px_rgba(99,102,241,0.15)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-indigo-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-indigo-400 shadow-[0_0_12px_#818cf8] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-indigo-300 font-bold block">HIGH ADMIRALTY // SECTION 17</span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">IMPERIAL HIGH COMMAND OFFICER SUITE</h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-700 font-bold uppercase tracking-wider">
+                TACTICAL STAFF MULTIPLIERS // 14-DAY COMMISSIONS
+            </span>
+        </div>
+
+        <div class="space-y-4 font-mono text-xs">
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                Commanders can enlist specialized High Command Officers using Aether retainers. Officers remain on active service for 14-day operational tenures, granting dynamic empire-wide bonuses to planetary production, fleet maneuvering, research speed, and queue throughput.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Commander -->
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-indigo-900/60 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-indigo-300 text-sm">High Commander</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-indigo-950 text-indigo-400 border border-indigo-700 font-bold">CIVIL STRATEGY</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Coordinates empire-wide logistics and civil architecture. Expands construction and research queues (+2 queue slots) and unlocks advanced tactical empire overviews.
+                    </p>
+                    <div class="text-[10px] text-cyan-300 font-bold pt-1 border-t border-slate-800">
+                        +2 Queue Capacity &bull; Tactical Fleet Orders &bull; Empire Automation
+                    </div>
+                </div>
+
+                <!-- Admiral -->
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-rose-900/60 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-rose-300 text-sm">Grand Admiral</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-950 text-rose-400 border border-rose-700 font-bold">ARMADA COMMAND</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Directs armada tactical maneuvers during space combat. Grants +2 fleet dispatch slots, +10% fleet sub-light speed, and tactical combat retreat authorization.
+                    </p>
+                    <div class="text-[10px] text-rose-300 font-bold pt-1 border-t border-slate-800">
+                        +2 Fleet Slots &bull; +10% Flight Velocity &bull; Tactical Retreat Matrix
+                    </div>
+                </div>
+
+                <!-- Geologist -->
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-amber-900/60 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-amber-300 text-sm">Chief Geologist</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-700 font-bold">MINING SYNDICATE</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Supercharges deep-crust excavation drills across all colonies, extracting +10% raw Metal, Crystal, and Deuterium synthesis without increasing energy consumption.
+                    </p>
+                    <div class="text-[10px] text-amber-300 font-bold pt-1 border-t border-slate-800">
+                        +10% Metal Extraction &bull; +10% Crystal Mining &bull; +10% Deuterium Yield
+                    </div>
+                </div>
+
+                <!-- Engineer -->
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-emerald-900/60 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-emerald-300 text-sm">Chief Engineer</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-700 font-bold">DEFENSE ENGINEERING</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Optimizes planetary power distributions (+15% energy grid throughput) and increases defensive grid post-battle repair rates from 70% to 85%.
+                    </p>
+                    <div class="text-[10px] text-emerald-300 font-bold pt-1 border-t border-slate-800">
+                        +15% Energy Grid Power &bull; 85% Defense Recovery &bull; Shield Hardening
+                    </div>
+                </div>
+
+                <!-- Technocrat -->
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-violet-900/60 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-violet-300 text-sm">Grand Technocrat</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-violet-950 text-violet-400 border border-violet-700 font-bold">SCIENCE COUNCIL</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Accelerates fundamental scientific exploration, reducing all research project completion times by 25% and boosting espionage spy defense arrays.
+                    </p>
+                    <div class="text-[10px] text-violet-300 font-bold pt-1 border-t border-slate-800">
+                        -25% Research Duration &bull; +2 Espionage Level Defense &bull; Tech Matrix
+                    </div>
+                </div>
+
+                <!-- Bundle -->
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-cyan-500/80 space-y-2 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-cyan-300 text-sm">Commanding Staff Bundle</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-700 font-bold">COMPLETE SYNERGY</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Commissions all 5 officers simultaneously with full combined bonuses plus an additional +2% overall imperial synergy bonus across all planetary realms.
+                    </p>
+                    <div class="text-[10px] text-cyan-300 font-bold pt-1 border-t border-slate-800">
+                        All 5 Active Officers &bull; Maximum Economic &amp; Fleet Efficiency
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="freight-manual" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-amber-500/60 bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950/20 space-y-6 shadow-[0_0_30px_rgba(245,158,11,0.15)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-amber-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-amber-400 shadow-[0_0_12px_#f59e0b] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-amber-300 font-bold block">IMPERIAL LOGISTICS // SECTION 18</span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">IMPERIAL FREIGHT &amp; AUTOMATED SUPPLY TRAINS</h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-700 font-bold uppercase tracking-wider">
+                1-CLICK EMPIRE CONSOLIDATION // ZERO MANUAL DISPATCH
+            </span>
+        </div>
+
+        <div class="space-y-4 font-mono text-xs">
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                As empires expand across multiple galaxies, manually dispatching cargo sorties from dozens of colonies becomes a logistical bottleneck. The <strong class="text-white">Imperial Supply Train ("Rally to Depot")</strong> protocol on the <a href="https://vanguardfront.online/game/empire" class="text-cyan-400 hover:underline font-bold">Empire Ledger</a> solves this entirely.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-amber-300 font-bold block uppercase text-[10px]">Autonomous Cargo Allocation</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        With a single click, the algorithm inspects all origin colonies, evaluates available unreserved resources (Metal, Crystal, Deuterium), reserves essential deuterium fuel for the return flight, and computes the exact combination of Courier Hauler (5,000 capacity) and Bulk Freighter (25,000 capacity) vessels needed.
+                    </p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-cyan-300 font-bold block uppercase text-[10px]">Synchronized Fleet Sorties</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Sorties are dispatched in parallel as Transport missions (Mission Type 3) targeting your chosen central fortress depot planet. All transport missions adhere to linear flight formulas and can be monitored via the fleet telemetry deck.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="relocation-manual" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-emerald-500/60 bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950/20 space-y-6 shadow-[0_0_30px_rgba(16,185,129,0.15)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-emerald-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-emerald-400 shadow-[0_0_12px_#34d399] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-emerald-300 font-bold block">ASTRO-CARTOGRAPHY // SECTION 19</span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">SUBSPACE WARP PLANETARY RELOCATION PROTOCOL</h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 font-bold uppercase tracking-wider">
+                2,500 AE // TECTONIC HYPERSPACE DISPLACEMENT
+            </span>
+        </div>
+
+        <div class="space-y-4 font-mono text-xs">
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                When geopolitical tensions or hostile armadas make a star system untenable, commanders can activate the <strong class="text-white">Subspace Warp Relocation</strong> protocol on the <a href="https://vanguardfront.online/game/overview" class="text-cyan-400 hover:underline font-bold">Planetary Overview</a> to translate an entire planetary colony and its orbiting lunar body across space.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-emerald-300 font-bold block uppercase text-[10px]">1. Coordinate Validation</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Target coordinates must be completely vacant in the galaxy matrix. Relocations preserve all planetary infrastructure, mine levels, shipyards, defense grids, and resource stockpiles.
+                    </p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-cyan-300 font-bold block uppercase text-[10px]">2. Moon &amp; Rift Anchor Portability</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        If the planet has an active moon, the moon and its Rift Anchor are translated in gravitational lock-step alongside the planet without dropping jump calibration states.
+                    </p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <span class="text-amber-300 font-bold block uppercase text-[10px]">3. Fleet Preconditions</span>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        No active hostile missions may be outbound toward the planet. All stationed armadas travel with the planet safely into the new galactic sector.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="acs-manual" class="hud-panel p-6 sm:p-8 rounded-2xl border-2 border-rose-500/60 bg-gradient-to-br from-slate-950 via-slate-900 to-rose-950/20 space-y-6 shadow-[0_0_30px_rgba(244,63,94,0.15)]">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-rose-900/60 pb-4">
+            <div class="flex items-center gap-3">
+                <span class="w-3.5 h-3.5 rounded-full bg-rose-400 shadow-[0_0_12px_#fb7185] animate-pulse"></span>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-rose-300 font-bold block">ALLIED WARFARE // SECTION 20</span>
+                    <h2 class="text-xl sm:text-2xl font-black font-mono text-white tracking-wide uppercase">ALLIANCE COMBAT SYSTEM (ACS JOINT SORTIES)</h2>
+                </div>
+            </div>
+            <span class="text-[10px] font-mono px-2.5 py-1 rounded bg-rose-950 text-rose-300 border border-rose-700 font-bold uppercase tracking-wider">
+                TACTICAL COALITION DIRECTIVES // MISSION TYPES 2 &amp; 5
+            </span>
+        </div>
+
+        <div class="space-y-4 font-mono text-xs">
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+                The <strong class="text-white">Alliance Combat System (ACS)</strong> empowers federations to combine naval power across allied fleets, bypassing the limitation of solo fleet strikes.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-rose-400 text-sm">ACS Joint Strike (Mission Type 2)</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-700 font-bold">OFFENSIVE COALITION</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Multiple allied armada wings coordinate hyperspace trajectories to arrive simultaneously at the target sector. In battle, all participating allied fleets engage as a single unified force, combining attack power, shield coverage, and rapidfire advantages against heavily fortified enemy bunker worlds.
+                    </p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <strong class="text-indigo-300 text-sm">ACS Defense Stationing (Mission Type 5)</strong>
+                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-700 font-bold">DEFENSIVE GARRISON</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Allied fleets deploy to friendly colony or moon orbits to stand sentinel. If an enemy attacks the host planet, stationing allied armadas fight alongside the planet's defenses, surprising raiders with unexpected coalition reinforcements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section></article></div></main><footer class="site-footer"><div class="container"><div class="px-footer"><div><strong>WildCat Studio</strong><p>Vanguard Front player documentation.</p></div><nav aria-label="Footer"><a href="../">Project showcase</a><a href="../../">Studio home</a><a href="https://vanguardfront.online/">Official game</a></nav></div><div class="footer-bottom"><span>&copy; 2026 WildCat Studio. All rights reserved.</span><a href="#main" class="px-home">Back to top ↑</a></div></div></footer><script src="../../js/proxalume.js" defer></script><script src="../../js/vanguard-manual.js" defer></script></body></html>
