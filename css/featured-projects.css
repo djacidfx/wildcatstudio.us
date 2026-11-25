@@ -1,0 +1,145 @@
+/* Homepage-only project portfolio. Uses the shared light/dark theme tokens. */
+.featured-projects {
+  scroll-margin-top: 84px;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, var(--bg-dark), var(--bg-surface));
+}
+.featured-projects .section-header { margin-bottom: 36px; }
+.featured-project-jump { text-align: center; margin: 0 auto 22px; }
+.featured-project-jump a {
+  display: inline-block;
+  color: var(--text-main);
+  text-underline-offset: 4px;
+  font-weight: 600;
+  font-size: .95rem;
+}
+.featured-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 24px;
+}
+.featured-project-card {
+  --project-glow: rgba(59, 130, 246, .20);
+  --project-border: #3b82f6;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-md);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.featured-project-card--vanguard {
+  --project-glow: rgba(13, 148, 136, .20);
+  --project-border: #0d9488;
+}
+.featured-project-card:focus-within {
+  border-color: var(--project-border);
+  box-shadow: var(--shadow-md), 0 0 28px var(--project-glow);
+}
+@media (hover: hover) {
+  .featured-project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--project-border);
+    box-shadow: var(--shadow-md), 0 0 28px var(--project-glow);
+  }
+}
+.featured-project-art {
+  margin: 0;
+  padding: 16px 16px 10px;
+  background: linear-gradient(135deg, #13253c, #070e1c);
+}
+.featured-project-card--vanguard .featured-project-art {
+  background: linear-gradient(135deg, #123b46, #061020);
+}
+.featured-project-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+}
+.featured-project-art figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: .76rem;
+  color: #cbd5e1;
+}
+.featured-project-content {
+  padding: clamp(20px, 3vw, 32px);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.featured-project-kind {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .77rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.featured-project-content h3 {
+  color: var(--text-main);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.featured-project-description { color: var(--text-muted); }
+.featured-project-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 26px;
+  padding: 0;
+}
+.featured-project-tags li {
+  color: var(--text-main);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  font-size: .8rem;
+}
+.featured-project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  width: 100%;
+}
+.featured-project-actions .btn { min-width: 0; white-space: normal; text-align: center; }
+.featured-project-secondary {
+  color: var(--text-main);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+}
+.featured-project-secondary:hover { border-color: var(--project-border); }
+.featured-projects a:focus-visible, .featured-project-jump a:focus-visible {
+  outline: 2px solid var(--text-main);
+  outline-offset: 4px;
+}
+.featured-project-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 480px) {
+  .featured-projects { padding: 52px 0; }
+  .featured-project-actions .btn { width: 100%; }
+  .featured-project-art { padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .featured-project-card, .featured-project-actions .btn { transition: none; }
+  .featured-project-card:hover, .featured-project-actions .btn:hover { transform: none; }
+}
